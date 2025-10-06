@@ -7,13 +7,15 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
+const SCROLL_THRESHOLD_PERCENTAGE = 0.7;
+
 export default function StickyNav() {
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = window.innerHeight * 0.7;
+      const scrollThreshold = window.innerHeight * SCROLL_THRESHOLD_PERCENTAGE;
       setIsVisible(window.scrollY > scrollThreshold);
     };
 
@@ -34,11 +36,11 @@ export default function StickyNav() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-40">
+    <div className="fixed top-0 left-0 right-0 z-50">
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <div className="bg-background/95 backdrop-blur-md border-b shadow-sm">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between py-3">
+            <div className="flex items-center justify-between gap-2 py-3">
               <div className="flex items-center gap-2">
                 <Dumbbell className="h-5 w-5 text-primary" data-testid="icon-nav-logo" />
                 <span className="font-semibold text-lg" data-testid="text-nav-title">Quick Navigation</span>
