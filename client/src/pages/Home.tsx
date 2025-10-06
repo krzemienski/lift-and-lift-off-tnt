@@ -7,16 +7,39 @@ import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import { Dumbbell, Heart, Trophy, Scale, Flower2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import type { InstagramPost } from "@shared/schema";
 
 export default function Home() {
   const { toast } = useToast();
 
+  const { data: instagramData, isLoading: instagramLoading } = useQuery<{ posts: InstagramPost[] }>({
+    queryKey: ["/api/instagram/posts"],
+  });
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: any) => {
+      const response = await apiRequest("POST", "/api/contact", data);
+      return await response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+      });
+    },
+    onError: () => {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
+
   const handleContactSubmit = (data: any) => {
-    console.log("Contact form submitted:", data);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
-    });
+    contactMutation.mutate(data);
   };
 
   const scrollToContact = () => {
@@ -55,56 +78,7 @@ export default function Home() {
     },
   ];
 
-  const instagramPosts = [
-    {
-      id: "1",
-      imageUrl: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&auto=format&fit=crop",
-      caption: "Morning HIIT session! 🔥 Let's crush those fitness goals together",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-    {
-      id: "2",
-      imageUrl: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop",
-      caption: "Yoga flow for flexibility and inner peace 🧘‍♀️",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-    {
-      id: "3",
-      imageUrl: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&auto=format&fit=crop",
-      caption: "Client success story! Down 20lbs and feeling stronger than ever 💪",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-    {
-      id: "4",
-      imageUrl: "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&auto=format&fit=crop",
-      caption: "Outdoor training in beautiful weather ☀️",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-    {
-      id: "5",
-      imageUrl: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=400&auto=format&fit=crop",
-      caption: "Strength training fundamentals - proper form is everything! 🏋️‍♀️",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-    {
-      id: "6",
-      imageUrl: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=400&auto=format&fit=crop",
-      caption: "Nutrition tips: Fuel your body right for maximum results 🥗",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-    {
-      id: "7",
-      imageUrl: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&auto=format&fit=crop",
-      caption: "Boxing for cardio and stress relief 🥊",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-    {
-      id: "8",
-      imageUrl: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&auto=format&fit=crop",
-      caption: "Recovery is just as important as training! 💆‍♀️",
-      permalink: "https://www.instagram.com/ellorylil",
-    },
-  ];
+  const instagramPosts = instagramData?.posts || [];
 
   return (
     <div className="min-h-screen">
