@@ -1,0 +1,107 @@
+# Personal Trainer Website Development Project
+
+## Project Overview
+
+Building three modern personal trainer websites using contemporary web technologies with a focus on responsive design, dynamic content, and engaging visual effects.
+
+---
+
+## Technology Stack
+
+### Core Technologies
+- **Framework**: Next.js
+- **UI Components**: ShadCN (or similar component library)
+- **Deployment**: Simple, modern deployment process
+- **Responsive Design**: Mobile-first approach ensuring perfect responsiveness across all devices
+
+---
+
+## Key Features & Requirements
+
+### 1. Visual Design Elements
+- **Background Video**: Fitness-related content with parallax scroll effect
+- **Responsive Layout**: Seamless experience on both mobile and desktop browsers
+- **Modern Aesthetics**: Following current web design trends
+
+### 2. Content Sections
+The website structure should include:
+- **Contact Section**: "Get in contact with me" functionality
+- **Instagram Integration**: Showcase trainer's Instagram content dynamically
+- **Additional Sections**: TBD based on research and best practices
+
+### 3. Instagram Integration
+- **Requirement**: Pull and display content from Instagram
+- **Action Item**: Research libraries and APIs for Instagram content integration
+- **Design Consideration**: Content must flow seamlessly with overall website design and maintain visual continuity
+
+---
+
+## Development Workflow
+
+### Phase 1: Research & Template Discovery
+**Primary Task**: Conduct deep research to identify suitable templates and inspiration
+
+**Deliverables**:
+- Present **25 high-quality personal trainer websites** featuring:
+  - Parallax video backgrounds (or similar dynamic effects)
+  - Modern, professional design
+  - Built with or easily adaptable to:
+    - ShadCN
+    - Next.js
+    - Other easily modifiable frameworks
+
+**Selection Criteria**:
+- Visual appeal and modern design
+- Technical feasibility for modification
+- Presence of parallax or video background effects
+- Responsive design implementation
+- Clean, maintainable codebase
+
+### Phase 2: Development (TBD)
+- Template selection and customization
+- Instagram API integration
+- Responsive design implementation
+- Parallax effect development
+
+### Phase 3: Deployment (TBD)
+- Final testing across devices
+- Deployment setup
+- Launch
+
+---
+
+## Technical Considerations
+
+### Instagram Content Integration
+- [ ] Research available Instagram APIs and libraries
+- [ ] Evaluate authentication requirements
+- [ ] Determine content refresh strategy
+- [ ] Ensure design continuity with pulled content
+
+### Parallax Video Implementation
+- [ ] Video format and optimization requirements
+- [ ] Performance considerations for mobile devices
+- [ ] Fallback options for low-bandwidth scenarios
+
+### Responsive Design
+- [ ] Mobile breakpoints definition
+- [ ] Touch interaction optimization
+- [ ] Performance optimization for various devices
+
+---
+
+## Next Steps
+
+1. **Immediate Action**: Begin research phase to identify 25 exemplary personal trainer websites
+2. **Template Analysis**: Evaluate technical stack and modification complexity
+3. **Feature Planning**: Finalize section structure based on research findings
+4. **Library Selection**: Identify optimal Instagram integration solution
+
+---
+
+## Notes
+
+- Project scope: **3 personal trainer websites**
+- Design philosophy: Modern, clean, and user-friendly
+- Priority: Responsive design and visual engagement through parallax effects
+- Content strategy: Leverage existing Instagram presence for dynamic, authentic content
