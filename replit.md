@@ -4,6 +4,13 @@
 Modern, responsive personal trainer website for Lillian Rolle featuring parallax video backgrounds, dynamic Instagram integration, and professional service showcase.
 
 ## Recent Changes
+- **Sticky Navigation Menu**: Added collapsible sticky navigation that appears when scrolling (October 2025)
+  - Appears automatically when scrolling past 70% of viewport height
+  - Collapsible menu with toggle button to show/hide navigation links
+  - Smooth scroll navigation to Home, About, Specialties, and Contact sections
+  - Semi-transparent background with backdrop blur for modern appearance
+  - Properly stacked z-index to avoid conflicts with other UI elements
+  
 - **Global Parallax Video Background**: Extended parallax effect across all sections (October 2025)
   - Video background is now fixed and spans entire page with smooth scrolling effect
   - Video overlay reduced to 30% opacity (bg-black/30) for maximum visibility
