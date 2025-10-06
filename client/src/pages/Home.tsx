@@ -12,18 +12,29 @@ import { apiRequest } from "@/lib/queryClient";
 import type { InstagramPost } from "@shared/schema";
 import heroVideo from "@assets/20251004_1852_Loop Video_loop_01k6rpsmebeqbany0na4a9jjdq_1759788986675.mp4";
 import coachImage from "@assets/IMG_8895_Original_1759789084126.jpeg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const { toast } = useToast();
-  const [scrollY, setScrollY] = useState(0);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (videoContainerRef.current) {
+            const scrollY = window.scrollY;
+            videoContainerRef.current.style.transform = `translateY(-${scrollY * 0.3}px)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -96,19 +107,17 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Global Parallax Video Background */}
-      <div className="fixed inset-0 -z-50">
+      <div className="fixed inset-0 -z-50 overflow-hidden">
         <div
-          className="absolute inset-0"
-          style={{
-            transform: `translateY(${scrollY * 0.5}px)`,
-          }}
+          ref={videoContainerRef}
+          className="absolute inset-0 -top-[20vh]"
         >
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="h-[120vh] w-full object-cover"
+            className="h-[140vh] w-full object-cover"
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
