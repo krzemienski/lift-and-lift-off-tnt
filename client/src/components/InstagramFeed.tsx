@@ -19,7 +19,7 @@ export default function InstagramFeed({ username, posts, profileUrl }: Instagram
   const [hoveredPost, setHoveredPost] = useState<string | null>(null);
 
   return (
-    <section className="py-20 md:py-32 px-6">
+    <section className="py-20 md:py-32 px-6 bg-background/70 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">

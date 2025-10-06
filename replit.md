@@ -4,6 +4,11 @@
 Modern, responsive personal trainer website for Lillian Rolle featuring parallax video backgrounds, dynamic Instagram integration, and professional service showcase.
 
 ## Recent Changes
+- **Global Parallax Video Background**: Extended parallax effect across all sections (October 2025)
+  - Video background is now fixed and spans entire page with smooth scrolling effect
+  - All sections have semi-transparent backgrounds with backdrop blur for readability
+  - Creates cohesive visual experience throughout the site
+  
 - **Instagram Integration**: Set up dynamic Instagram feed fetching from @ellorylil using Instagram Basic Display API
   - Backend route: `/api/instagram/posts`
   - Falls back to placeholder images when `INSTAGRAM_ACCESS_TOKEN` is not set

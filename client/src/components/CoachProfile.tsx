@@ -20,7 +20,7 @@ export default function CoachProfile({
   stats = [],
 }: CoachProfileProps) {
   return (
-    <section className="py-20 md:py-32 px-6">
+    <section className="py-20 md:py-32 px-6 bg-background/70 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="relative">

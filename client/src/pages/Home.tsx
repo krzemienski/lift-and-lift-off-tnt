@@ -12,9 +12,20 @@ import { apiRequest } from "@/lib/queryClient";
 import type { InstagramPost } from "@shared/schema";
 import heroVideo from "@assets/20251004_1852_Loop Video_loop_01k6rpsmebeqbany0na4a9jjdq_1759788986675.mp4";
 import coachImage from "@assets/IMG_8895_Original_1759789084126.jpeg";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const { toast } = useToast();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const { data: instagramData, isLoading: instagramLoading } = useQuery<{ posts: InstagramPost[] }>({
     queryKey: ["/api/instagram/posts"],
@@ -84,12 +95,32 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* Global Parallax Video Background */}
+      <div className="fixed inset-0 -z-50">
+        <div
+          className="absolute inset-0"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+          }}
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-[120vh] w-full object-cover"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+      </div>
+
       <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
       </div>
 
       <HeroSection
-        videoSrc={heroVideo}
         title="Transform Your Body, Elevate Your Life"
         subtitle="Expert personal training tailored to your goals with certified coach Lillian Rolle"
         primaryCTA="Start Your Transformation"

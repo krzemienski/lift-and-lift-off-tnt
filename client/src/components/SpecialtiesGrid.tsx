@@ -13,7 +13,7 @@ interface SpecialtiesGridProps {
 
 export default function SpecialtiesGrid({ specialties }: SpecialtiesGridProps) {
   return (
-    <section className="py-20 md:py-32 px-6 bg-card">
+    <section className="py-20 md:py-32 px-6 bg-background/80 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 interface HeroSectionProps {
-  videoSrc: string;
   title: string;
   subtitle: string;
   primaryCTA: string;
@@ -13,7 +12,6 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  videoSrc,
   title,
   subtitle,
   primaryCTA,
@@ -21,12 +19,10 @@ export default function HeroSection({
   onPrimaryCTA,
   onSecondaryCTA,
 }: HeroSectionProps) {
-  const [scrollY, setScrollY] = useState(0);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
       setShowScrollIndicator(window.scrollY < 100);
     };
 
@@ -35,53 +31,33 @@ export default function HeroSection({
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          transform: `translateY(${scrollY * 0.5}px)`,
-        }}
-      >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="h-full w-full object-cover"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
-
-      <div className="flex h-full items-center justify-center px-6">
-        <div className="max-w-5xl text-center text-white">
-          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
-            {title}
-          </h1>
-          <p className="mb-10 text-lg md:text-xl text-white/90">
-            {subtitle}
-          </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button
-              size="lg"
-              variant="default"
-              onClick={onPrimaryCTA}
-              className="text-base"
-              data-testid="button-primary-cta"
-            >
-              {primaryCTA}
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={onSecondaryCTA}
-              className="text-base bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
-              data-testid="button-secondary-cta"
-            >
-              {secondaryCTA}
-            </Button>
-          </div>
+    <section className="relative h-screen w-full flex items-center justify-center px-6">
+      <div className="max-w-5xl text-center text-white">
+        <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
+          {title}
+        </h1>
+        <p className="mb-10 text-lg md:text-xl text-white/90">
+          {subtitle}
+        </p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <Button
+            size="lg"
+            variant="default"
+            onClick={onPrimaryCTA}
+            className="text-base"
+            data-testid="button-primary-cta"
+          >
+            {primaryCTA}
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={onSecondaryCTA}
+            className="text-base bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
+            data-testid="button-secondary-cta"
+          >
+            {secondaryCTA}
+          </Button>
         </div>
       </div>
 
