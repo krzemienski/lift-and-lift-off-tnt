@@ -13,13 +13,13 @@ interface SpecialtiesGridProps {
 
 export default function SpecialtiesGrid({ specialties }: SpecialtiesGridProps) {
   return (
-    <section className="py-20 md:py-32 px-6 bg-background/80 backdrop-blur-md">
+    <section className="py-20 md:py-32 px-6 bg-black/35 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
             Training Specialties
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
             Personalized programs designed to meet your unique fitness goals
           </p>
         </div>

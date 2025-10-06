@@ -19,7 +19,7 @@ export default function Footer({ instagramUrl, location, email }: FooterProps) {
   };
 
   return (
-    <footer className="border-t bg-background/80 backdrop-blur-md">
+    <footer className="border-t bg-black/45 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>

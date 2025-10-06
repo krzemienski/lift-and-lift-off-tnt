@@ -19,16 +19,16 @@ export default function InstagramFeed({ username, posts, profileUrl }: Instagram
   const [hoveredPost, setHoveredPost] = useState<string | null>(null);
 
   return (
-    <section className="py-20 md:py-32 px-6 bg-background/70 backdrop-blur-sm">
+    <section className="py-20 md:py-32 px-6 bg-black/40 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
             <Instagram className="h-8 w-8 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
               Follow My Journey
             </h2>
           </div>
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-lg text-white/80 mb-6" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
             @{username}
           </p>
           <Button
