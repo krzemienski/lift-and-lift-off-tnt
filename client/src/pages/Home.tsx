@@ -5,6 +5,7 @@ import InstagramFeed from "@/components/InstagramFeed";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
+import StickyNav from "@/components/StickyNav";
 import { Dumbbell, Heart, Trophy, Scale, Flower2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useQuery, useMutation } from "@tanstack/react-query";
@@ -124,6 +125,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30" />
         </div>
       </div>
+
+      <StickyNav />
 
       <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
