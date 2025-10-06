@@ -10,6 +10,8 @@ import { useToast } from "@/hooks/use-toast";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { InstagramPost } from "@shared/schema";
+import heroVideo from "@assets/20251004_1852_Loop Video_loop_01k6rpsmebeqbany0na4a9jjdq_1759788986675.mp4";
+import coachImage from "@assets/IMG_8895_Original_1759789084126.jpeg";
 
 export default function Home() {
   const { toast } = useToast();
@@ -87,7 +89,7 @@ export default function Home() {
       </div>
 
       <HeroSection
-        videoSrc="/attached_assets/20251004_1852_Loop Video_loop_01k6rpsmebeqbany0na4a9jjdq_1759788986675.mp4"
+        videoSrc={heroVideo}
         title="Transform Your Body, Elevate Your Life"
         subtitle="Expert personal training tailored to your goals with certified coach Lillian Rolle"
         primaryCTA="Start Your Transformation"
@@ -100,7 +102,7 @@ export default function Home() {
         <CoachProfile
           name="Lillian Rolle"
           location="Havana, Cuba"
-          imageSrc="/attached_assets/IMG_8895_Original_1759789084126.jpeg"
+          imageSrc={coachImage}
           bio="With a passion for transforming lives through fitness, I bring authentic Cuban energy and certified expertise to every training session. My approach combines proven techniques with personalized attention to help you achieve sustainable results, no matter your age or fitness level."
           certifications={["ECP - EFTI/Lionel (NBFE)", "Certified Yoga Instructor", "Sports Nutrition Specialist"]}
           stats={[
