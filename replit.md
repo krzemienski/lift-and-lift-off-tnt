@@ -1,10 +1,25 @@
-# Lillian Rolle - Personal Trainer Website
+# TNT Fitness - Coach Rico's Personal Training Website
 
 ## Project Overview
-Modern, responsive personal trainer website for Lillian Rolle featuring parallax video backgrounds, dynamic Instagram integration, and professional service showcase.
+Modern, responsive personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with parallax video backgrounds, dynamic Instagram integration, and professional service showcase.
 
 ## Recent Changes
-- **Lily Rolle Fitness Branding Implementation** (October 9, 2025)
+- **TNT Fitness Branding Implementation for Coach Rico** (October 2025)
+  - **Complete Brand Transformation**: Updated entire website from Lillian Rolle to TNT Fitness (Today, Not Tomorrow) featuring Coach Rico
+  - **Colors**: Updated color scheme to TNT brand colors
+    * Gold #D4A017 (HSL: 46 84% 46%) - Primary buttons and calls-to-action
+    * Navy #0B2545 (HSL: 213 60% 16%) - Text and backgrounds
+    * Indigo #243B6B (HSL: 219 48% 30%) - Secondary colors and accents
+    * All colors properly configured with light/dark mode support
+  - **Content Updates**:
+    * Hero section: "TODAY, NOT TOMORROW" messaging
+    * Coach profile: Updated to Coach Rico with ISSA certifications
+    * Training programs: Calisthenics, Flexibility, Boxing, Strength Training, Fat Loss
+    * Contact info: New York location and TNT Fitness contact details
+  - **Video Integration**: Integrated Coach Rico's training videos
+  - **Social Media**: Updated Instagram to @tntfitness
+
+- **Previous Lily Rolle Fitness Branding** (October 9, 2025)
   - **Colors**: Updated entire color scheme to neon cyberpunk aesthetic
     * Hot Pink #FF2D95 (HSL: 328 100% 59%) - Primary buttons and accents
     * Electric Purple #9B5DE5 - Secondary colors and gradients
@@ -63,8 +78,8 @@ Modern, responsive personal trainer website for Lillian Rolle featuring parallax
 - `SESSION_SECRET` - Session secret for Express (already configured)
 
 ## User Information
-- Coach: Lillian Rolle
-- Location: Havana, Cuba
-- Instagram: @ellorylil (https://www.instagram.com/ellorylil)
-- Certifications: ECP - EFTI/Lionel (NBFE)
-- Specialties: Middle Age Fitness, Muscle Gain, Sports Training, Weight Loss, Yoga
+- Coach: Rico (TNT Fitness)
+- Location: New York, NY
+- Instagram: @tntfitness (https://www.instagram.com/tntfitness)
+- Certifications: ISSA Certified, Athletic Performance Specialist, Bodyweight Training Expert
+- Specialties: Calisthenics, Flexibility, Boxing, Strength Training, Fat Loss

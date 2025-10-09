@@ -23,9 +23,9 @@ export default function Footer({ instagramUrl, location, email }: FooterProps) {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-4">Lillian Rolle</h3>
+            <h3 className="text-xl font-bold mb-4">TNT Fitness</h3>
             <p className="text-muted-foreground mb-4">
-              Transform your body, elevate your life through expert personal training.
+              Today, Not Tomorrow - Explosive fitness transformations with Coach Rico.
             </p>
             <div className="flex gap-4">
               <Button
@@ -46,17 +46,17 @@ export default function Footer({ instagramUrl, location, email }: FooterProps) {
             <ul className="space-y-2 text-muted-foreground">
               <li>
                 <a href="#specialties" className="hover:text-foreground transition-colors">
-                  Training Specialties
+                  Training Programs
                 </a>
               </li>
               <li>
                 <a href="#about" className="hover:text-foreground transition-colors">
-                  About Me
+                  About Coach Rico
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-foreground transition-colors">
-                  Contact
+                  Schedule Assessment
                 </a>
               </li>
             </ul>
@@ -84,7 +84,7 @@ export default function Footer({ instagramUrl, location, email }: FooterProps) {
         </div>
 
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2024 Lillian Rolle Training. All rights reserved.</p>
+          <p>© 2024 TNT Fitness. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />

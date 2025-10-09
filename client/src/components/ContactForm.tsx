@@ -99,7 +99,7 @@ export default function ContactForm({ onSubmit, trainingGoals, contactInfo }: Co
                       rel="noopener noreferrer"
                       className="hover:text-primary transition-colors"
                     >
-                      @ellorylil
+                      @tntfitness
                     </a>
                   </div>
                 </div>

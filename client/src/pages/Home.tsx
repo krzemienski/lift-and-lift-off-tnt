@@ -6,13 +6,12 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import StickyNav from "@/components/StickyNav";
-import { Dumbbell, Heart, Trophy, Scale, Flower2 } from "lucide-react";
+import { Dumbbell, Activity, Shield, Target, Flame } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { InstagramPost } from "@shared/schema";
-import heroVideo from "@assets/20251004_1852_Loop Video_loop_01k6rpsmebeqbany0na4a9jjdq_1759788986675.mp4";
-import coachImage from "@assets/IMG_8895_Original_1759789084126.jpeg";
+import heroVideo from "@assets/19700121_0354_68e81c40fec88191bc473950076dccad_1760044276094.mp4";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -77,29 +76,29 @@ export default function Home() {
 
   const specialties = [
     {
-      icon: Heart,
-      title: "Middle Age Fitness Goals",
-      description: "Tailored programs focusing on longevity, mobility, and sustainable fitness for adults 40+. Build strength while protecting your joints.",
+      icon: Activity,
+      title: "Calisthenics",
+      description: "Master bodyweight training with progressive exercises that build functional strength, coordination, and control without equipment.",
+    },
+    {
+      icon: Target,
+      title: "Flexibility",
+      description: "Improve your range of motion, prevent injuries, and enhance performance through targeted mobility and stretching techniques.",
+    },
+    {
+      icon: Shield,
+      title: "Boxing",
+      description: "High-intensity boxing workouts that combine cardio, coordination, and stress relief while building mental toughness.",
     },
     {
       icon: Dumbbell,
-      title: "Muscle Gain",
-      description: "Progressive resistance training and nutrition guidance to help you build lean muscle mass and increase strength effectively.",
+      title: "Strength Training",
+      description: "Progressive resistance programs designed to build muscle, increase power, and transform your physique effectively.",
     },
     {
-      icon: Trophy,
-      title: "Sports Specific Training",
-      description: "Performance-focused workouts designed to enhance your athletic abilities and excel in your chosen sport.",
-    },
-    {
-      icon: Scale,
-      title: "Weight Loss",
-      description: "Evidence-based approach combining cardio, strength training, and nutrition to achieve sustainable weight loss results.",
-    },
-    {
-      icon: Flower2,
-      title: "Yoga",
-      description: "Mind-body practice improving flexibility, balance, and mental clarity through traditional and modern yoga techniques.",
+      icon: Flame,
+      title: "Fat Loss",
+      description: "Science-based fat burning strategies combining HIIT, strength training, and nutrition coaching for sustainable results.",
     },
   ];
 
@@ -133,25 +132,25 @@ export default function Home() {
       </div>
 
       <HeroSection
-        title="Transform Your Body, Elevate Your Life"
-        subtitle="Expert personal training tailored to your goals with certified coach Lillian Rolle"
-        primaryCTA="Start Your Transformation"
-        secondaryCTA="View My Programs"
+        title="TODAY, NOT TOMORROW"
+        subtitle="Stop waiting, start transforming. Expert fitness coaching by Coach Rico at TNT Fitness"
+        primaryCTA="Start Now"
+        secondaryCTA="View Programs"
         onPrimaryCTA={scrollToContact}
         onSecondaryCTA={scrollToSpecialties}
       />
 
       <div id="about">
         <CoachProfile
-          name="Lillian Rolle"
-          location="Havana, Cuba"
-          imageSrc={coachImage}
-          bio="With a passion for transforming lives through fitness, I bring authentic Cuban energy and certified expertise to every training session. My approach combines proven techniques with personalized attention to help you achieve sustainable results, no matter your age or fitness level."
-          certifications={["ECP - EFTI/Lionel (NBFE)", "Certified Yoga Instructor", "Sports Nutrition Specialist"]}
+          name="Coach Rico"
+          location="New York, USA"
+          imageSrc={undefined}
+          bio="Today, Not Tomorrow - that's more than just our motto at TNT Fitness, it's our way of life. I specialize in explosive transformations through calisthenics, boxing, and strength training. With ISSA certification and years of experience, I'll push you beyond your limits to achieve the results you've been waiting for."
+          certifications={["ISSA Certified", "Athletic Performance Specialist", "Bodyweight Training Expert", "Sports Nutrition"]}
           stats={[
-            { label: "Years Experience", value: "8+" },
-            { label: "Clients Trained", value: "500+" },
-            { label: "Success Stories", value: "200+" },
+            { label: "Years Experience", value: "10+" },
+            { label: "Clients Transformed", value: "750+" },
+            { label: "Success Rate", value: "95%" },
           ]}
         />
       </div>
@@ -161,35 +160,35 @@ export default function Home() {
       </div>
 
       <InstagramFeed
-        username="ellorylil"
+        username="tntfitness"
         posts={instagramPosts}
-        profileUrl="https://www.instagram.com/ellorylil"
+        profileUrl="https://www.instagram.com/tntfitness"
       />
 
       <div id="contact">
         <ContactForm
           onSubmit={handleContactSubmit}
           trainingGoals={[
-            "Middle Age Fitness",
-            "Muscle Gain",
-            "Sports Training",
-            "Weight Loss",
-            "Yoga",
-            "General Fitness",
+            "Calisthenics",
+            "Flexibility Training",
+            "Boxing",
+            "Strength Training",
+            "Fat Loss",
+            "Athletic Performance",
           ]}
           contactInfo={{
-            email: "lillian@rolletraining.com",
-            phone: "+1 (305) 555-0123",
-            location: "Miami, FL",
-            instagram: "https://www.instagram.com/ellorylil",
+            email: "rico@tntfitness.com",
+            phone: "+1 (212) 555-0123",
+            location: "New York, NY",
+            instagram: "https://www.instagram.com/tntfitness",
           }}
         />
       </div>
 
       <Footer
-        instagramUrl="https://www.instagram.com/ellorylil"
-        location="Miami, FL"
-        email="lillian@rolletraining.com"
+        instagramUrl="https://www.instagram.com/tntfitness"
+        location="New York, NY"
+        email="rico@tntfitness.com"
       />
     </div>
   );
