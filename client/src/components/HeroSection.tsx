@@ -33,7 +33,7 @@ export default function HeroSection({
   return (
     <section className="relative h-screen w-full flex items-center justify-center px-6">
       <div className="max-w-5xl text-center text-white">
-        <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
+        <h1 className="mb-6 text-5xl font-display font-extrabold leading-tight md:text-7xl">
           {title}
         </h1>
         <p className="mb-10 text-lg md:text-xl text-white/90">

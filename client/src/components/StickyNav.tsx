@@ -6,6 +6,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import kettlebellIcon from "@assets/icon_kettlebell.svg";
 
 const SCROLL_THRESHOLD_PERCENTAGE = 0.7;
 
@@ -42,8 +43,8 @@ export default function StickyNav() {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between gap-2 py-3">
               <div className="flex items-center gap-2">
-                <Dumbbell className="h-5 w-5 text-primary" data-testid="icon-nav-logo" />
-                <span className="font-semibold text-lg" data-testid="text-nav-title">Quick Navigation</span>
+                <img src={kettlebellIcon} className="h-5 w-5" alt="Lily Fitness" data-testid="icon-nav-logo" />
+                <span className="font-heading font-bold text-lg" data-testid="text-nav-title">Quick Navigation</span>
               </div>
               
               <CollapsibleTrigger asChild>

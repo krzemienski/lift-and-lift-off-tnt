@@ -59,7 +59,7 @@ export default function ContactForm({ onSubmit, trainingGoals, contactInfo }: Co
     <section className="py-20 md:py-32 px-6 bg-black/40 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+          <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-4 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
             Get In Contact With Me
           </h2>
           <p className="text-lg text-white/80" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
@@ -71,7 +71,7 @@ export default function ContactForm({ onSubmit, trainingGoals, contactInfo }: Co
           <div className="md:col-span-2 space-y-6">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+                <h3 className="text-xl font-heading font-bold mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary" />
@@ -108,7 +108,7 @@ export default function ContactForm({ onSubmit, trainingGoals, contactInfo }: Co
 
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3">Response Time</h3>
+                <h3 className="text-xl font-heading font-bold mb-3">Response Time</h3>
                 <p className="text-muted-foreground">
                   I typically respond within 24 hours during business days. Looking forward to hearing from you!
                 </p>

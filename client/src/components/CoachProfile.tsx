@@ -33,7 +33,7 @@ export default function CoachProfile({
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white" data-testid="text-coach-name" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-4 text-white" data-testid="text-coach-name" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
               {name}
             </h2>
             <p className="text-lg text-white/80 mb-6" data-testid="text-coach-location" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
@@ -45,7 +45,7 @@ export default function CoachProfile({
             </p>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>Certifications</h3>
+              <h3 className="text-xl font-heading font-bold mb-4 text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>Certifications</h3>
               <div className="flex flex-wrap gap-2">
                 {certifications.map((cert, index) => (
                   <Badge key={index} variant="secondary" className="text-sm" data-testid={`badge-cert-${index}`}>
