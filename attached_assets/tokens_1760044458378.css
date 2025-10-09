@@ -1,0 +1,14 @@
+:root {
+  --tnt-navy: #0B2545;
+  --tnt-indigo: #243B6B;
+  --tnt-gold: #D4A017;
+  --tnt-white: #FFFFFF;
+  --tnt-black: #0B0D10;
+  --tnt-text: var(--tnt-navy);
+  --tnt-bg: #FFFFFF;
+}
+/* Dark theme example */
+:root[data-theme="dark"] {
+  --tnt-text: var(--tnt-white);
+  --tnt-bg: var(--tnt-black);
+}

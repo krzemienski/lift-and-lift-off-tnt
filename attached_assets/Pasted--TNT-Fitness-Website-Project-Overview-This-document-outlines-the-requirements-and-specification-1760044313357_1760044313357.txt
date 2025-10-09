@@ -1,0 +1,122 @@
+# TNT Fitness Website Project
+
+## Overview
+This document outlines the requirements and specifications for Coach Rico's fitness website. The brand, "TNT" (Today, Not Tomorrow) Fitness, emphasizes immediate action and transformation through specialized training programs.
+
+## Brand Identity
+
+### Company Name
+- **Primary**: TNT (Today, Not Tomorrow) Fitness
+- **Alternative Options**: 
+  - Got Fit
+  - Got Cov
+  - *(Final domain name to be determined)*
+
+### Logo Concept
+- **Design**: TNT box (explosive box) with muscular arms flexing on each side
+- **Style**: Dynamic and energetic, representing explosive fitness results
+- **Purpose**: Website branding and visual identity
+
+### Color Schemes
+
+**Option 1: Patriotic Theme**
+- Red
+- White
+- Blue
+
+**Option 2: Premium Theme**
+- Blue
+- Gold
+- Indigo
+
+**Color Guidelines**:
+- Bright and eye-catching tones
+- Avoid dark or eerie shades
+- Fun and engaging visual appeal
+- High contrast for readability
+
+## Service Offerings
+
+### Coach Rico's Specialties
+1. **Calisthenics** - Bodyweight training and movement
+2. **Flexibility** - Mobility and range of motion training
+3. **Boxing** - Combat fitness and conditioning
+4. **Strength Training** - Progressive resistance programs
+5. **Fat Loss** - Body composition transformation
+
+## Website Structure
+
+### User Journey
+1. **Discovery**: Client visits website
+2. **Engagement**: Client views content and services
+3. **Connection**: Client sends message or follows Instagram
+4. **Conversion**: Direct outreach and client sync
+
+### Key Features
+- **Contact Form**: Simple message submission for inquiries
+- **Social Media Integration**: Instagram follow button and content feed
+- **Content Display**: Showcase training philosophy and results
+- **Direct Communication**: Streamlined outbound client engagement
+
+## Design Specifications
+
+### Typography
+- **Style**: Clean and modern
+- **Approach**: Elegant branding with professional readability
+- **Purpose**: Support brand identity while maintaining clarity
+
+### Visual Elements
+- **Video Parallax Background**: Dynamic scrolling video effect for engaging user experience
+- **Responsive Design**: Mobile-first approach for accessibility
+- **Visual Hierarchy**: Clear content organization and flow
+
+## Technical Requirements
+
+### Domain
+- [ ] Finalize domain name (TNT/Today Not Tomorrow Fitness variations)
+- [ ] Register and configure DNS settings
+
+### Development Features
+- [ ] Implement video parallax background
+- [ ] Create responsive layout
+- [ ] Integrate contact form functionality
+- [ ] Add Instagram API integration
+- [ ] Optimize for mobile devices
+
+## Action Items
+
+### Branding
+- [ ] Design TNT box logo with muscular arms
+- [ ] Finalize color scheme (Option 1 or Option 2)
+- [ ] Select typography family and weights
+- [ ] Create brand style guide
+
+### Content
+- [ ] Write compelling copy for services
+- [ ] Gather testimonials and transformation stories
+- [ ] Create or source video content for parallax background
+- [ ] Prepare Instagram content strategy
+
+### Development
+- [ ] Set up hosting and domain
+- [ ] Build website structure with parallax video
+- [ ] Implement contact and social integration
+- [ ] Test user journey and conversion flow
+- [ ] Launch and monitor analytics
+
+## Notes
+- Brand emphasizes urgency and action ("Today, Not Tomorrow")
+- Design should be vibrant, energetic, and motivating
+- User experience prioritizes simplicity and direct communication
+- Coach Rico's personal brand is central to the website identity
+
+Education
+Equinox Fitness Training Institute
+Certifications
+• International Sports Sciences Association (ISSA)
+Specialties
+• Athletic Performance
+• Bodyweight Training
+• Cardiovascular Conditioning
+• Strength Training
+• Weight Loss
