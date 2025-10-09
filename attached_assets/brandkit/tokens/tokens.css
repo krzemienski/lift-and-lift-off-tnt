@@ -1,0 +1,10 @@
+:root {
+  --color-pink: #FF2D95;
+  --color-purple: #9B5DE5;
+  --color-black: #0E0E0E;
+  --color-magenta: #FF00FF;
+  --color-violet: #7B2CBF;
+  --color-steel: #222222;
+  --radius: 16px;
+  --shadow-neon: 0 0 12px rgba(255,45,149,0.6), 0 0 24px rgba(155,93,229,0.5);
+}

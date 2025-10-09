@@ -1,0 +1,73 @@
+{
+  "brand_name": "Lily Rolle Fitness",
+  "primary_colors": {
+    "hot_pink": {
+      "hex": "#FF2D95",
+      "rgb": [
+        255,
+        45,
+        149
+      ],
+      "hsl": "328, 100%, 59%"
+    },
+    "electric_purple": {
+      "hex": "#9B5DE5",
+      "rgb": [
+        155,
+        93,
+        229
+      ],
+      "hsl": "266, 72%, 63%"
+    },
+    "carbon_black": {
+      "hex": "#0E0E0E",
+      "rgb": [
+        14,
+        14,
+        14
+      ],
+      "hsl": "0, 0%, 5%"
+    }
+  },
+  "accent_colors": {
+    "neon_magenta": {
+      "hex": "#FF00FF",
+      "rgb": [
+        255,
+        0,
+        255
+      ]
+    },
+    "deep_violet": {
+      "hex": "#7B2CBF",
+      "rgb": [
+        123,
+        44,
+        191
+      ]
+    },
+    "steel_gray": {
+      "hex": "#222222",
+      "rgb": [
+        34,
+        34,
+        34
+      ]
+    }
+  },
+  "fonts": {
+    "display": "Orbitron",
+    "heading": "Montserrat",
+    "body": "Inter"
+  },
+  "css_variables": {
+    "--color-pink": "#FF2D95",
+    "--color-purple": "#9B5DE5",
+    "--color-black": "#0E0E0E",
+    "--color-magenta": "#FF00FF",
+    "--color-violet": "#7B2CBF",
+    "--color-steel": "#222222",
+    "--radius": "16px",
+    "--shadow-neon": "0 0 12px rgba(255,45,149,0.6), 0 0 24px rgba(155,93,229,0.5)"
+  }
+}

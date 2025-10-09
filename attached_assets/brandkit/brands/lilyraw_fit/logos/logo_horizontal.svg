@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320">
+  <defs>
+    <linearGradient id="neonGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF2D95"/>
+      <stop offset="100%" stop-color="#9B5DE5"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .bg{fill:#0E0E0E}
+      .stroke{stroke:url(#neonGradient);stroke-width:10;fill:none;filter:url(#glow);stroke-linecap:round;stroke-linejoin:round}
+      .fillGrad{fill:url(#neonGradient);filter:url(#glow)}
+      .text{fill:#FFFFFF;font-family:'Montserrat','Orbitron','Segoe UI',Arial,sans-serif}
+    </style>
+  </defs>
+<g transform="translate(40,40) scale(0.5)">
+  <defs>
+    <linearGradient id="neonGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF2D95"/>
+      <stop offset="100%" stop-color="#9B5DE5"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .bg{fill:#0E0E0E}
+      .stroke{stroke:url(#neonGradient);stroke-width:10;fill:none;filter:url(#glow);stroke-linecap:round;stroke-linejoin:round}
+      .fillGrad{fill:url(#neonGradient);filter:url(#glow)}
+      .text{fill:#FFFFFF;font-family:'Montserrat','Orbitron','Segoe UI',Arial,sans-serif}
+    </style>
+  </defs>
+<rect class="stroke" x="136" y="84" rx="30" ry="30" width="240" height="70"/><circle class="stroke" cx="256" cy="310" r="150"/><path class="stroke" d="M130 380 Q256 430 382 380"/><circle class="stroke" cx="256" cy="300" r="90" /></g><g transform="translate(40,40) scale(0.5)">
+  <defs>
+    <linearGradient id="neonGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF2D95"/>
+      <stop offset="100%" stop-color="#9B5DE5"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .bg{fill:#0E0E0E}
+      .stroke{stroke:url(#neonGradient);stroke-width:10;fill:none;filter:url(#glow);stroke-linecap:round;stroke-linejoin:round}
+      .fillGrad{fill:url(#neonGradient);filter:url(#glow)}
+      .text{fill:#FFFFFF;font-family:'Montserrat','Orbitron','Segoe UI',Arial,sans-serif}
+    </style>
+  </defs>
+<rect class="stroke" x="42" y="84" width="428" height="344" rx="24" ry="24"/><polyline class="stroke" points="70,256 130,256 170,206 210,306 250,176 290,306 330,246 380,246 442,246"/></g><text class="text" x="360" y="200" font-size="96" font-weight="800" letter-spacing="1">lilyraw.fit</text></svg>
