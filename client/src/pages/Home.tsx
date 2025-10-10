@@ -117,9 +117,9 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="h-[140vh] w-full object-cover md:object-cover object-top md:object-center scale-150 md:scale-100 sm:scale-125"
+            className="h-[140vh] w-full object-cover object-center"
             style={{
-              transformOrigin: 'top center',
+              transformOrigin: 'center',
             }}
           >
             <source src={heroVideo} type="video/mp4" />
