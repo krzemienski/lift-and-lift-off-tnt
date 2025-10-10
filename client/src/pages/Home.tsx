@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { InstagramPost } from "@shared/schema";
-import heroVideo from "@assets/download_1760055598134.mp4";
+import heroVideo from "@assets/download_1760056534924.mp4";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -117,7 +117,10 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="h-[140vh] w-full object-cover"
+            className="h-[140vh] w-full object-cover md:object-cover object-top md:object-center scale-150 md:scale-100 sm:scale-125"
+            style={{
+              transformOrigin: 'top center',
+            }}
           >
             <source src={heroVideo} type="video/mp4" />
           </video>

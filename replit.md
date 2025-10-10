@@ -16,7 +16,10 @@ Modern, responsive personal trainer website for TNT Fitness (Today, Not Tomorrow
     * Coach profile: Updated to Coach Rico with ISSA certifications
     * Training programs: Calisthenics, Flexibility, Boxing, Strength Training, Fat Loss
     * Contact info: New York location and TNT Fitness contact details
-  - **Video Integration**: Integrated Coach Rico's training videos
+  - **Video Integration**: Integrated Coach Rico's training videos with mobile-responsive zoom
+    * Desktop: Normal scale with centered positioning
+    * Mobile: 150% zoom focused on person (object-top positioning)
+    * Latest video: download_1760056534924.mp4
   - **Social Media**: Updated Instagram to @tntfitness
 
 - **Previous Lily Rolle Fitness Branding** (October 9, 2025)
