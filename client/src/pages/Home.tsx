@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { InstagramPost } from "@shared/schema";
-import heroVideo from "@assets/19700121_0354_68e81c40fec88191bc473950076dccad_1760044276094.mp4";
+import heroVideo from "@assets/download_1760055598134.mp4";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
