@@ -1,0 +1,5 @@
+- **Calisthenics** — Control your body, master movement.
+- **Flexibility** — Mobility work to move pain‑free.
+- **Boxing** — Conditioning + technique for ring stamina.
+- **Strength Training** — Progressive overload, durable gains.
+- **Fat Loss** — Nutrition guidance + metabolic conditioning.

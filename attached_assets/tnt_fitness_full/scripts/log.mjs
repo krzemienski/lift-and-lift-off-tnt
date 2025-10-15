@@ -1,0 +1,1 @@
+const ts=new Date().toISOString();console.log(`[TNT] ${process.argv[2]||'run'} @ ${ts}`)

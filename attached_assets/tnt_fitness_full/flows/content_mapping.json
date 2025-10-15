@@ -1,0 +1,16 @@
+{
+  "home": {
+    "content": "src/content/home.md",
+    "video_desktop": "public/videos/hero_kettlebell.mp4",
+    "video_mobile": "public/videos/hero_ropes.mp4"
+  },
+  "programs": {
+    "content": "src/content/programs.md"
+  },
+  "trainer": {
+    "content": "src/content/trainer_story_longform.md"
+  },
+  "assessment": {
+    "content": "src/content/assessment.md"
+  }
+}

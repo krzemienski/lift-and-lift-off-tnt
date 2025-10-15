@@ -1,0 +1,4 @@
+import React from 'react'
+import { useParams } from 'react-router-dom'
+const map:any={'calisthenics':['Core control','Skill progressions','Full‑body strength'],'flexibility':['Mobility flows','Joint health','Pain‑free range'],'boxing':['Footwork & guard','Pad rounds','Conditioning'],'strength':['Progressive overload','Form & safety','Durable gains'],'fat-loss':['Nutrition guidance','Energy balance','Metabolic circuits']}
+export default function ProgramDetail(){const {slug}=useParams();const pts=map[slug??'']||[];return (<div className='mx-auto max-w-4xl px-6 py-10'><h1 className='text-3xl font-extrabold mb-4'>{(slug||'Program').replace('-', ' ').replace(/\b\w/g,(c)=>c.toUpperCase())}</h1><ul className='list-disc pl-6 space-y-2'>{pts.map((p:string,i:number)=>(<li key={i}>{p}</li>))}</ul><a href='/assessment' className='button button--primary mt-6 inline-flex'>Start with an Assessment</a></div>) }

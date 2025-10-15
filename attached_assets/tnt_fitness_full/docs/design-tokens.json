@@ -1,0 +1,28 @@
+{
+  "colors": {
+    "navy": "#0B2545",
+    "indigo": "#243B6B",
+    "gold": "#D4A017",
+    "white": "#FFFFFF",
+    "black": "#0B0D10"
+  },
+  "fonts": {
+    "display": "Montserrat",
+    "body": "Inter"
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "radii": {
+    "sm": 10,
+    "md": 14,
+    "lg": 20
+  }
+}
