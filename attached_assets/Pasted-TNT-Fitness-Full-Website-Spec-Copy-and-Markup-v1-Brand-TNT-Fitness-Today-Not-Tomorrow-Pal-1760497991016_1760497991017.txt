@@ -1,0 +1,247 @@
+TNT Fitness — Full Website Spec, Copy, and Markup (v1)
+
+Brand: TNT Fitness (Today, Not Tomorrow)
+Palette: Navy #0B2545, Indigo #243B6B, Gold #D4A017, White #FFFFFF, Black #0B0D10
+
+Videos (hero parallax, provided by you): kettlebell video and battle ropes video. Use one per breakpoint (desktop/mobile) and rotate per session.
+
+⸻
+
+1) Sitemap & Flows
+
+Home (/)
+  ├─ Programs (/programs)
+  │   ├─ Calisthenics (/programs/calisthenics)
+  │   ├─ Flexibility  (/programs/flexibility)
+  │   ├─ Boxing       (/programs/boxing)
+  │   ├─ Strength     (/programs/strength)
+  │   └─ Fat Loss     (/programs/fat-loss)
+  ├─ Assessment (/assessment)
+  ├─ Trainer (/trainer)
+  ├─ Results (/results)
+  ├─ Instagram (/instagram)
+  ├─ Contact (/contact)
+  ├─ Legal (/privacy, /terms)
+  └─ System (/_success, /_error, /404)
+
+Primary flow: Home → Programs/Trainer → Assessment → Success (email/DM follow‑up).
+
+⸻
+
+2) Global Navigation (Desktop → Mobile Drawer)
+
+Desktop: Logo (left) · Programs · Trainer · Assessment · Results · Instagram · CTA (Get Started)
+Mobile: Hamburger → same links; CTA pinned in drawer
+
+⸻
+
+3) Page Blueprints & Copy
+
+3.1 Home
+
+Hero (video parallax)
+	•	Headline: TODAY, NOT TOMORROW
+	•	Subcopy: Immediate, focused coaching across boxing, strength, calisthenics, flexibility, and fat loss—engineered for accountability and results.
+	•	CTA: Schedule Assessment (Gold)
+	•	Secondary: View Programs (outline)
+
+Programs (5 cards)
+	•	Calisthenics — Control your body, master movement.
+	•	Flexibility — Mobility work to move pain‑free.
+	•	Boxing — Conditioning + technique for real ring stamina.
+	•	Strength Training — Progressive overload, safer form, durable gains.
+	•	Fat Loss — Nutrition guidance + metabolic conditioning.
+
+Coach Rico (About)
+	•	Education: Equinox Fitness Training Institute
+	•	Certifications: ISSA – International Sports Sciences Association
+	•	Revelation: My journey started with asthma and early setbacks. Fitness became the discipline that fueled my recovery and performance.
+	•	Evolution: In 2019 I suffered severe head and spinal injuries and spent two years rehabbing. In 2024 I committed to mastering human performance, earning PT and nutrition credentials. Fitness served and saved me—now it’s your turn.
+
+Results
+	•	Testimonial carousel (3–6 quotes) + before/after gallery.
+
+Instagram
+	•	3×2 grid of latest posts + Follow button.
+
+Footer
+	•	Links: Programs, Trainer, Assessment, Instagram, Contact, Privacy, Terms. © TNT Fitness.
+
+3.2 Programs (grid)
+	•	Intro blurb + filter pills; 2–3 cards per row on desktop, 1 per row on mobile.
+
+3.3 Program Detail (template)
+	•	Hero image (or short muted loop).
+	•	“What you’ll achieve” bullet list (3–5).
+	•	Weekly structure block: 2–4 sessions, 45–60 min, notes.
+	•	Gear list (if any).
+	•	CTA: Start with an Assessment.
+
+3.4 Trainer
+	•	Education, Certifications, Revelation & Evolution story (long form).
+	•	Coaching philosophy: Fitness is wellness for mind, spirit, and body.
+	•	CTA: Book consult.
+
+3.5 Assessment
+	•	Explainer list: 20‑min call · Movement screen · Program fit · Next steps.
+	•	Form (Name, Email/IG, Goals multi‑select, Preferred time), consent checkbox.
+	•	Success page with thanks and next steps.
+
+3.6 Contact
+	•	Message form, map placeholder (optional), response SLA.
+
+⸻
+
+4) Design Tokens (CSS)
+
+:root{
+  --tnt-navy:#0B2545; --tnt-indigo:#243B6B; --tnt-gold:#D4A017; --tnt-white:#FFFFFF; --tnt-black:#0B0D10;
+  --font-display:"Montserrat",ui-sans-serif,system-ui; --font-body:"Inter",ui-sans-serif,system-ui;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px;
+}
+
+
+⸻
+
+5) Markup — Core Components (Tailwind classes)
+
+5.1 Header
+
+<header class="fixed inset-x-0 top-0 z-50 bg-[color:var(--tnt-navy)]/85 backdrop-blur border-b border-white/10">
+  <div class="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/assets/icon_1A_64.png" alt="TNT Fitness" class="h-8 w-8"/>
+      <span class="text-white font-bold tracking-wide">TNT FITNESS</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-white/90">
+      <a href="/programs" class="hover:text-white">Programs</a>
+      <a href="/trainer" class="hover:text-white">Trainer</a>
+      <a href="/assessment" class="hover:text-white">Assessment</a>
+      <a href="/results" class="hover:text-white">Results</a>
+      <a href="/instagram" class="hover:text-white">Instagram</a>
+      <a href="/assessment" class="ml-4 inline-flex items-center bg-[color:var(--tnt-gold)] text-black font-semibold px-4 py-2 rounded-xl">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+5.2 Hero with Parallax Video (desktop + mobile videos)
+
+<section class="relative pt-16">
+  <video class="absolute inset-0 w-full h-[70vh] object-cover" autoplay muted playsinline loop poster="/images/hero-poster.jpg">
+    <source src="/videos/hero_kettlebell.mp4" type="video/mp4" media="(min-width:768px)">
+    <source src="/videos/hero_ropes.mp4" type="video/mp4" media="(max-width:767px)">
+  </video>
+  <div class="absolute inset-0 bg-[color:var(--tnt-navy)]/55"></div>
+  <div class="relative mx-auto max-w-7xl px-6 h-[70vh] flex items-center">
+    <div class="max-w-2xl text-white">
+      <h1 class="font-[var(--font-display)] font-extrabold text-5xl md:text-6xl leading-tight">TODAY, NOT TOMORROW</h1>
+      <p class="mt-4 text-white/90">Immediate, focused coaching across boxing, strength, calisthenics, flexibility, and fat loss—engineered for accountability and results.</p>
+      <div class="mt-6 flex gap-3">
+        <a href="/assessment" class="bg-[color:var(--tnt-gold)] text-black font-semibold px-5 py-3 rounded-xl">Schedule Assessment</a>
+        <a href="/programs" class="border border-white/40 text-white px-5 py-3 rounded-xl">View Programs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+Parallax note: Wrap the hero in a parent with will-change: transform and add a small translateZ(0); on scroll, apply a subtle transform: translateY(-8%) to the video layer for depth. Respect prefers-reduced-motion.
+
+5.3 Program Card
+
+<a href="/programs/calisthenics" class="group rounded-2xl overflow-hidden bg-white shadow hover:shadow-lg transition">
+  <img src="/images/calisthenics.jpg" class="h-48 w-full object-cover" alt="Calisthenics"/>
+  <div class="p-5">
+    <h3 class="font-[var(--font-display)] font-extrabold text-xl text-[color:var(--tnt-navy)]">Calisthenics</h3>
+    <p class="mt-1 text-[color:var(--tnt-navy)]/80">Control your body, master movement.</p>
+  </div>
+</a>
+
+5.4 Trainer Bio Block
+
+<section class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-8 items-center">
+  <div>
+    <h2 class="text-3xl font-extrabold text-[color:var(--tnt-navy)]">Coach Rico</h2>
+    <p class="mt-3">Education: Equinox Fitness Training Institute</p>
+    <p>Certifications: ISSA — International Sports Sciences Association</p>
+    <h3 class="mt-5 font-bold">Revelation</h3>
+    <p>My journey started with asthma and early setbacks...</p>
+    <h3 class="mt-5 font-bold">Evolution</h3>
+    <p>In 2019 I suffered severe injuries and spent two years rehabbing...</p>
+    <a href="/assessment" class="mt-6 inline-flex bg-[color:var(--tnt-gold)] text-black font-semibold px-5 py-3 rounded-xl">Book a Free Consult</a>
+  </div>
+  <img src="/images/coach-rico.jpg" alt="Coach Rico" class="rounded-2xl shadow"/>
+</section>
+
+5.5 Assessment Form
+
+<form class="mx-auto max-w-2xl p-6 bg-white rounded-2xl shadow space-y-4" action="/api/contact" method="post">
+  <input class="w-full border rounded-xl px-4 py-3" name="name" placeholder="Your name" required>
+  <input class="w-full border rounded-xl px-4 py-3" name="contact" placeholder="Email or Instagram" required>
+  <fieldset class="space-y-2">
+    <legend class="font-semibold">Goals</legend>
+    <div class="flex flex-wrap gap-2">
+      <label><input type="checkbox" name="goals" value="calisthenics"> Calisthenics</label>
+      <label><input type="checkbox" name="goals" value="flexibility"> Flexibility</label>
+      <label><input type="checkbox" name="goals" value="boxing"> Boxing</label>
+      <label><input type="checkbox" name="goals" value="strength"> Strength</label>
+      <label><input type="checkbox" name="goals" value="fat-loss"> Fat Loss</label>
+    </div>
+  </fieldset>
+  <textarea class="w-full border rounded-xl px-4 py-3" name="notes" rows="3" placeholder="Anything else?" ></textarea>
+  <button class="bg-[color:var(--tnt-gold)] text-black font-semibold px-5 py-3 rounded-xl">Send</button>
+</form>
+
+
+⸻
+
+6) Video Guidelines (Hero)
+	•	Duration: 8–12s loops, seamless; Resolution: 3840×2160 (desktop), 1080×1920 (mobile).
+	•	Encode: H.264 baseline + webm (VP9) if desired.
+	•	Poster: darkened frame with 10–15% navy overlay.
+	•	Accessibility: Respect prefers-reduced-motion; provide aria-label and descriptive fallback copy.
+
+⸻
+
+7) Content Inventory
+	•	Copy blocks above for Home, Programs intro, Trainer longform (Revelation/Evolution), Assessment, Results, Instagram, Contact.
+	•	Media: hero videos (kettlebell, ropes), coach portraits, program photos, testimonials.
+
+⸻
+
+8) Build & Deploy (Docker-first)
+
+# Builder
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package.json .
+RUN npm i
+COPY . .
+RUN npm run build
+
+# Runner
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+RUN printf 'server {\n  listen 80;\n  server_name _;\n  root /usr/share/nginx/html;\n  location / { try_files $uri /index.html; }\n}\n' > /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
+
+Commands
+
+npm install
+npm run dev   # local
+npm run build && npm run preview
+# Docker
+docker build -t tnt-fitness . && docker run --rm -p 8080:80 tnt-fitness
+
+
+⸻
+
+9) QA Checklist
+	•	Contrast AA+; keyboard nav; focus ring visible.
+	•	Motion fallback on; hero videos muted, looped, playsinline, no audio.
+	•	Images lazy-loaded; posters set; OG image present.
+	•	Forms: validation + spam protection.
+
+⸻
+
+Need separate boards per page or more markup? Reply with the page names (e.g., “Programs detail” + “Assessment success”) and I’ll export desktop & mobile boards for each.
