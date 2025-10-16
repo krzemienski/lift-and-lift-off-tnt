@@ -83,6 +83,14 @@ export default function VideoCarousel() {
         ref={containerRef}
         className="absolute inset-0 -top-[20vh]"
       >
+        {/* Fallback poster image for when videos aren't loaded */}
+        <div 
+          className="absolute inset-0 h-[140vh] w-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(/images/hero_poster_desktop.jpg)`,
+            transformOrigin: 'center',
+          }}
+        />
         {videos.map((videoSrc, index) => (
           <video
             key={index}

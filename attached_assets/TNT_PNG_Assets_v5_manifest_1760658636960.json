@@ -1,0 +1,146 @@
+{
+  "public/favicon-512.png": [
+    512,
+    512
+  ],
+  "public/favicon-192.png": [
+    192,
+    192
+  ],
+  "public/favicon-180.png": [
+    180,
+    180
+  ],
+  "public/favicon-128.png": [
+    128,
+    128
+  ],
+  "public/favicon-64.png": [
+    64,
+    64
+  ],
+  "public/favicon-48.png": [
+    48,
+    48
+  ],
+  "public/favicon-32.png": [
+    32,
+    32
+  ],
+  "public/favicon-16.png": [
+    16,
+    16
+  ],
+  "public/og-image.png": [
+    1200,
+    630
+  ],
+  "public/brand/icon_1A_1024.png": [
+    1024,
+    1024
+  ],
+  "public/brand/icon_1A_512.png": [
+    512,
+    512
+  ],
+  "public/brand/icon_1A_256.png": [
+    256,
+    256
+  ],
+  "public/brand/icon_1A_128.png": [
+    128,
+    128
+  ],
+  "public/brand/icon_1A_64.png": [
+    64,
+    64
+  ],
+  "public/brand/icon_1B_1024.png": [
+    1024,
+    1024
+  ],
+  "public/brand/icon_1B_512.png": [
+    512,
+    512
+  ],
+  "public/brand/icon_1B_256.png": [
+    256,
+    256
+  ],
+  "public/brand/icon_1B_128.png": [
+    128,
+    128
+  ],
+  "public/brand/icon_1B_64.png": [
+    64,
+    64
+  ],
+  "public/brand/horizontal_1A_dark_FIX.png": [
+    2400,
+    1200
+  ],
+  "public/brand/horizontal_1A_light_FIX.png": [
+    2400,
+    1200
+  ],
+  "public/brand/horizontal_1A_dark_FIX_transparent.png": [
+    2400,
+    1200
+  ],
+  "public/brand/horizontal_1A_light_FIX_transparent.png": [
+    2400,
+    1200
+  ],
+  "public/icons/png/kettlebell.png": [
+    512,
+    512
+  ],
+  "public/icons/png/stretch-band.png": [
+    512,
+    512
+  ],
+  "public/icons/png/boxing-glove.png": [
+    512,
+    512
+  ],
+  "public/icons/png/barbell.png": [
+    512,
+    512
+  ],
+  "public/icons/png/heart-rate.png": [
+    512,
+    512
+  ],
+  "public/icons/png/stopwatch.png": [
+    512,
+    512
+  ],
+  "public/images/thumb_calisthenics.png": [
+    1200,
+    800
+  ],
+  "public/images/thumb_flexibility.png": [
+    1200,
+    800
+  ],
+  "public/images/thumb_boxing.png": [
+    1200,
+    800
+  ],
+  "public/images/thumb_strength.png": [
+    1200,
+    800
+  ],
+  "public/images/thumb_fat-loss.png": [
+    1200,
+    800
+  ],
+  "public/images/hero_poster_desktop.jpg": [
+    1920,
+    1080
+  ],
+  "public/images/hero_poster_mobile.jpg": [
+    1080,
+    1920
+  ]
+}

@@ -11,6 +11,7 @@ const programs = [
     description: "Control your body, master movement.",
     fullDescription: "Master bodyweight training with progressive exercises that build functional strength, coordination, and control without equipment. Learn advanced movements like muscle-ups, handstands, and human flags.",
     href: "/programs/calisthenics",
+    thumbnail: "/images/thumb_calisthenics.png",
     benefits: ["Build functional strength", "Improve body control", "No equipment needed", "Progressive skill development"],
     duration: "12 weeks",
     frequency: "4x per week"
@@ -21,6 +22,7 @@ const programs = [
     description: "Mobility work to move pain-free.",
     fullDescription: "Improve your range of motion, prevent injuries, and enhance performance through targeted mobility and stretching techniques. Incorporate yoga, dynamic stretching, and myofascial release.",
     href: "/programs/flexibility",
+    thumbnail: "/images/thumb_flexibility.png",
     benefits: ["Increase range of motion", "Reduce injury risk", "Improve posture", "Enhance recovery"],
     duration: "8 weeks",
     frequency: "5x per week"
@@ -31,6 +33,7 @@ const programs = [
     description: "Conditioning + technique for ring stamina.",
     fullDescription: "High-intensity boxing workouts that combine cardio, coordination, and stress relief while building mental toughness. Learn proper form, combinations, and defensive techniques.",
     href: "/programs/boxing",
+    thumbnail: "/images/thumb_boxing.png",
     benefits: ["Elite cardio conditioning", "Stress relief", "Self-defense skills", "Mental toughness"],
     duration: "10 weeks",
     frequency: "3x per week"
@@ -41,6 +44,7 @@ const programs = [
     description: "Progressive overload, durable gains.",
     fullDescription: "Progressive resistance programs designed to build muscle, increase power, and transform your physique effectively. Focus on compound movements and proper technique.",
     href: "/programs/strength",
+    thumbnail: "/images/thumb_strength.png",
     benefits: ["Build lean muscle", "Increase metabolism", "Improve bone density", "Boost confidence"],
     duration: "12 weeks",
     frequency: "4x per week"
@@ -51,6 +55,7 @@ const programs = [
     description: "Nutrition guidance + metabolic conditioning.",
     fullDescription: "Science-based fat burning strategies combining HIIT, strength training, and nutrition coaching for sustainable results. Transform your body composition while maintaining muscle mass.",
     href: "/programs/fat-loss",
+    thumbnail: "/images/thumb_fat-loss.png",
     benefits: ["Sustainable fat loss", "Preserve muscle", "Nutrition education", "Lifestyle transformation"],
     duration: "16 weeks",
     frequency: "5x per week"
@@ -82,14 +87,24 @@ export default function Programs() {
             {programs.map((program, index) => (
               <Card key={index} className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-0">
-                  <CardHeader className="p-8 md:p-12">
-                    <div className="flex items-start gap-4 mb-4">
-                      <program.icon className="h-12 w-12 text-primary flex-shrink-0" />
-                      <div>
-                        <CardTitle className="text-3xl mb-2">{program.title}</CardTitle>
-                        <CardDescription className="text-lg">{program.description}</CardDescription>
+                  <CardContent className="p-0 relative">
+                    <img 
+                      src={program.thumbnail} 
+                      alt={`${program.title} training`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-8">
+                      <div className="flex items-center gap-4">
+                        <program.icon className="h-12 w-12 text-primary" />
+                        <div>
+                          <h3 className="text-3xl font-bold text-white">{program.title}</h3>
+                          <p className="text-white/90">{program.description}</p>
+                        </div>
                       </div>
                     </div>
+                  </CardContent>
+                  <CardHeader className="p-8 md:p-12">
                     <p className="text-muted-foreground mb-6">{program.fullDescription}</p>
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
@@ -101,23 +116,23 @@ export default function Programs() {
                         <p className="font-semibold">{program.frequency}</p>
                       </div>
                     </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-4">Program Benefits</h3>
+                      <ul className="space-y-3 mb-6">
+                        {program.benefits.map((benefit, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                     <Button className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>
                       <Link href={program.href} data-testid={`button-view-${program.title.toLowerCase()}`}>
                         View Program <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardHeader>
-                  <CardContent className="p-8 md:p-12 bg-muted/30">
-                    <h3 className="font-semibold text-lg mb-4">Program Benefits</h3>
-                    <ul className="space-y-3">
-                      {program.benefits.map((benefit, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
                 </div>
               </Card>
             ))}
