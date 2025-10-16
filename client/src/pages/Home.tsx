@@ -47,7 +47,7 @@ export default function Home() {
       <VideoCarousel />
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center px-6">
+      <section className="relative h-screen w-full flex items-center justify-center px-6 pt-16">
         <div className="max-w-5xl text-center text-white z-10">
           <h1 className="mb-6 text-5xl font-display font-extrabold leading-tight md:text-7xl text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
             TODAY, NOT TOMORROW

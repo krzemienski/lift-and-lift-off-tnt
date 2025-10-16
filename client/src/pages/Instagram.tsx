@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Instagram as InstagramIcon, ExternalLink } from "lucide-react";
 import VideoCarousel from "@/components/VideoCarousel";
-import StickyNav from "@/components/StickyNav";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import InstagramFeed from "@/components/InstagramFeed";
@@ -19,7 +18,6 @@ export default function Instagram() {
   return (
     <div className="min-h-screen">
       <VideoCarousel />
-      <StickyNav />
       
       <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />

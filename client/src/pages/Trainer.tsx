@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Award, Brain, Heart, Mountain } from "lucide-react";
 import VideoCarousel from "@/components/VideoCarousel";
-import StickyNav from "@/components/StickyNav";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -15,7 +14,6 @@ export default function Trainer() {
   return (
     <div className="min-h-screen">
       <VideoCarousel />
-      <StickyNav />
       
       <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
