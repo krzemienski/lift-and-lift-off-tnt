@@ -1,54 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { Calendar, Clock, User, CheckCircle } from "lucide-react";
 import VideoCarousel from "@/components/VideoCarousel";
-import StickyNav from "@/components/StickyNav";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const assessmentSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-  program: z.string().min(1, "Please select a program"),
-  fitnessLevel: z.string().min(1, "Please select your fitness level"),
-  goals: z.string().min(10, "Please describe your goals in detail"),
-  injuries: z.string().optional(),
-  availability: z.string().min(1, "Please select your availability"),
+  contactInfo: z.string().min(3, "Please enter your email or Instagram handle"),
+  goals: z.array(z.string()).min(1, "Please select at least one goal"),
   preferredTime: z.string().min(1, "Please select your preferred time"),
+  notes: z.string().optional(),
 });
 
 type AssessmentFormData = z.infer<typeof assessmentSchema>;
 
-const programs = [
-  "Calisthenics - Control your body",
-  "Flexibility - Move pain-free",
-  "Boxing - Conditioning + technique",
-  "Strength Training - Durable gains",
-  "Fat Loss - Nutrition + conditioning",
-  "Not sure - Need guidance"
-];
-
-const fitnessLevels = [
-  "Beginner - Just starting out",
-  "Intermediate - 6 months to 2 years experience",
-  "Advanced - 2+ years consistent training",
-  "Athletic - Competitive athlete or former athlete"
-];
-
-const availability = [
-  "1-2 days per week",
-  "3-4 days per week",
-  "5+ days per week",
-  "Flexible schedule"
+const programGoals = [
+  { id: "calisthenics", label: "Calisthenics - Master bodyweight movements" },
+  { id: "flexibility", label: "Flexibility - Improve mobility and reduce pain" },
+  { id: "boxing", label: "Boxing - Build conditioning and technique" },
+  { id: "strength", label: "Strength Training - Build muscle and power" },
+  { id: "fatloss", label: "Fat Loss - Transform body composition" },
 ];
 
 const preferredTimes = [
@@ -66,14 +48,10 @@ export default function Assessment() {
     resolver: zodResolver(assessmentSchema),
     defaultValues: {
       name: "",
-      email: "",
-      phone: "",
-      program: "",
-      fitnessLevel: "",
-      goals: "",
-      injuries: "",
-      availability: "",
+      contactInfo: "",
+      goals: [],
       preferredTime: "",
+      notes: "",
     },
   });
 
@@ -90,7 +68,7 @@ export default function Assessment() {
   return (
     <div className="min-h-screen">
       <VideoCarousel />
-      <StickyNav />
+      <Navigation />
       
       <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
@@ -193,44 +171,14 @@ export default function Assessment() {
                 <CardContent>
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <FormField
-                          control={form.control}
-                          name="name"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Full Name</FormLabel>
-                              <FormControl>
-                                <Input placeholder="John Doe" {...field} data-testid="input-assessment-name" />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-
-                        <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Phone Number</FormLabel>
-                              <FormControl>
-                                <Input placeholder="(555) 123-4567" {...field} data-testid="input-assessment-phone" />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-
                       <FormField
                         control={form.control}
-                        name="email"
+                        name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Email Address</FormLabel>
+                            <FormLabel>Name</FormLabel>
                             <FormControl>
-                              <Input type="email" placeholder="john@example.com" {...field} data-testid="input-assessment-email" />
+                              <Input placeholder="Your full name" {...field} data-testid="input-assessment-name" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -239,120 +187,64 @@ export default function Assessment() {
 
                       <FormField
                         control={form.control}
-                        name="program"
+                        name="contactInfo"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Program of Interest</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
-                              <FormControl>
-                                <SelectTrigger data-testid="select-program">
-                                  <SelectValue placeholder="Select a program" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                {programs.map((program) => (
-                                  <SelectItem key={program} value={program}>
-                                    {program}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
+                            <FormLabel>Email / Instagram</FormLabel>
+                            <FormControl>
+                              <Input placeholder="email@example.com or @instagram" {...field} data-testid="input-assessment-contact" />
+                            </FormControl>
+                            <FormDescription>
+                              Enter your email address or Instagram handle
+                            </FormDescription>
                             <FormMessage />
                           </FormItem>
                         )}
                       />
-
-                      <FormField
-                        control={form.control}
-                        name="fitnessLevel"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Current Fitness Level</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
-                              <FormControl>
-                                <SelectTrigger data-testid="select-fitness-level">
-                                  <SelectValue placeholder="Select your level" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                {fitnessLevels.map((level) => (
-                                  <SelectItem key={level} value={level}>
-                                    {level}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <FormField
-                          control={form.control}
-                          name="availability"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Training Availability</FormLabel>
-                              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                <FormControl>
-                                  <SelectTrigger data-testid="select-availability">
-                                    <SelectValue placeholder="Days per week" />
-                                  </SelectTrigger>
-                                </FormControl>
-                                <SelectContent>
-                                  {availability.map((option) => (
-                                    <SelectItem key={option} value={option}>
-                                      {option}
-                                    </SelectItem>
-                                  ))}
-                                </SelectContent>
-                              </Select>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-
-                        <FormField
-                          control={form.control}
-                          name="preferredTime"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Preferred Time</FormLabel>
-                              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                <FormControl>
-                                  <SelectTrigger data-testid="select-time">
-                                    <SelectValue placeholder="Select time" />
-                                  </SelectTrigger>
-                                </FormControl>
-                                <SelectContent>
-                                  {preferredTimes.map((time) => (
-                                    <SelectItem key={time} value={time}>
-                                      {time}
-                                    </SelectItem>
-                                  ))}
-                                </SelectContent>
-                              </Select>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
 
                       <FormField
                         control={form.control}
                         name="goals"
-                        render={({ field }) => (
+                        render={() => (
                           <FormItem>
-                            <FormLabel>Fitness Goals</FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Describe your fitness goals and what you hope to achieve..."
-                                className="min-h-[100px]"
-                                {...field}
-                                data-testid="textarea-goals"
+                            <FormLabel>Goals (Select all that apply)</FormLabel>
+                            <FormDescription>
+                              Choose the programs you're interested in
+                            </FormDescription>
+                            {programGoals.map((goal) => (
+                              <FormField
+                                key={goal.id}
+                                control={form.control}
+                                name="goals"
+                                render={({ field }) => {
+                                  return (
+                                    <FormItem
+                                      key={goal.id}
+                                      className="flex flex-row items-start space-x-3 space-y-0"
+                                    >
+                                      <FormControl>
+                                        <Checkbox
+                                          checked={field.value?.includes(goal.id)}
+                                          onCheckedChange={(checked) => {
+                                            return checked
+                                              ? field.onChange([...field.value, goal.id])
+                                              : field.onChange(
+                                                  field.value?.filter(
+                                                    (value) => value !== goal.id
+                                                  )
+                                                )
+                                          }}
+                                          data-testid={`checkbox-goal-${goal.id}`}
+                                        />
+                                      </FormControl>
+                                      <FormLabel className="font-normal cursor-pointer">
+                                        {goal.label}
+                                      </FormLabel>
+                                    </FormItem>
+                                  )
+                                }}
                               />
-                            </FormControl>
+                            ))}
                             <FormMessage />
                           </FormItem>
                         )}
@@ -360,16 +252,41 @@ export default function Assessment() {
 
                       <FormField
                         control={form.control}
-                        name="injuries"
+                        name="preferredTime"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Injuries or Limitations (Optional)</FormLabel>
+                            <FormLabel>Preferred Time</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                              <FormControl>
+                                <SelectTrigger data-testid="select-time">
+                                  <SelectValue placeholder="Select your preferred training time" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {preferredTimes.map((time) => (
+                                  <SelectItem key={time} value={time}>
+                                    {time}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="notes"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Notes (Optional)</FormLabel>
                             <FormControl>
                               <Textarea
-                                placeholder="Any injuries, surgeries, or physical limitations we should know about?"
-                                className="min-h-[80px]"
+                                placeholder="Any additional information you'd like to share..."
+                                className="min-h-[100px]"
                                 {...field}
-                                data-testid="textarea-injuries"
+                                data-testid="textarea-notes"
                               />
                             </FormControl>
                             <FormMessage />
@@ -377,7 +294,7 @@ export default function Assessment() {
                         )}
                       />
 
-                      <Button type="submit" size="lg" className="w-full" data-testid="button-book-assessment">
+                      <Button type="submit" size="lg" className="w-full bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" data-testid="button-book-assessment">
                         Book My Free Assessment
                       </Button>
                     </form>

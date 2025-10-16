@@ -36,7 +36,7 @@ export default function VideoCarousel() {
         window.requestAnimationFrame(() => {
           if (containerRef.current) {
             const scrollY = window.scrollY;
-            containerRef.current.style.transform = `translateY(-${scrollY * 0.3}px)`;
+            containerRef.current.style.transform = `translateY(-${scrollY * 0.08}px)`;
           }
           ticking = false;
         });

@@ -143,7 +143,7 @@ export default function Home() {
               </div>
 
               <Button size="lg" className="mt-8 bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>
-                <Link href="/trainer" data-testid="button-full-story">Read Full Story</Link>
+                <Link href="/assessment" data-testid="button-book-consult">Book a Free Consult</Link>
               </Button>
             </div>
             
