@@ -1,22 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import video1 from "@assets/download_1760497007100.mp4";
-import video2 from "@assets/download 2_1760497007100.mp4";
-import video3 from "@assets/download 3_1760497007100.mp4";
-import video4 from "@assets/download 4_1760497007100.mp4";
-import video5 from "@assets/download 5_1760497007100.mp4";
-import video6 from "@assets/download 6_1760497007100.mp4";
-import video7 from "@assets/download 7_1760497007100.mp4";
-import video8 from "@assets/download 8_1760497007100.mp4";
 
 const videos = [
-  video1,
-  video2,
-  video3,
-  video4,
-  video5,
-  video6,
-  video7,
-  video8,
+  "/videos/download.mp4",
+  "/videos/download2.mp4",
+  "/videos/download3.mp4",
+  "/videos/download4.mp4",
+  "/videos/download5.mp4",
+  "/videos/download6.mp4",
+  "/videos/download7.mp4",
+  "/videos/download8.mp4",
 ];
 
 export default function VideoCarousel() {
@@ -47,11 +39,21 @@ export default function VideoCarousel() {
   }, []);
 
   useEffect(() => {
+    // Preload and set up all videos
     videoRefs.current.forEach((video, index) => {
       if (video) {
-        video.src = videos[index];
+        // Don't need to set src since it's already in the JSX
+        video.load(); // Force load the video
         if (index === 0) {
-          video.play().catch(console.error);
+          // Play the first video with retry mechanism
+          const playVideo = () => {
+            video.play().catch((error) => {
+              console.error("Error playing video:", error);
+              // Retry after a short delay
+              setTimeout(playVideo, 1000);
+            });
+          };
+          playVideo();
         }
       }
     });
@@ -81,14 +83,16 @@ export default function VideoCarousel() {
         ref={containerRef}
         className="absolute inset-0 -top-[20vh]"
       >
-        {videos.map((_, index) => (
+        {videos.map((videoSrc, index) => (
           <video
             key={index}
             ref={(el) => (videoRefs.current[index] = el)}
+            src={videoSrc}
             autoPlay={index === 0}
             loop={false}
             muted
             playsInline
+            preload="auto"
             onEnded={index === currentVideoIndex ? handleVideoEnd : undefined}
             className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-1000 ${
               index === currentVideoIndex
