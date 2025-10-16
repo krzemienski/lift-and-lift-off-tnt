@@ -43,7 +43,7 @@ export default function Strength() {
               STRENGTH TRAINING
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Progressive overload, safer form, durable gains. Build muscle, increase power, and transform your physique.
+              Progressive overload, durable gains.
             </p>
           </div>
 
@@ -86,66 +86,25 @@ export default function Strength() {
                 <CardTitle>What You'll Achieve</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Build lean muscle mass and definition</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Increase overall strength and power</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Improve bone density and joint health</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Boost metabolism and fat burning</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Master proper lifting technique</span>
-                  </li>
-                </ul>
+                <p className="text-lg">Progressive overload · Form & safety · Durable gains.</p>
               </CardContent>
             </Card>
 
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Program Structure</CardTitle>
+                <CardTitle>Weekly Structure</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Dynamic Warm-up:</span>
-                      <span className="text-muted-foreground"> 10 minutes mobility and activation</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Main Lifts:</span>
-                      <span className="text-muted-foreground"> 35 minutes compound movements</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Accessory Work:</span>
-                      <span className="text-muted-foreground"> 20 minutes targeted exercises</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Cool-down:</span>
-                      <span className="text-muted-foreground"> 10 minutes stretching and recovery</span>
-                    </div>
-                  </li>
-                </ul>
+                <p className="text-lg">3–4 days/week · 60–75 min · Lower/Upper split.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="backdrop-blur-sm bg-card/90">
+              <CardHeader>
+                <CardTitle>Gear Needed</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg">Barbell/dumbbells or kettlebells.</p>
               </CardContent>
             </Card>
           </div>
@@ -187,7 +146,7 @@ export default function Strength() {
               <CardContent className="pt-8 pb-8">
                 <h3 className="text-2xl font-display font-bold mb-4">Ready to Build Your Strength?</h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Start your strength journey today. Book a free assessment and unlock your true potential.
+                  Assessment verifies hinge/squat patterns and load tolerance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>

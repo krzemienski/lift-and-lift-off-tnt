@@ -99,10 +99,10 @@ export default function Results() {
       <section className="relative py-32 px-6">
         <div className="max-w-5xl mx-auto text-center text-white">
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-            Real Results, Real People
+            Consistency Compounds
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-            These are the transformations that happen when you choose Today, Not Tomorrow. Every story is a testament to dedication, proper guidance, and the TNT method.
+            See what clients achieved in 8–12 weeks.
           </p>
         </div>
       </section>

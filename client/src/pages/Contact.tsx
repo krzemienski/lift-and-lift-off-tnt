@@ -72,10 +72,10 @@ export default function Contact() {
       <section className="relative py-32 px-6">
         <div className="max-w-5xl mx-auto text-center text-white">
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-            Get In Touch
+            Let's Talk
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-            Ready to transform your life? Reach out today and let's start your fitness journey. Response within 24 hours guaranteed.
+            Send a quick message with your goals. We'll respond within 24 hours.
           </p>
         </div>
       </section>

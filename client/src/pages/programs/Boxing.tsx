@@ -43,7 +43,7 @@ export default function Boxing() {
               BOXING
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Conditioning + technique for real ring stamina. Build elite cardio, mental toughness, and self-defense skills.
+              Conditioning + technique for ring stamina.
             </p>
           </div>
 
@@ -86,66 +86,25 @@ export default function Boxing() {
                 <CardTitle>What You'll Achieve</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Elite cardiovascular conditioning</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Master boxing technique and footwork</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Develop mental toughness and focus</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Build functional self-defense skills</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Improve coordination and reflexes</span>
-                  </li>
-                </ul>
+                <p className="text-lg">Footwork & guard · Pad rounds · Conditioning.</p>
               </CardContent>
             </Card>
 
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Program Structure</CardTitle>
+                <CardTitle>Weekly Structure</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Jump Rope:</span>
-                      <span className="text-muted-foreground"> 15 minutes warm-up and footwork</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Technique Work:</span>
-                      <span className="text-muted-foreground"> 20 minutes skills and drills</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Bag/Mitt Work:</span>
-                      <span className="text-muted-foreground"> 30 minutes intensive training</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Conditioning:</span>
-                      <span className="text-muted-foreground"> 20 minutes HIIT and core work</span>
-                    </div>
-                  </li>
-                </ul>
+                <p className="text-lg">3 days/week · 60 min · Drills + conditioning finisher.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="backdrop-blur-sm bg-card/90">
+              <CardHeader>
+                <CardTitle>Gear Needed</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg">Gloves, wraps, jump rope.</p>
               </CardContent>
             </Card>
           </div>
@@ -187,7 +146,7 @@ export default function Boxing() {
               <CardContent className="pt-8 pb-8">
                 <h3 className="text-2xl font-display font-bold mb-4">Ready to Step Into the Ring?</h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Start your boxing journey today. Book a free assessment and unleash your inner fighter.
+                  Assessment sets stance and guard; we progress safely to pad work.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>

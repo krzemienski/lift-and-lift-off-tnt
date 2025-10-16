@@ -1,0 +1,450 @@
+# COMPREHENSIVE SITE AUDIT & SANITIZATION TO-DO LIST
+
+## PHASE 1: DOCUMENTATION & ASSET INVENTORY (To-Dos 1-25)
+
+### Documentation Review
+1. Read and parse the complete markdown file line-by-line
+2. Extract all video file references from markdown documentation
+3. Extract all image file references from markdown documentation
+4. Extract all copy/text content requirements from markdown
+5. Document all layout specifications for desktop
+6. Document all layout specifications for mobile
+7. Identify all parallax scroll requirements
+8. Identify all animation requirements
+9. Document all color specifications
+10. Document all typography specifications
+11. Document all spacing/padding requirements
+12. Document all interaction states (hover, active, focus)
+
+### Asset Inventory
+13. List all video files in uploaded assets
+14. List all PNG files in uploaded assets
+15. List all files in zip archive #1
+16. List all files in zip archive #2
+17. List all files in zip archive #3 (if exists)
+18. Cross-reference video filenames with markdown requirements
+19. Cross-reference image filenames with markdown requirements
+20. Identify missing assets
+21. Identify duplicate assets
+22. Identify incorrectly named assets
+23. Create master asset mapping document
+24. Verify video file formats and codecs
+25. Verify image file formats and dimensions
+
+## PHASE 2: VIDEO AUDIT & MAPPING (To-Dos 26-60)
+
+### Video File Verification
+26. Verify hero section video file exists
+27. Verify hero section video filename matches specification
+28. Test hero section video playback
+29. Verify hero section video dimensions (desktop)
+30. Verify hero section video dimensions (mobile)
+31. Verify Section 2 video file exists
+32. Verify Section 2 video filename matches specification
+33. Test Section 2 video playback
+34. Verify Section 2 video dimensions (desktop)
+35. Verify Section 2 video dimensions (mobile)
+36. Verify Section 3 video file exists
+37. Verify Section 3 video filename matches specification
+38. Test Section 3 video playback
+39. Verify Section 3 video dimensions (desktop)
+40. Verify Section 3 video dimensions (mobile)
+41. Verify Section 4 video file exists
+42. Verify Section 4 video filename matches specification
+43. Test Section 4 video playback
+44. Verify Section 4 video dimensions (desktop)
+45. Verify Section 4 video dimensions (mobile)
+46. Verify footer video file exists
+47. Verify footer video filename matches specification
+48. Test footer video playback
+49. Verify footer video dimensions (desktop)
+50. Verify footer video dimensions (mobile)
+
+### Video Implementation Check
+51. Verify video autoplay settings for each section
+52. Verify video loop settings for each section
+53. Verify video muted settings for each section
+54. Verify video loading strategy (lazy/eager)
+55. Verify video fallback images exist
+56. Verify video controls visibility settings
+57. Check video z-index layering
+58. Check video opacity settings
+59. Verify video aspect ratio maintenance
+60. Verify video mobile optimization settings
+
+## PHASE 3: IMAGE AUDIT & MAPPING (To-Dos 61-95)
+
+### Image File Verification
+61. Verify logo image exists
+62. Verify logo dimensions match specification
+63. Verify navigation icons exist
+64. Verify hero background image exists (if applicable)
+65. Verify hero overlay images exist
+66. Verify Section 1 images exist
+67. Verify Section 1 image dimensions
+68. Verify Section 2 images exist
+69. Verify Section 2 image dimensions
+70. Verify Section 3 images exist
+71. Verify Section 3 image dimensions
+72. Verify Section 4 images exist
+73. Verify Section 4 image dimensions
+74. Verify Section 5 images exist
+75. Verify Section 5 image dimensions
+76. Verify footer images exist
+77. Verify footer image dimensions
+78. Verify social media icons exist
+79. Verify CTA button images/icons exist
+80. Verify decorative element images exist
+
+### Image Implementation Check
+81. Verify image alt text for accessibility
+82. Verify image loading strategy (lazy/eager)
+83. Verify image srcset for responsive images
+84. Verify image format optimization (WebP fallbacks)
+85. Check image compression quality
+86. Verify image aspect ratios maintained
+87. Check image alignment in containers
+88. Verify image object-fit properties
+89. Verify image object-position properties
+90. Check image filter/overlay effects
+91. Verify image hover states
+92. Verify image transition effects
+93. Check image z-index layering
+94. Verify image mobile scaling
+95. Verify retina display optimization
+
+## PHASE 4: PARALLAX FUNCTIONALITY AUDIT (To-Dos 96-120)
+
+### Parallax Setup Verification
+96. Identify all sections requiring parallax
+97. Verify parallax library/implementation method
+98. Check parallax initialization code
+99. Verify parallax speed settings per section
+100. Verify parallax direction settings per section
+
+### Desktop Parallax Testing
+101. Test hero section parallax on desktop
+102. Test Section 1 parallax on desktop
+103. Test Section 2 parallax on desktop
+104. Test Section 3 parallax on desktop
+105. Test Section 4 parallax on desktop
+106. Test Section 5 parallax on desktop
+107. Test footer parallax on desktop
+108. Verify parallax smoothness (no jank)
+109. Verify parallax boundaries (start/end points)
+110. Test parallax with different scroll speeds
+
+### Mobile Parallax Testing
+111. Test hero section parallax on mobile
+112. Test Section 1 parallax on mobile
+113. Test Section 2 parallax on mobile
+114. Test Section 3 parallax on mobile
+115. Test Section 4 parallax on mobile
+116. Test Section 5 parallax on mobile
+117. Test footer parallax on mobile
+118. Verify mobile parallax performance
+119. Verify parallax disable on low-performance devices
+120. Test parallax with touch scrolling
+
+## PHASE 5: COPY/TEXT CONTENT AUDIT (To-Dos 121-160)
+
+### Content Extraction & Verification
+121. Extract hero headline from markdown
+122. Verify hero headline matches implementation
+123. Extract hero subheadline from markdown
+124. Verify hero subheadline matches implementation
+125. Extract hero CTA text from markdown
+126. Verify hero CTA text matches implementation
+127. Extract Section 1 headline from markdown
+128. Verify Section 1 headline matches implementation
+129. Extract Section 1 body copy from markdown
+130. Verify Section 1 body copy matches implementation
+131. Extract Section 2 headline from markdown
+132. Verify Section 2 headline matches implementation
+133. Extract Section 2 body copy from markdown
+134. Verify Section 2 body copy matches implementation
+135. Extract Section 3 headline from markdown
+136. Verify Section 3 headline matches implementation
+137. Extract Section 3 body copy from markdown
+138. Verify Section 3 body copy matches implementation
+139. Extract Section 4 headline from markdown
+140. Verify Section 4 headline matches implementation
+141. Extract Section 4 body copy from markdown
+142. Verify Section 4 body copy matches implementation
+143. Extract Section 5 headline from markdown
+144. Verify Section 5 headline matches implementation
+145. Extract Section 5 body copy from markdown
+146. Verify Section 5 body copy matches implementation
+147. Extract footer copy from markdown
+148. Verify footer copy matches implementation
+149. Extract navigation menu items from markdown
+150. Verify navigation menu items match implementation
+
+### Typography Verification
+151. Verify hero headline font family
+152. Verify hero headline font size (desktop)
+153. Verify hero headline font size (mobile)
+154. Verify hero headline font weight
+155. Verify hero headline line height
+156. Verify hero headline letter spacing
+157. Verify body copy font family
+158. Verify body copy font size (desktop)
+159. Verify body copy font size (mobile)
+160. Verify body copy line height
+
+## PHASE 6: DESKTOP LAYOUT TESTING (To-Dos 161-200)
+
+### Desktop Screenshot Capture
+161. Capture full-page desktop screenshot
+162. Capture hero section desktop screenshot
+163. Capture Section 1 desktop screenshot
+164. Capture Section 2 desktop screenshot
+165. Capture Section 3 desktop screenshot
+166. Capture Section 4 desktop screenshot
+167. Capture Section 5 desktop screenshot
+168. Capture footer desktop screenshot
+169. Capture navigation desktop screenshot
+170. Capture desktop hover states screenshot
+
+### Desktop Layout Verification
+171. Verify desktop viewport width (1920px)
+172. Verify desktop container max-width
+173. Verify desktop grid system implementation
+174. Verify desktop column layouts
+175. Verify desktop section padding-top
+176. Verify desktop section padding-bottom
+177. Verify desktop section margin-top
+178. Verify desktop section margin-bottom
+179. Verify desktop element alignment (left/center/right)
+180. Verify desktop vertical spacing between elements
+181. Verify desktop horizontal spacing between elements
+182. Verify desktop header height
+183. Verify desktop header positioning (fixed/sticky)
+184. Verify desktop navigation layout
+185. Verify desktop hero section height
+186. Verify desktop hero content positioning
+187. Verify desktop CTA button positioning
+188. Verify desktop image grid layouts
+189. Verify desktop text column widths
+190. Verify desktop footer layout
+191. Check desktop content overflow
+192. Check desktop horizontal scrolling (should not exist)
+193. Verify desktop z-index stacking order
+194. Verify desktop background colors
+195. Verify desktop border styles
+196. Verify desktop shadow effects
+197. Verify desktop animation triggers
+198. Verify desktop scroll snap points (if applicable)
+199. Test desktop at 1440px viewport
+200. Test desktop at 1366px viewport
+
+## PHASE 7: MOBILE LAYOUT TESTING (To-Dos 201-240)
+
+### Mobile Screenshot Capture
+201. Capture full-page mobile screenshot (375px)
+202. Capture hero section mobile screenshot
+203. Capture Section 1 mobile screenshot
+204. Capture Section 2 mobile screenshot
+205. Capture Section 3 mobile screenshot
+206. Capture Section 4 mobile screenshot
+207. Capture Section 5 mobile screenshot
+208. Capture footer mobile screenshot
+209. Capture mobile navigation screenshot (hamburger menu)
+210. Capture mobile menu open screenshot
+
+### Mobile Layout Verification
+211. Verify mobile viewport width (375px)
+212. Verify mobile container padding
+213. Verify mobile single-column layout
+214. Verify mobile section padding-top
+215. Verify mobile section padding-bottom
+216. Verify mobile section margin-top
+217. Verify mobile section margin-bottom
+218. Verify mobile element alignment
+219. Verify mobile vertical spacing between elements
+220. Verify mobile header height
+221. Verify mobile header positioning
+222. Verify mobile navigation hamburger icon
+223. Verify mobile menu functionality
+224. Verify mobile menu animation
+225. Verify mobile hero section height
+226. Verify mobile hero content positioning
+227. Verify mobile CTA button size
+228. Verify mobile CTA button positioning
+229. Verify mobile image stacking
+230. Verify mobile text readability
+231. Verify mobile footer layout
+232. Check mobile content overflow
+233. Check mobile horizontal scrolling (should not exist)
+234. Verify mobile touch target sizes (min 44px)
+235. Verify mobile font size scaling
+236. Test mobile at 414px viewport (iPhone Plus)
+237. Test mobile at 390px viewport (iPhone 12/13)
+238. Test mobile at 360px viewport (Android)
+239. Test mobile landscape orientation
+240. Verify mobile video aspect ratio handling
+
+## PHASE 8: CROSS-BROWSER TESTING (To-Dos 241-265)
+
+### Desktop Browser Testing
+241. Test in Chrome desktop (latest)
+242. Test in Firefox desktop (latest)
+243. Test in Safari desktop (latest)
+244. Test in Edge desktop (latest)
+245. Capture Chrome desktop screenshots
+246. Capture Firefox desktop screenshots
+247. Capture Safari desktop screenshots
+248. Capture Edge desktop screenshots
+249. Verify video playback in Chrome
+250. Verify video playback in Firefox
+251. Verify video playback in Safari
+252. Verify video playback in Edge
+
+### Mobile Browser Testing
+253. Test in Chrome mobile (iOS)
+254. Test in Safari mobile (iOS)
+255. Test in Chrome mobile (Android)
+256. Test in Samsung Internet (Android)
+257. Capture Chrome mobile screenshots
+258. Capture Safari mobile screenshots
+259. Verify video playback in Chrome mobile
+260. Verify video playback in Safari mobile
+261. Test mobile menu in all browsers
+262. Test touch interactions in all browsers
+263. Test scroll performance in all browsers
+264. Verify parallax in all browsers
+265. Check for browser-specific CSS issues
+
+## PHASE 9: INTERACTION & ANIMATION TESTING (To-Dos 266-290)
+
+### Button & Link Interactions
+266. Test hero CTA button hover state
+267. Test hero CTA button active state
+268. Test hero CTA button focus state
+269. Test navigation link hover states
+270. Test navigation link active states
+271. Test footer link hover states
+272. Test all button click functionality
+273. Verify button transition timing
+274. Verify button color changes
+275. Verify button scale/transform effects
+
+### Scroll Animations
+276. Test fade-in animations on scroll
+277. Test slide-in animations on scroll
+278. Test scale animations on scroll
+279. Verify animation trigger points
+280. Verify animation duration
+281. Verify animation easing functions
+282. Test animation performance
+283. Verify animations don't repeat unnecessarily
+284. Test scroll-triggered video playback
+285. Verify smooth scroll behavior
+
+### Form Interactions (if applicable)
+286. Test form input focus states
+287. Test form validation
+288. Test form submission
+289. Verify form error messages
+290. Test form success states
+
+## PHASE 10: PERFORMANCE TESTING (To-Dos 291-310)
+
+### Load Performance
+291. Measure initial page load time
+292. Measure time to first contentful paint
+293. Measure time to interactive
+294. Measure largest contentful paint
+295. Check cumulative layout shift score
+296. Verify lazy loading implementation
+297. Test video preload strategy
+298. Test image loading priority
+299. Measure total page weight
+300. Identify render-blocking resources
+
+### Runtime Performance
+301. Test scroll performance (60fps target)
+302. Test animation frame rate
+303. Test video playback performance
+304. Monitor memory usage
+305. Check for memory leaks
+306. Test on low-end devices
+307. Test on throttled network (3G)
+308. Verify service worker caching (if applicable)
+309. Test offline functionality (if applicable)
+310. Profile JavaScript execution time
+
+## PHASE 11: ACCESSIBILITY TESTING (To-Dos 311-330)
+
+### Semantic HTML & ARIA
+311. Verify semantic HTML structure
+312. Verify heading hierarchy (h1-h6)
+313. Verify ARIA labels on interactive elements
+314. Verify ARIA roles where appropriate
+315. Verify landmark regions
+316. Test with screen reader (NVDA/JAWS)
+317. Verify focus order
+318. Verify skip navigation link
+319. Test keyboard navigation
+320. Verify focus visible indicators
+
+### Content Accessibility
+321. Verify color contrast ratios (WCAG AA)
+322. Verify text resizing up to 200%
+323. Verify alt text on all images
+324. Verify video captions/transcripts
+325. Verify form labels
+326. Test with high contrast mode
+327. Test with dark mode (if applicable)
+328. Verify no flashing content (seizure risk)
+329. Test with zoom at 200%
+330. Run automated accessibility audit (Lighthouse/axe)
+
+## PHASE 12: FINAL SANITIZATION & FIXES (To-Dos 331-360)
+
+### Code Cleanup
+331. Remove unused CSS
+332. Remove unused JavaScript
+333. Remove console.log statements
+334. Remove commented-out code
+335. Verify CSS class naming consistency
+336. Verify JavaScript variable naming consistency
+337. Minify CSS for production
+338. Minify JavaScript for production
+339. Optimize image compression
+340. Optimize video compression
+
+### Final Verification
+341. Re-test hero section (desktop)
+342. Re-test hero section (mobile)
+343. Re-test all sections sequentially (desktop)
+344. Re-test all sections sequentially (mobile)
+345. Verify all videos playing correctly
+346. Verify all images loading correctly
+347. Verify all copy matches specification
+348. Verify all links functional
+349. Verify all buttons functional
+350. Verify parallax working correctly
+351. Final cross-browser check
+352. Final mobile device check
+353. Final accessibility check
+354. Final performance check
+355. Document all remaining issues
+356. Prioritize remaining issues
+357. Create fix timeline for remaining issues
+358. Capture final desktop screenshots
+359. Capture final mobile screenshots
+360. Generate comprehensive test report
+
+---
+
+**TOTAL TO-DOS: 360**
+
+**EXECUTION APPROACH:**
+- Work sequentially through each phase
+- Document findings in real-time
+- Capture screenshots at designated checkpoints
+- Flag critical issues immediately
+- Create detailed issue reports with screenshots
+- Provide fix recommendations for each issue
+- Re-test after each fix implementation

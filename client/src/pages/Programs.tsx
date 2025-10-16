@@ -28,7 +28,7 @@ const programs = [
   {
     icon: Shield,
     title: "Boxing",
-    description: "Conditioning + technique for real ring stamina.",
+    description: "Conditioning + technique for ring stamina.",
     fullDescription: "High-intensity boxing workouts that combine cardio, coordination, and stress relief while building mental toughness. Learn proper form, combinations, and defensive techniques.",
     href: "/programs/boxing",
     benefits: ["Elite cardio conditioning", "Stress relief", "Self-defense skills", "Mental toughness"],
@@ -38,7 +38,7 @@ const programs = [
   {
     icon: Dumbbell,
     title: "Strength Training",
-    description: "Progressive overload, safer form, durable gains.",
+    description: "Progressive overload, durable gains.",
     fullDescription: "Progressive resistance programs designed to build muscle, increase power, and transform your physique effectively. Focus on compound movements and proper technique.",
     href: "/programs/strength",
     benefits: ["Build lean muscle", "Increase metabolism", "Improve bone density", "Boost confidence"],

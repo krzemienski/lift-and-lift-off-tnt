@@ -43,7 +43,7 @@ export default function Flexibility() {
               FLEXIBILITY
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Mobility work to move pain-free. Improve your range of motion, prevent injuries, and enhance athletic performance.
+              Mobility work to move pain-free.
             </p>
           </div>
 
@@ -86,66 +86,25 @@ export default function Flexibility() {
                 <CardTitle>What You'll Achieve</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Increase range of motion in all major joints</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Reduce muscle tension and chronic pain</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Improve posture and body alignment</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Prevent injuries and enhance recovery</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Master advanced flexibility positions</span>
-                  </li>
-                </ul>
+                <p className="text-lg">Mobility flows · Joint health · Pain-free range.</p>
               </CardContent>
             </Card>
 
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Program Structure</CardTitle>
+                <CardTitle>Weekly Structure</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Warm-up Flow:</span>
-                      <span className="text-muted-foreground"> 5 minutes gentle movement</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Dynamic Stretching:</span>
-                      <span className="text-muted-foreground"> 10 minutes active mobility</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Static Holds:</span>
-                      <span className="text-muted-foreground"> 20 minutes deep stretching</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Recovery:</span>
-                      <span className="text-muted-foreground"> 10 minutes relaxation and breathing</span>
-                    </div>
-                  </li>
-                </ul>
+                <p className="text-lg">3–4 days/week · 30–45 min · Spine/hips/shoulders blocks.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="backdrop-blur-sm bg-card/90">
+              <CardHeader>
+                <CardTitle>Gear Needed</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg">Mat, strap.</p>
               </CardContent>
             </Card>
           </div>
@@ -187,7 +146,7 @@ export default function Flexibility() {
               <CardContent className="pt-8 pb-8">
                 <h3 className="text-2xl font-display font-bold mb-4">Ready to Move Pain-Free?</h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Start your flexibility journey today. Book a free assessment and discover your body's true potential.
+                  Assessment screens ankles, hips, and thoracic rotation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>

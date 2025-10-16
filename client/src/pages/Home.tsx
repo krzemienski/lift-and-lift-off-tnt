@@ -24,13 +24,13 @@ export default function Home() {
     {
       icon: Shield,
       title: "Boxing",
-      description: "Conditioning + technique for real ring stamina.",
+      description: "Conditioning + technique for ring stamina.",
       href: "/programs/boxing",
     },
     {
       icon: Dumbbell,
       title: "Strength Training",
-      description: "Progressive overload, safer form, durable gains.",
+      description: "Progressive overload, durable gains.",
       href: "/programs/strength",
     },
     {
@@ -53,7 +53,7 @@ export default function Home() {
             TODAY, NOT TOMORROW
           </h1>
           <p className="mb-10 text-lg md:text-xl text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-            Immediate, focused coaching across boxing, strength, calisthenics, flexibility, and fat loss—engineered for accountability and results.
+            Immediate, focused coaching across <strong>boxing</strong>, <strong>strength</strong>, <strong>calisthenics</strong>, <strong>flexibility</strong>, and <strong>fat loss</strong>—engineered for accountability and results.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button
@@ -85,7 +85,7 @@ export default function Home() {
               Training Programs
             </h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Five specialized programs designed to transform your fitness journey
+              Choose a proven path. Each track pairs technique with conditioning and smart recovery.
             </p>
           </div>
           
@@ -138,7 +138,13 @@ export default function Home() {
                 
                 <div>
                   <h3 className="font-semibold text-primary text-lg mb-2">Evolution</h3>
-                  <p>In 2019 I suffered severe head and spinal injuries and spent two years rehabbing. In 2024 I committed to mastering human performance, earning PT and nutrition credentials. Fitness served and saved me—now it's your turn.</p>
+                  <p>In 2019 I suffered severe head and spinal injuries and spent two years rehabbing. In 2024 I committed to mastering human performance, earning PT and nutrition credentials.</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-primary text-lg mb-2">Philosophy</h3>
+                  <p className="font-semibold">Fitness is wellness for mind, spirit, and body.</p>
+                  <p className="mt-2">Fitness served and saved me—now it's your turn.</p>
                 </div>
               </div>
 

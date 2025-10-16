@@ -43,7 +43,7 @@ export default function FatLoss() {
               FAT LOSS
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Nutrition guidance + metabolic conditioning. Science-based fat burning for sustainable transformation.
+              Nutrition guidance + metabolic conditioning.
             </p>
           </div>
 
@@ -86,66 +86,25 @@ export default function FatLoss() {
                 <CardTitle>What You'll Achieve</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Sustainable fat loss while preserving muscle</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Master nutrition for optimal body composition</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Boost metabolism and energy levels</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Build healthy lifestyle habits that last</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Complete body transformation</span>
-                  </li>
-                </ul>
+                <p className="text-lg">Nutrition guidance · Energy balance · Metabolic circuits.</p>
               </CardContent>
             </Card>
 
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Program Structure</CardTitle>
+                <CardTitle>Weekly Structure</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">HIIT Cardio:</span>
-                      <span className="text-muted-foreground"> 20 minutes high-intensity intervals</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Strength Circuits:</span>
-                      <span className="text-muted-foreground"> 25 minutes metabolic training</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Core Work:</span>
-                      <span className="text-muted-foreground"> 10 minutes targeted abs</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Nutrition Coaching:</span>
-                      <span className="text-muted-foreground"> Weekly meal planning support</span>
-                    </div>
-                  </li>
-                </ul>
+                <p className="text-lg">4 days/week · 45–60 min · Circuits + LISS.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="backdrop-blur-sm bg-card/90">
+              <CardHeader>
+                <CardTitle>Gear Needed</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg">Minimal; bodyweight + dumbbells.</p>
               </CardContent>
             </Card>
           </div>
@@ -210,7 +169,7 @@ export default function FatLoss() {
               <CardContent className="pt-8 pb-8">
                 <h3 className="text-2xl font-display font-bold mb-4">Ready to Transform Your Body?</h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Start your fat loss journey today. Book a free assessment and achieve sustainable results.
+                  Assessment personalizes nutrition and cardio adherence plan.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>

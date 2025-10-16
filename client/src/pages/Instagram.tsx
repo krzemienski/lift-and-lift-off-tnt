@@ -29,7 +29,7 @@ export default function Instagram() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-              FOLLOW THE JOURNEY
+              STAY ACCOUNTABLE
             </h1>
             <div className="flex items-center justify-center gap-4 mb-6">
               <InstagramIcon className="h-8 w-8 text-primary" />
@@ -38,7 +38,7 @@ export default function Instagram() {
               </p>
             </div>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Daily motivation, workout tips, client transformations, and behind-the-scenes content
+              Latest posts and behind-the-scenes training.
             </p>
             <Button
               size="lg"

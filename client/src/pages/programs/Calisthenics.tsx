@@ -43,7 +43,7 @@ export default function Calisthenics() {
               CALISTHENICS
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Control your body, master movement. Build functional strength and unlock advanced bodyweight skills without equipment.
+              Control your body, master movement.
             </p>
           </div>
 
@@ -86,66 +86,25 @@ export default function Calisthenics() {
                 <CardTitle>What You'll Achieve</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Master fundamental bodyweight movements</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Build exceptional core strength and stability</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Unlock advanced skills like muscle-ups and handstands</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Improve flexibility and mobility</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Develop mind-muscle connection</span>
-                  </li>
-                </ul>
+                <p className="text-lg">Core control · Skill progressions · Full-body strength.</p>
               </CardContent>
             </Card>
 
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Program Structure</CardTitle>
+                <CardTitle>Weekly Structure</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Dynamic Warm-up:</span>
-                      <span className="text-muted-foreground"> 10 minutes mobility and activation</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Skill Work:</span>
-                      <span className="text-muted-foreground"> 15 minutes focused practice</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Strength Training:</span>
-                      <span className="text-muted-foreground"> 30 minutes progressive exercises</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold">Cool-down:</span>
-                      <span className="text-muted-foreground"> 5 minutes stretching and recovery</span>
-                    </div>
-                  </li>
-                </ul>
+                <p className="text-lg">3 days/week · 45–60 min · Pull/Push/Legs + skill.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="backdrop-blur-sm bg-card/90">
+              <CardHeader>
+                <CardTitle>Gear Needed</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg">Rings, bar, floor space.</p>
               </CardContent>
             </Card>
           </div>
@@ -187,7 +146,7 @@ export default function Calisthenics() {
               <CardContent className="pt-8 pb-8">
                 <h3 className="text-2xl font-display font-bold mb-4">Ready to Master Your Body?</h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Start your calisthenics journey today. Book a free assessment and let's create a personalized plan for your goals.
+                  Start with an assessment to baseline pull-ups, dips, and hollow body.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>

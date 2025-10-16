@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import video1 from "@assets/download_1760497007100.mp4";
-import video2 from "@assets/download 2_1760497007100.mp4";
-import video3 from "@assets/download 3_1760497007100.mp4";
-import video4 from "@assets/download 4_1760497007100.mp4";
-import video5 from "@assets/download 5_1760497007100.mp4";
-import video6 from "@assets/download 6_1760497007100.mp4";
-import video7 from "@assets/download 7_1760497007100.mp4";
-import video8 from "@assets/download 8_1760497007100.mp4";
-import video9 from "@assets/download_1760056534924.mp4";
+import video1 from "@assets/download_1760647844569.MP4";
+import video2 from "@assets/download 2_1760647844569.MP4";
+import video3 from "@assets/download 3_1760647844569.MP4";
+import video4 from "@assets/download 4_1760647844569.MP4";
+import video5 from "@assets/download 5_1760647844569.MP4";
+import video6 from "@assets/download 6_1760647844569.MP4";
+import video7 from "@assets/download 7_1760647844569.MP4";
+import video8 from "@assets/download 8_1760647844569.MP4";
 
 const videos = [
   video1,
@@ -18,7 +17,6 @@ const videos = [
   video6,
   video7,
   video8,
-  video9,
 ];
 
 export default function VideoCarousel() {

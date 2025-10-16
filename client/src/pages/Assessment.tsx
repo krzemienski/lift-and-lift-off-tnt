@@ -59,7 +59,7 @@ export default function Assessment() {
     console.log(data);
     toast({
       title: "Assessment Booked!",
-      description: "Coach Rico will contact you within 24 hours to schedule your free assessment.",
+      description: "Thanks! We'll reply within 24 hours with next steps.",
       duration: 5000,
     });
     form.reset();
@@ -81,7 +81,7 @@ export default function Assessment() {
               FREE ASSESSMENT
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              Let's create a personalized training plan that fits your goals, schedule, and fitness level
+              20-min call · Movement screen · Program fit · Next steps.
             </p>
           </div>
 
