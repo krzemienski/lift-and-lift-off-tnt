@@ -7,7 +7,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import kettlebellIcon from "@assets/icon_kettlebell.svg";
+import tntDynamiteLogo from "/brand/tnt-dynamite-logo.png";
 
 const navItems = [
   { href: "/programs", label: "Programs" },
@@ -29,8 +29,8 @@ export default function Header() {
           <Link href="/">
             <a className="flex items-center gap-2" data-testid="link-logo">
               <img 
-                src={kettlebellIcon} 
-                className="h-8 w-8" 
+                src={tntDynamiteLogo} 
+                className="h-10 w-10" 
                 alt="TNT Fitness" 
                 data-testid="icon-logo" 
               />
@@ -84,8 +84,8 @@ export default function Header() {
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-2">
                   <img 
-                    src={kettlebellIcon} 
-                    className="h-8 w-8" 
+                    src={tntDynamiteLogo} 
+                    className="h-10 w-10" 
                     alt="TNT Fitness" 
                   />
                   <span className="font-heading font-extrabold text-xl text-white">
