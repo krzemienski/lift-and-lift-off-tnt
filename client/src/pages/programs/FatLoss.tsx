@@ -83,7 +83,7 @@ export default function FatLoss() {
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>What You'll Achieve</CardTitle>
+                <CardTitle>You'll achieve:</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg">Nutrition guidance · Energy balance · Metabolic circuits.</p>
@@ -92,7 +92,7 @@ export default function FatLoss() {
 
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Weekly Structure</CardTitle>
+                <CardTitle>Weekly structure:</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg">4 days/week · 45–60 min · Circuits + LISS.</p>
@@ -101,7 +101,7 @@ export default function FatLoss() {
             
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Gear Needed</CardTitle>
+                <CardTitle>Gear:</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg">Minimal; bodyweight + dumbbells.</p>

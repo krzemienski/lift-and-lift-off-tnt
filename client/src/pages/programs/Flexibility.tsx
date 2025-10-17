@@ -83,7 +83,7 @@ export default function Flexibility() {
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>What You'll Achieve</CardTitle>
+                <CardTitle>You'll achieve:</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg">Mobility flows · Joint health · Pain-free range.</p>
@@ -92,7 +92,7 @@ export default function Flexibility() {
 
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Weekly Structure</CardTitle>
+                <CardTitle>Weekly structure:</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg">3–4 days/week · 30–45 min · Spine/hips/shoulders blocks.</p>
@@ -101,7 +101,7 @@ export default function Flexibility() {
             
             <Card className="backdrop-blur-sm bg-card/90">
               <CardHeader>
-                <CardTitle>Gear Needed</CardTitle>
+                <CardTitle>Gear:</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg">Mat, strap.</p>

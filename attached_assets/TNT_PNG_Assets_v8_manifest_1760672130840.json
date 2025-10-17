@@ -1,0 +1,298 @@
+{
+  "public/favicon-512.png": {
+    "size_bytes": 10693,
+    "sha256": "471e41a305b16bf3d1249da272c05666fad35edef7c55eedf4d23912302fb85d",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/favicon-192.png": {
+    "size_bytes": 3687,
+    "sha256": "1cfa888da5898afcbe656b5e9f673f2a88a0888c1a284c2c5391b047172e5730",
+    "dimensions": {
+      "w": 192,
+      "h": 192
+    }
+  },
+  "public/favicon-180.png": {
+    "size_bytes": 3472,
+    "sha256": "edf39fefd61f5634e6fe7da8ed0f2ff0da367ede835eac5003c4134800fdfffc",
+    "dimensions": {
+      "w": 180,
+      "h": 180
+    }
+  },
+  "public/favicon-128.png": {
+    "size_bytes": 2278,
+    "sha256": "2ae1a720ad9356fd5cb7519e19db93acb91a5f6eeb54b2ea60d89fae536bbae7",
+    "dimensions": {
+      "w": 128,
+      "h": 128
+    }
+  },
+  "public/favicon-64.png": {
+    "size_bytes": 1119,
+    "sha256": "52386f30319001fbaf1a7a66b93893fcd6b6c257cbc900806d60745f7f427b54",
+    "dimensions": {
+      "w": 64,
+      "h": 64
+    }
+  },
+  "public/favicon-48.png": {
+    "size_bytes": 841,
+    "sha256": "89b9bbebcf847c884af30ecd7f2f41e3b54e57e0131252ac6920bc4bb146549f",
+    "dimensions": {
+      "w": 48,
+      "h": 48
+    }
+  },
+  "public/favicon-32.png": {
+    "size_bytes": 572,
+    "sha256": "0b93fe4e4b37e4369113def7b119d2ba5178be27302524961c59f6662e945b63",
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    }
+  },
+  "public/favicon-16.png": {
+    "size_bytes": 291,
+    "sha256": "c30a05f8d08d3eba8fddff536035a4a7343448e64c68284c8c23c99e31e255dd",
+    "dimensions": {
+      "w": 16,
+      "h": 16
+    }
+  },
+  "public/og-image.png": {
+    "size_bytes": 13082,
+    "sha256": "d0568b4555296194cf3b1f8f58665e4070f6e3d850a5fdb5078327546f477d09",
+    "dimensions": {
+      "w": 1200,
+      "h": 630
+    }
+  },
+  "public/brand/icon_1A_1024.png": {
+    "size_bytes": 8424,
+    "sha256": "f7dab62c0dd9dd4ef5bff055539fc4b795e16f13d2401a48dad38bfb607c130c",
+    "dimensions": {
+      "w": 1024,
+      "h": 1024
+    }
+  },
+  "public/brand/icon_1A_512.png": {
+    "size_bytes": 15066,
+    "sha256": "ee4f933e447da28b806923ef7cf0d038758b7e2cce14abbe3864819a195009d5",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/brand/icon_1A_256.png": {
+    "size_bytes": 7836,
+    "sha256": "9a591ecf2ac3711876a4d812f78ec70c74c38803f7a7e908c592e8ca08b0b3f5",
+    "dimensions": {
+      "w": 256,
+      "h": 256
+    }
+  },
+  "public/brand/icon_1A_128.png": {
+    "size_bytes": 3797,
+    "sha256": "07dc88c27f2641db2f4a455d77b2226c06bad8f5e6fd8ce9537a3b3561f937e5",
+    "dimensions": {
+      "w": 128,
+      "h": 128
+    }
+  },
+  "public/brand/icon_1A_64.png": {
+    "size_bytes": 1825,
+    "sha256": "a56ee74a101f748391cab708d3e53896ca0e4c83006cd389db84779cd5999a42",
+    "dimensions": {
+      "w": 64,
+      "h": 64
+    }
+  },
+  "public/brand/icon_1B_1024.png": {
+    "size_bytes": 8649,
+    "sha256": "2ec7c988638e33c350540b5dc34470a4809232ab15030ef6ab2f7dccf5c23c12",
+    "dimensions": {
+      "w": 1024,
+      "h": 1024
+    }
+  },
+  "public/brand/icon_1B_512.png": {
+    "size_bytes": 15336,
+    "sha256": "0231e93d5cd1f2b5a29bb3a308e724452a5f8bd62f95d474efa092db38e072c8",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/brand/icon_1B_256.png": {
+    "size_bytes": 8008,
+    "sha256": "d4d187e529a3b241d2e4ec8fe27feac982e7ce5e875e294985b60161a493e7cc",
+    "dimensions": {
+      "w": 256,
+      "h": 256
+    }
+  },
+  "public/brand/icon_1B_128.png": {
+    "size_bytes": 4061,
+    "sha256": "1400b2e18cb35a7aba17579170d84cc3e4ce4f38e72953022a68f8c364cbc0ae",
+    "dimensions": {
+      "w": 128,
+      "h": 128
+    }
+  },
+  "public/brand/icon_1B_64.png": {
+    "size_bytes": 1945,
+    "sha256": "b5a9bebc34209dccef4f70c14d5b40bde5f97fba7e4d40de0fbfb686be04cbb0",
+    "dimensions": {
+      "w": 64,
+      "h": 64
+    }
+  },
+  "public/brand/horizontal_1A_dark_FIX.png": {
+    "size_bytes": 48534,
+    "sha256": "4cce9c66482dfc88fc7aedf00ff9d0c7d29184c6072fd3cc6a4bc586b6e7960c",
+    "dimensions": {
+      "w": 2600,
+      "h": 1200
+    }
+  },
+  "public/brand/horizontal_1A_light_FIX.png": {
+    "size_bytes": 50609,
+    "sha256": "50efc5060df5ed3abc1c7c427cb6eeecacb03f5e2207315cadf826192cba82d2",
+    "dimensions": {
+      "w": 2600,
+      "h": 1200
+    }
+  },
+  "public/brand/horizontal_1A_dark_FIX_transparent.png": {
+    "size_bytes": 55018,
+    "sha256": "8aceebacd059797da820081b4b34e9b20cae837744244ee0e63fa31a24b5f150",
+    "dimensions": {
+      "w": 2600,
+      "h": 1200
+    }
+  },
+  "public/brand/horizontal_1A_light_FIX_transparent.png": {
+    "size_bytes": 55511,
+    "sha256": "e8f81bf29a7cb03e99f818a91ee0ddbae18bebd8934a3cfbdde7ee3dc11a8613",
+    "dimensions": {
+      "w": 2600,
+      "h": 1200
+    }
+  },
+  "public/icons/png/kettlebell.png": {
+    "size_bytes": 3121,
+    "sha256": "00f0f805548ecc6be19c54151545e272f116c9ef2f26fec7612178b328c71f96",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/icons/png/stretch-band.png": {
+    "size_bytes": 2684,
+    "sha256": "1fe0c391fd7e9824c58a06b1a562a96a2b5dd58563a9548c98d8c17414b0fac7",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/icons/png/boxing-glove.png": {
+    "size_bytes": 3347,
+    "sha256": "9dad806982600f460b94d31f98b29727818d48d4809a799a9f65ddeb05201c38",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/icons/png/barbell.png": {
+    "size_bytes": 1976,
+    "sha256": "8a811ed89f47150c4a7eb234b0013cb0c4647251bf897bfdc977fb8e9bd32668",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/icons/png/heart-rate.png": {
+    "size_bytes": 4102,
+    "sha256": "1b81c8bbb87e5543fe8966d0bf400c8d9492bc6a1d599147b2fb0ca89fd2f60e",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/icons/png/stopwatch.png": {
+    "size_bytes": 4017,
+    "sha256": "b3819d699bc63c4549ef3718758aa32f29aefb1f2565127038ff590d68479959",
+    "dimensions": {
+      "w": 512,
+      "h": 512
+    }
+  },
+  "public/images/thumb_calisthenics.png": {
+    "size_bytes": 20682,
+    "sha256": "5ca550c11b5983d2aec9fd9dd6aee97bdb996b0338ead4f6741be53ee54f32e5",
+    "dimensions": {
+      "w": 1200,
+      "h": 800
+    }
+  },
+  "public/images/thumb_flexibility.png": {
+    "size_bytes": 20271,
+    "sha256": "a1cac1b1919fec12e19ea142da77ee6ecd3e7e45ac238ce7cbac6533bbaa723b",
+    "dimensions": {
+      "w": 1200,
+      "h": 800
+    }
+  },
+  "public/images/thumb_boxing.png": {
+    "size_bytes": 21363,
+    "sha256": "4ed3d6d2f3dcb5ca6424bd1e6b6c8669030d6d599a7b3cfda9424a3ce764ed2b",
+    "dimensions": {
+      "w": 1200,
+      "h": 800
+    }
+  },
+  "public/images/thumb_strength.png": {
+    "size_bytes": 15093,
+    "sha256": "e8dc1ac698e8c11d7f14764af4e4af67a161c32e98580408a608caee467d15de",
+    "dimensions": {
+      "w": 1200,
+      "h": 800
+    }
+  },
+  "public/images/thumb_fat-loss.png": {
+    "size_bytes": 25348,
+    "sha256": "5de96e20ca47c32c74378b3243dcd7533ab94cff804c501a5a3492903ea011f2",
+    "dimensions": {
+      "w": 1200,
+      "h": 800
+    }
+  },
+  "public/images/hero_poster_desktop.jpg": {
+    "size_bytes": 61839,
+    "sha256": "d1f8d1507993f3db6d3a45ba1c56058d0468cc5f91c799162fcf386f438b1e67",
+    "dimensions": {
+      "w": 1920,
+      "h": 1080
+    }
+  },
+  "public/images/hero_poster_mobile.jpg": {
+    "size_bytes": 55886,
+    "sha256": "55318f813de8dfdb01fc1374cde06ca19d909d7982bc01d56a656cd6db04e95b",
+    "dimensions": {
+      "w": 1080,
+      "h": 1920
+    }
+  },
+  "public/videos/hero_kettlebell.mp4.PLACE-HERE.txt": {
+    "size_bytes": 37,
+    "sha256": "d9a5bbd194d928439b76d08fb05ae4e13f4c96a98839494b954ab3579603455d"
+  },
+  "public/videos/hero_ropes.mp4.PLACE-HERE.txt": {
+    "size_bytes": 32,
+    "sha256": "515ed00c83755694861e72033ab5cfe6fafe752b4e59025bb395ca5fcf5e3d43"
+  }
+}
