@@ -12,14 +12,22 @@ import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
 import VideoCarousel from "@/components/VideoCarousel";
-import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Loader2 } from "lucide-react";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-  trainingGoal: z.string().min(1, "Please select a training goal"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string()
+    .min(2, "Name must be at least 2 characters")
+    .max(50, "Name must be less than 50 characters"),
+  email: z.string()
+    .email("Please enter a valid email address (e.g., john@example.com)"),
+  phone: z.string()
+    .min(10, "Phone number must be at least 10 digits")
+    .regex(/^[\d\s\-\(\)\+]+$/, "Please enter a valid phone number"),
+  trainingGoal: z.string()
+    .min(1, "Please select a training goal to help us understand your needs"),
+  message: z.string()
+    .min(10, "Message must be at least 10 characters to provide enough detail")
+    .max(500, "Message must be less than 500 characters"),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -183,11 +191,19 @@ export default function Contact() {
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold"
+                      className="w-full bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold relative"
                       disabled={contactMutation.isPending}
                       data-testid="button-submit-contact"
+                      aria-busy={contactMutation.isPending}
                     >
-                      {contactMutation.isPending ? "Sending..." : "Send Message"}
+                      {contactMutation.isPending ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        "Send Message"
+                      )}
                     </Button>
                   </form>
                 </Form>

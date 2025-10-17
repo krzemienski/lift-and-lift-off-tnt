@@ -204,6 +204,42 @@
  * need to be distinguished from eachother visually.
  */
 @layer utilities {
+  
+  /* Focus indicators for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+  
+  /* Ensure proper touch targets for mobile */
+  button, a {
+    position: relative;
+  }
+  
+  /* Add invisible touch area extension for small interactive elements */
+  button::before,
+  a[role="button"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 44px;
+    min-height: 44px;
+    pointer-events: none;
+  }
+  
+  /* Smooth scrolling for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {

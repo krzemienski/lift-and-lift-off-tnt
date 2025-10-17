@@ -15,9 +15,33 @@ export default function VideoCarousel() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [nextVideoIndex, setNextVideoIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [videosLoaded, setVideosLoaded] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
+  // Intersection observer for lazy loading
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observerRef.current.observe(containerRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
+  // Parallax scrolling effect
   useEffect(() => {
     let ticking = false;
 
@@ -38,26 +62,40 @@ export default function VideoCarousel() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Load videos only when in view
   useEffect(() => {
-    // Preload and set up all videos
-    videoRefs.current.forEach((video, index) => {
-      if (video) {
-        // Don't need to set src since it's already in the JSX
-        video.load(); // Force load the video
-        if (index === 0) {
-          // Play the first video with retry mechanism
-          const playVideo = () => {
-            video.play().catch((error) => {
-              console.error("Error playing video:", error);
-              // Retry after a short delay
-              setTimeout(playVideo, 1000);
-            });
-          };
-          playVideo();
+    if (isInView && !videosLoaded) {
+      // Preload only the first few videos initially
+      const videosToPreload = 3; 
+      videoRefs.current.slice(0, videosToPreload).forEach((video, index) => {
+        if (video) {
+          video.load();
+          if (index === 0) {
+            // Play the first video with retry mechanism
+            const playVideo = () => {
+              video.play().catch((error) => {
+                console.error("Error playing video:", error);
+                // Retry after a short delay
+                setTimeout(playVideo, 1000);
+              });
+            };
+            playVideo();
+          }
         }
-      }
-    });
-  }, []);
+      });
+      
+      // Load remaining videos after a delay
+      setTimeout(() => {
+        videoRefs.current.slice(videosToPreload).forEach((video) => {
+          if (video) {
+            video.load();
+          }
+        });
+      }, 2000);
+      
+      setVideosLoaded(true);
+    }
+  }, [isInView, videosLoaded]);
 
   const handleVideoEnd = () => {
     if (isTransitioning) return;
@@ -100,7 +138,7 @@ export default function VideoCarousel() {
             loop={false}
             muted
             playsInline
-            preload="auto"
+            preload={index < 2 ? "auto" : "metadata"}
             onEnded={index === currentVideoIndex ? handleVideoEnd : undefined}
             className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-1000 ${
               index === currentVideoIndex

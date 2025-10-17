@@ -27,48 +27,47 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center gap-2" data-testid="link-logo">
-              {/* Mobile: Icon logo */}
-              <img 
-                src={tntIconLogo} 
-                className="h-10 w-10 block sm:hidden" 
-                alt="TNT Fitness" 
-                data-testid="icon-logo" 
-              />
-              {/* Desktop: Horizontal logo */}
-              <img 
-                src={tntHorizontalLogo} 
-                className="h-10 hidden sm:block" 
-                alt="TNT Fitness" 
-                data-testid="horizontal-logo" 
-              />
-            </a>
+          <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
+            {/* Mobile: Icon logo */}
+            <img 
+              src={tntIconLogo} 
+              className="h-10 w-10 block sm:hidden" 
+              alt="TNT Fitness" 
+              data-testid="icon-logo" 
+            />
+            {/* Desktop: Horizontal logo */}
+            <img 
+              src={tntHorizontalLogo} 
+              className="h-10 hidden sm:block" 
+              alt="TNT Fitness" 
+              data-testid="horizontal-logo" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className={`text-white/90 hover:text-white transition-colors font-medium ${
-                    location === item.href ? "text-gold" : ""
-                  }`}
-                  data-testid={`link-nav-${item.label.toLowerCase()}`}
-                >
-                  {item.label}
-                </a>
+              <Link 
+                key={item.href} 
+                href={item.href}
+                className={`text-white/90 hover:text-white transition-colors font-medium ${
+                  location === item.href ? "text-gold" : ""
+                }`}
+                data-testid={`link-nav-${item.label.toLowerCase()}`}
+              >
+                {item.label}
               </Link>
             ))}
-            <Link href="/contact">
-              <Button 
-                variant="default" 
-                className="bg-gold hover:bg-gold/90 text-navy font-bold"
-                data-testid="button-get-started"
-              >
+            <Button 
+              asChild
+              variant="default" 
+              className="bg-gold hover:bg-gold/90 text-navy font-bold"
+              data-testid="button-get-started"
+            >
+              <Link href="/contact">
                 Get Started
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </nav>
 
           {/* Mobile Menu Trigger */}
@@ -103,28 +102,29 @@ export default function Header() {
               {/* Mobile Navigation */}
               <nav className="flex flex-col gap-4">
                 {navItems.map((item) => (
-                  <Link key={item.href} href={item.href}>
-                    <a
-                      onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-colors font-medium ${
-                        location === item.href ? "text-gold bg-white/5" : ""
-                      }`}
-                      data-testid={`link-mobile-${item.label.toLowerCase()}`}
-                    >
-                      {item.label}
-                    </a>
+                  <Link 
+                    key={item.href} 
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-colors font-medium ${
+                      location === item.href ? "text-gold bg-white/5" : ""
+                    }`}
+                    data-testid={`link-mobile-${item.label.toLowerCase()}`}
+                  >
+                    {item.label}
                   </Link>
                 ))}
-                <Link href="/contact">
-                  <Button 
-                    onClick={() => setIsOpen(false)}
-                    variant="default" 
-                    className="w-full bg-gold hover:bg-gold/90 text-navy font-bold mt-4"
-                    data-testid="button-mobile-get-started"
-                  >
+                <Button 
+                  onClick={() => setIsOpen(false)}
+                  variant="default" 
+                  className="w-full bg-gold hover:bg-gold/90 text-navy font-bold mt-4"
+                  data-testid="button-mobile-get-started"
+                  asChild
+                >
+                  <Link href="/contact">
                     Get Started
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>

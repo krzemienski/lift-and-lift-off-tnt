@@ -1,0 +1,15 @@
+# TNT Fitness Robots.txt
+# Allow all web crawlers
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://tntfitness.com/sitemap.xml
+
+# Block access to internal resources
+Disallow: /api/
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/

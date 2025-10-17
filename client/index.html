@@ -22,9 +22,68 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
     <link rel="manifest" href="/manifest.json" />
+    <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <!-- Preload critical font styles -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "TNT Fitness",
+      "alternateName": "Today Not Tomorrow Fitness",
+      "description": "Elite personal training in New York specializing in boxing, strength training, calisthenics, flexibility, and fat loss",
+      "url": "https://tntfitness.com",
+      "logo": "https://tntfitness.com/og-image.png",
+      "image": "https://tntfitness.com/og-image.png",
+      "telephone": "+1-212-555-0123",
+      "email": "info@tntfitness.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 06:00-22:00 Sa-Su 08:00-20:00",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Training Programs",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Boxing Training",
+            "description": "High-intensity boxing workouts with cardio conditioning"
+          },
+          {
+            "@type": "Offer",
+            "name": "Strength Training",
+            "description": "Progressive resistance programs for muscle building"
+          },
+          {
+            "@type": "Offer",
+            "name": "Calisthenics",
+            "description": "Bodyweight training for functional strength"
+          },
+          {
+            "@type": "Offer",
+            "name": "Flexibility Training",
+            "description": "Mobility work and stretching for pain-free movement"
+          },
+          {
+            "@type": "Offer",
+            "name": "Fat Loss Program",
+            "description": "Science-based fat burning with nutrition coaching"
+          }
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
