@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, RefObject } from "react";
+import { useEffect, useRef, useState, RefObject, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface UseIntersectionObserverOptions {
@@ -59,7 +59,7 @@ export function AnimatedSection({
   animation = "fade-in-up",
   delay = 0,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   animation?: "fade-in-up" | "fade-in-scale" | "slide-in-right";
   delay?: number;
