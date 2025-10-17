@@ -76,6 +76,11 @@
   --shadow-2xl: 0px 25px 50px -12px hsl(280 15% 10% / 0.22);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+  
+  /* Animation Timing Functions */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
   /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
 
@@ -328,5 +333,210 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+  
+  /* Shimmer effect for skeleton loading */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .skeleton-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted) / 0.5) 25%,
+      hsl(var(--muted) / 0.7) 50%,
+      hsl(var(--muted) / 0.5) 75%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  /* Fade in animation for viewport entry */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Ripple effect for buttons */
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+  }
+  
+  /* Gold gradient animation */
+  @keyframes goldGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gold-gradient-animate {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(46 90% 55%) 50%,
+      hsl(var(--primary)) 100%
+    );
+    background-size: 200% 200%;
+    animation: goldGradient 3s ease infinite;
+  }
+  
+  /* Success animation */
+  @keyframes successCheckmark {
+    0% {
+      stroke-dashoffset: 100;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /* Parallax text effect */
+  .parallax-text {
+    will-change: transform;
+    transition: transform 0.5s var(--ease-smooth);
+  }
+  
+  /* Card lift effect */
+  .card-lift {
+    transition: all 0.3s var(--ease-smooth);
+    will-change: transform, box-shadow;
+  }
+  
+  .card-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+      0 20px 40px -15px rgba(0, 0, 0, 0.3),
+      0 10px 20px -5px hsl(var(--primary) / 0.2);
+  }
+  
+  /* Smooth page transitions */
+  .page-transition-enter {
+    animation: fadeInScale 0.4s var(--ease-smooth) forwards;
+  }
+  
+  .page-transition-exit {
+    animation: fadeInScale 0.3s var(--ease-smooth) reverse forwards;
+  }
+  
+  /* Enhanced mobile menu animation */
+  .menu-slide-in {
+    animation: slideInRight 0.3s var(--ease-smooth) forwards;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Button scale animation */
+  .btn-scale {
+    transition: transform 0.2s var(--ease-bounce);
+    will-change: transform;
+  }
+  
+  .btn-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn-scale:active {
+    transform: scale(0.98);
+  }
+  
+  /* Viewport observer animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s var(--ease-smooth);
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Progressive image loading */
+  .progressive-image {
+    filter: blur(5px);
+    transition: filter 0.3s var(--ease-smooth);
+  }
+  
+  .progressive-image.loaded {
+    filter: blur(0);
+  }
+  
+  /* Loading progress bar */
+  @keyframes loadingProgress {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+  .loading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary)),
+      hsl(46 90% 55%)
+    );
+    transform-origin: left;
+    animation: loadingProgress 2s var(--ease-smooth);
+    z-index: 9999;
   }
 }

@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Activity, Target, Shield, Dumbbell, Flame, ArrowRight } from "lucide-react";
 import VideoCarousel from "@/components/VideoCarousel";
 import { Link } from "wouter";
+import { useState, useEffect } from "react";
+import { SkeletonProgramCard } from "@/components/ui/skeleton-card";
+import { AnimatedSection } from "@/hooks/use-intersection-observer";
+import { ProgressiveImage } from "@/hooks/use-progressive-image";
 
 const programs = [
   {
@@ -63,6 +67,16 @@ const programs = [
 ];
 
 export default function Programs() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Video Carousel Background */}
@@ -70,42 +84,46 @@ export default function Programs() {
 
       {/* Hero Section */}
       <section className="relative py-32 px-6">
-        <div className="max-w-5xl mx-auto text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+        <AnimatedSection animation="fade-in-scale" className="max-w-5xl mx-auto text-center text-white">
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }}>
             Training Programs
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }}>
             Five specialized programs designed to transform your body and mind. Each program is crafted with proven methodologies and personalized to your goals.
           </p>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Programs Grid */}
       <section className="relative py-24 bg-black/50 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid gap-12">
-            {programs.map((program, index) => (
-              <Card key={index} className="overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <CardContent className="p-0 relative">
-                    <img 
-                      src={program.thumbnail} 
-                      alt={`${program.title} training`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-8">
-                      <div className="flex items-center gap-4">
-                        <program.icon className="h-12 w-12 text-primary" />
-                        <div>
-                          <h3 className="text-3xl font-bold text-white">{program.title}</h3>
-                          <p className="text-white/90">{program.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                  <CardHeader className="p-8 md:p-12">
+            {isLoading
+              ? Array.from({ length: 3 }).map((_, index) => (
+                  <SkeletonProgramCard key={index} className="animate-fade-in-scale" style={{ animationDelay: `${index * 100}ms` }} />
+                ))
+              : programs.map((program, index) => (
+                  <AnimatedSection key={index} animation="fade-in-up" delay={index * 150}>
+                    <Card className="overflow-hidden card-lift">
+                      <div className="grid md:grid-cols-2 gap-0">
+                        <CardContent className="p-0 relative">
+                          <ProgressiveImage
+                            src={program.thumbnail}
+                            alt={`${program.title} training`}
+                            className="w-full h-full"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                          <div className="absolute bottom-0 left-0 p-8">
+                            <div className="flex items-center gap-4">
+                              <program.icon className="h-12 w-12 text-primary animate-gold-gradient" />
+                              <div>
+                                <h3 className="text-3xl font-bold text-white">{program.title}</h3>
+                                <p className="text-white/90">{program.description}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                        <CardHeader className="p-8 md:p-12">
                     <p className="text-muted-foreground mb-6">{program.fullDescription}</p>
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
@@ -128,35 +146,36 @@ export default function Programs() {
                         ))}
                       </ul>
                     </div>
-                    <Button className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold" asChild>
-                      <Link href={program.href} data-testid={`button-view-${program.title.toLowerCase()}`}>
-                        View Program <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardHeader>
-                </div>
-              </Card>
-            ))}
+                          <Button className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold btn-scale gold-gradient-animate" asChild>
+                            <Link href={program.href} data-testid={`button-view-${program.title.toLowerCase()}`}>
+                              View Program <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </Link>
+                          </Button>
+                        </CardHeader>
+                      </div>
+                    </Card>
+                  </AnimatedSection>
+                ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-black/60 backdrop-blur-md">
+      <AnimatedSection animation="fade-in-scale" className="relative py-24 bg-black/60 backdrop-blur-md">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-display font-bold text-white mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+          <h2 className="text-4xl font-display font-bold text-white mb-6 parallax-text" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
             Ready to Start Your Journey?
           </h2>
           <p className="text-lg text-white/90 mb-8" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
             Take the first step today. Schedule your assessment and let's create a personalized plan for your transformation.
           </p>
-          <Button size="lg" className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold text-base" asChild>
+          <Button size="lg" className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold text-base btn-scale gold-gradient-animate" asChild>
             <Link href="/assessment" data-testid="button-schedule-assessment-programs">
               Schedule Your Assessment
             </Link>
           </Button>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Footer */}
       <footer className="relative py-12 bg-black/70 backdrop-blur-md border-t border-white/10">

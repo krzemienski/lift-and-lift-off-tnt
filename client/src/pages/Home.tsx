@@ -4,6 +4,7 @@ import VideoCarousel from "@/components/VideoCarousel";
 import { useToast } from "@/hooks/use-toast";
 import { Activity, Target, Shield, Dumbbell, Flame } from "lucide-react";
 import { Link } from "wouter";
+import { AnimatedSection } from "@/hooks/use-intersection-observer";
 
 export default function Home() {
   const { toast } = useToast();
@@ -49,16 +50,16 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen w-full flex items-center justify-center px-6 pt-16">
         <div className="max-w-5xl text-center text-white z-10">
-          <h1 className="mb-6 text-5xl font-display font-extrabold leading-tight md:text-7xl text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+          <h1 className="mb-6 text-5xl font-display font-extrabold leading-tight md:text-7xl text-white animate-fade-in-scale" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }}>
             TODAY, NOT TOMORROW
           </h1>
-          <p className="mb-10 text-lg md:text-xl text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+          <p className="mb-10 text-lg md:text-xl text-white/90 animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }}>
             Immediate, focused coaching across <strong>boxing</strong>, <strong>strength</strong>, <strong>calisthenics</strong>, <strong>flexibility</strong>, and <strong>fat loss</strong>—engineered for accountability and results.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             <Button
               size="lg"
-              className="text-base bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold"
+              className="text-base bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold btn-scale gold-gradient-animate"
               data-testid="button-schedule-assessment"
               asChild
             >
@@ -67,7 +68,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="text-base bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
+              className="text-base bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 btn-scale"
               data-testid="button-view-programs"
               asChild
             >
@@ -80,26 +81,28 @@ export default function Home() {
       {/* Programs Section */}
       <section className="relative py-24 bg-black/50 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <AnimatedSection animation="fade-in-scale" className="text-center mb-12">
             <h2 className="text-4xl font-display font-bold text-white mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
               Training Programs
             </h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
               Choose a proven path. Each track pairs technique with conditioning and smart recovery.
             </p>
-          </div>
+          </AnimatedSection>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {programs.map((program, index) => (
-              <Card key={index} className="hover-elevate">
-                <Link href={program.href}>
-                  <CardHeader>
-                    <program.icon className="h-10 w-10 text-primary mb-3" />
-                    <CardTitle className="text-xl">{program.title}</CardTitle>
-                    <CardDescription className="text-base">{program.description}</CardDescription>
-                  </CardHeader>
-                </Link>
-              </Card>
+              <AnimatedSection key={index} animation="fade-in-up" delay={index * 100}>
+                <Card className="hover-elevate card-lift">
+                  <Link href={program.href}>
+                    <CardHeader>
+                      <program.icon className="h-10 w-10 text-primary mb-3 animate-gold-gradient" />
+                      <CardTitle className="text-xl">{program.title}</CardTitle>
+                      <CardDescription className="text-base">{program.description}</CardDescription>
+                    </CardHeader>
+                  </Link>
+                </Card>
+              </AnimatedSection>
             ))}
           </div>
 

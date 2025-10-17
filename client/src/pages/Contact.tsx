@@ -7,12 +7,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
 import VideoCarousel from "@/components/VideoCarousel";
 import { Mail, Phone, MapPin, Instagram, Loader2 } from "lucide-react";
+import { AnimatedSection } from "@/hooks/use-intersection-observer";
+import { InlineSuccessAnimation } from "@/components/SuccessAnimation";
 
 const contactFormSchema = z.object({
   name: z.string()
@@ -34,6 +37,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
   const { toast } = useToast();
+  const [showSuccess, setShowSuccess] = useState(false);
   
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -52,11 +56,13 @@ export default function Contact() {
       return await response.json();
     },
     onSuccess: () => {
+      setShowSuccess(true);
       toast({
         title: "Message Sent!",
         description: "Thank you for reaching out. I'll get back to you within 24 hours.",
       });
       form.reset();
+      setTimeout(() => setShowSuccess(false), 5000);
     },
     onError: () => {
       toast({
@@ -78,14 +84,14 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section className="relative py-32 px-6">
-        <div className="max-w-5xl mx-auto text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+        <AnimatedSection animation="fade-in-scale" className="max-w-5xl mx-auto text-center text-white">
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }}>
             Let's talk.
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }}>
             Send a quick message with your goals. We'll respond within 24 hours.
           </p>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Contact Form Section */}
@@ -93,12 +99,20 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card>
+            <AnimatedSection animation="fade-in-up" delay={100}>
+              <Card className="card-lift">
               <CardHeader>
                 <CardTitle className="text-2xl">Send a Message</CardTitle>
                 <CardDescription>Fill out the form below and I'll get back to you within 24 hours.</CardDescription>
               </CardHeader>
               <CardContent>
+                {showSuccess && (
+                  <InlineSuccessAnimation 
+                    isSuccess={showSuccess} 
+                    message="Message sent successfully! We'll be in touch soon." 
+                    className="mb-6"
+                  />
+                )}
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField
@@ -191,7 +205,7 @@ export default function Contact() {
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold relative"
+                      className="w-full bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold relative btn-scale gold-gradient-animate"
                       disabled={contactMutation.isPending}
                       data-testid="button-submit-contact"
                       aria-busy={contactMutation.isPending}
@@ -209,9 +223,10 @@ export default function Contact() {
                 </Form>
               </CardContent>
             </Card>
+          </AnimatedSection>
 
             {/* Contact Information */}
-            <div className="space-y-6">
+            <AnimatedSection animation="fade-in-up" delay={200} className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle>Contact Information</CardTitle>
@@ -284,7 +299,7 @@ export default function Contact() {
                   </Button>
                 </CardContent>
               </Card>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

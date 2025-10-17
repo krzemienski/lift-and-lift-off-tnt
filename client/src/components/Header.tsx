@@ -61,7 +61,7 @@ export default function Header() {
             <Button 
               asChild
               variant="default" 
-              className="bg-gold hover:bg-gold/90 text-navy font-bold"
+              className="bg-gold hover:bg-gold/90 text-navy font-bold btn-scale gold-gradient-animate"
               data-testid="button-get-started"
             >
               <Link href="/contact">
@@ -84,7 +84,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent 
               side="right" 
-              className="w-[300px] bg-navy border-l border-white/10"
+              className="w-[300px] bg-navy border-l border-white/10 menu-slide-in"
             >
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-2">
@@ -101,14 +101,15 @@ export default function Header() {
               
               {/* Mobile Navigation */}
               <nav className="flex flex-col gap-4">
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                   <Link 
                     key={item.href} 
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-colors font-medium ${
+                    className={`block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300 font-medium animate-fade-in-up ${
                       location === item.href ? "text-gold bg-white/5" : ""
                     }`}
+                    style={{ animationDelay: `${index * 50}ms` }}
                     data-testid={`link-mobile-${item.label.toLowerCase()}`}
                   >
                     {item.label}
@@ -117,7 +118,8 @@ export default function Header() {
                 <Button 
                   onClick={() => setIsOpen(false)}
                   variant="default" 
-                  className="w-full bg-gold hover:bg-gold/90 text-navy font-bold mt-4"
+                  className="w-full bg-gold hover:bg-gold/90 text-navy font-bold mt-4 btn-scale gold-gradient-animate animate-fade-in-up"
+                  style={{ animationDelay: `${navItems.length * 50}ms` }}
                   data-testid="button-mobile-get-started"
                   asChild
                 >
