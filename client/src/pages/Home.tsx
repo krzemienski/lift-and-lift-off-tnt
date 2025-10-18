@@ -252,16 +252,12 @@ export default function Home() {
       <footer className="relative py-12 bg-black/70 backdrop-blur-md border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <img 
-                src="/brand/tnt_logo_new.png" 
+                src="/brand/tnt_logo_main.png" 
                 alt="TNT Fitness"
-                className="h-12 w-auto brightness-110"
+                className="h-14 w-auto"
               />
-              <div>
-                <h3 className="text-2xl font-display font-bold text-[#D4A017]">TNT FITNESS</h3>
-                <p className="text-white/60 text-sm">Today, Not Tomorrow</p>
-              </div>
             </div>
             
             <nav className="flex flex-wrap gap-6 text-white/80">

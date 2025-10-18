@@ -41,16 +41,13 @@ export default function StickyNav() {
         <div className="bg-background/95 backdrop-blur-md border-b shadow-sm">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between gap-2 py-3">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center">
                 <img 
-                  src="/brand/tnt_logo_new.png" 
+                  src="/brand/tnt_logo_main.png" 
                   alt="TNT Fitness"
-                  className="h-8 w-auto brightness-110"
+                  className="h-10 w-auto"
+                  data-testid="icon-nav-logo"
                 />
-                <div className="flex flex-col">
-                  <span className="font-display font-black text-[#D4A017] text-sm tracking-wider" data-testid="text-nav-title">TNT FITNESS</span>
-                  <span className="text-[9px] text-foreground/60 tracking-widest font-medium hidden sm:block">TODAY, NOT TOMORROW</span>
-                </div>
               </div>
               
               <CollapsibleTrigger asChild>

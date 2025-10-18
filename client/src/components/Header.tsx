@@ -7,8 +7,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import tntHorizontalLogo from "/brand/horizontal_1A_light_FIX_transparent.png";
-import tntIconLogo from "/brand/icon_1A_128.png";
+import tntLogo from "/brand/tnt_logo_main.png";
 
 const navItems = [
   { href: "/programs", label: "Programs" },
@@ -27,20 +26,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
-            {/* Mobile: Icon logo */}
+          <Link href="/" className="flex items-center" data-testid="link-logo">
             <img 
-              src={tntIconLogo} 
-              className="h-10 w-10 block sm:hidden" 
+              src={tntLogo} 
+              className="h-12 w-auto" 
               alt="TNT Fitness" 
-              data-testid="icon-logo" 
-            />
-            {/* Desktop: Horizontal logo */}
-            <img 
-              src={tntHorizontalLogo} 
-              className="h-10 hidden sm:block" 
-              alt="TNT Fitness" 
-              data-testid="horizontal-logo" 
+              data-testid="logo" 
             />
           </Link>
 
@@ -87,15 +78,12 @@ export default function Header() {
               className="w-[300px] bg-navy border-l border-white/10 menu-slide-in"
             >
               <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center">
                   <img 
-                    src={tntIconLogo} 
-                    className="h-10 w-10" 
+                    src={tntLogo} 
+                    className="h-10 w-auto" 
                     alt="TNT Fitness" 
                   />
-                  <span className="font-heading font-extrabold text-xl text-white">
-                    TNT FITNESS
-                  </span>
                 </div>
               </div>
               
