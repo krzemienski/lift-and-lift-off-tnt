@@ -6,7 +6,6 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import kettlebellIcon from "@assets/icon_kettlebell.svg";
 
 const SCROLL_THRESHOLD_PERCENTAGE = 0.7;
 
@@ -42,9 +41,16 @@ export default function StickyNav() {
         <div className="bg-background/95 backdrop-blur-md border-b shadow-sm">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between gap-2 py-3">
-              <div className="flex items-center gap-2">
-                <img src={kettlebellIcon} className="h-5 w-5" alt="TNT Fitness" data-testid="icon-nav-logo" />
-                <span className="font-heading font-bold text-lg" data-testid="text-nav-title">TNT Fitness</span>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="/brand/tnt_logo_new.png" 
+                  alt="TNT Fitness"
+                  className="h-8 w-auto brightness-110"
+                />
+                <div className="flex flex-col">
+                  <span className="font-display font-black text-[#D4A017] text-sm tracking-wider" data-testid="text-nav-title">TNT FITNESS</span>
+                  <span className="text-[9px] text-foreground/60 tracking-widest font-medium hidden sm:block">TODAY, NOT TOMORROW</span>
+                </div>
               </div>
               
               <CollapsibleTrigger asChild>

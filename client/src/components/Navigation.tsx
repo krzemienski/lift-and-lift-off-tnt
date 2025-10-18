@@ -23,9 +23,16 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl font-display font-bold text-primary">TNT</span>
-              <span className="hidden sm:block text-sm text-white/80">FITNESS</span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/brand/tnt_logo_new.png" 
+                alt="TNT Fitness"
+                className="h-10 w-auto brightness-110 contrast-125"
+              />
+              <div className="flex flex-col">
+                <span className="text-xl font-display font-black text-[#D4A017] tracking-wider">TNT FITNESS</span>
+                <span className="text-[10px] text-white/60 tracking-widest font-medium">TODAY, NOT TOMORROW</span>
+              </div>
             </div>
           </Link>
 

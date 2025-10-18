@@ -157,12 +157,12 @@ export default function Home() {
             </div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-8xl font-display font-bold text-primary mb-4">TNT</div>
-                  <p className="text-white/80 text-lg">Today Not Tomorrow</p>
-                </div>
-              </div>
+              <img 
+                src="/images/hero_trainer.png"
+                alt="Coach Rico - TNT Fitness"
+                className="w-full aspect-square object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>

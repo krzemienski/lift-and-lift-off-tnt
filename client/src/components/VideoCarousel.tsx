@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
 const videos = [
-  "/videos/download.mp4",
+  "/videos/hero_desktop.mp4",
+  "/videos/training_main.mp4",
   "/videos/download2.mp4",
   "/videos/download3.mp4",
   "/videos/download4.mp4",
   "/videos/download5.mp4",
   "/videos/download6.mp4",
   "/videos/download7.mp4",
-  "/videos/download8.mp4",
 ];
 
 export default function VideoCarousel() {
@@ -41,7 +41,7 @@ export default function VideoCarousel() {
     };
   }, []);
 
-  // Parallax scrolling effect
+  // Enhanced parallax scrolling effect with smooth transitions
   useEffect(() => {
     let ticking = false;
 
@@ -50,7 +50,9 @@ export default function VideoCarousel() {
         window.requestAnimationFrame(() => {
           if (containerRef.current) {
             const scrollY = window.scrollY;
-            containerRef.current.style.transform = `translateY(-${scrollY * 0.08}px)`;
+            // Smoother parallax with enhanced depth perception
+            containerRef.current.style.transform = `translateY(-${scrollY * 0.12}px) scale(${1 + scrollY * 0.0001})`;
+            containerRef.current.style.willChange = 'transform';
           }
           ticking = false;
         });
@@ -116,10 +118,11 @@ export default function VideoCarousel() {
   };
 
   return (
-    <div className="fixed inset-0 -z-50 overflow-hidden">
+    <div className="fixed inset-0 -z-50 overflow-hidden bg-black">
       <div
         ref={containerRef}
-        className="absolute inset-0 -top-[20vh]"
+        className="absolute inset-0 -top-[20vh] transition-transform duration-100 ease-out"
+        style={{ transformStyle: 'preserve-3d' }}
       >
         {/* Fallback poster image for when videos aren't loaded */}
         <div 
