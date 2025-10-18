@@ -7,7 +7,8 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import tntLogo from "/brand/tnt_logo_main.png";
+import tntIcon from "/brand/tnt_icon_clean.png";
+import tntHorizontal from "/brand/tnt_horizontal_clean.png";
 
 const navItems = [
   { href: "/programs", label: "Programs" },
@@ -27,11 +28,19 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center" data-testid="link-logo">
+            {/* Mobile: Icon only */}
             <img 
-              src={tntLogo} 
-              className="h-12 w-auto" 
+              src={tntIcon} 
+              className="h-10 w-10 block md:hidden" 
               alt="TNT Fitness" 
-              data-testid="logo" 
+              data-testid="logo-icon" 
+            />
+            {/* Desktop: Horizontal logo */}
+            <img 
+              src={tntHorizontal} 
+              className="h-8 w-auto hidden md:block" 
+              alt="TNT Fitness" 
+              data-testid="logo-horizontal" 
             />
           </Link>
 
@@ -80,8 +89,8 @@ export default function Header() {
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center">
                   <img 
-                    src={tntLogo} 
-                    className="h-10 w-auto" 
+                    src={tntIcon} 
+                    className="h-10 w-10" 
                     alt="TNT Fitness" 
                   />
                 </div>

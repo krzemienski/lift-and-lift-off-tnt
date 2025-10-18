@@ -24,10 +24,17 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center">
+              {/* Mobile: Icon only */}
               <img 
-                src="/brand/tnt_logo_main.png" 
+                src="/brand/tnt_icon_clean.png" 
                 alt="TNT Fitness"
-                className="h-12 w-auto"
+                className="h-10 w-10 block md:hidden"
+              />
+              {/* Desktop: Horizontal logo */}
+              <img 
+                src="/brand/tnt_horizontal_clean.png" 
+                alt="TNT Fitness"
+                className="h-8 w-auto hidden md:block"
               />
             </div>
           </Link>

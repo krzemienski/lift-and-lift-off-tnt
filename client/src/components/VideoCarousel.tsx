@@ -73,12 +73,11 @@ export default function VideoCarousel() {
         if (video) {
           video.load();
           if (index === 0) {
-            // Play the first video with retry mechanism
+            // Play the first video with graceful fallback
             const playVideo = () => {
               video.play().catch((error) => {
-                console.error("Error playing video:", error);
-                // Retry after a short delay
-                setTimeout(playVideo, 1000);
+                console.warn("Video autoplay not supported in this environment:", error.message);
+                // Don't retry - fallback to static background will be shown
               });
             };
             playVideo();
@@ -124,14 +123,22 @@ export default function VideoCarousel() {
         className="absolute inset-0 -top-[20vh] transition-transform duration-100 ease-out"
         style={{ transformStyle: 'preserve-3d' }}
       >
-        {/* Fallback poster image for when videos aren't loaded */}
+        {/* Enhanced fallback background with TNT brand gradient */}
         <div 
-          className="absolute inset-0 h-[140vh] w-full bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 h-[140vh] w-full"
           style={{
-            backgroundImage: `url(/images/hero_poster_desktop.jpg)`,
+            background: `linear-gradient(135deg, #0B2545 0%, #243B6B 50%, #0B2545 100%)`,
             transformOrigin: 'center',
           }}
-        />
+        >
+          {/* Optional hero image overlay */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+            style={{
+              backgroundImage: `url(/images/hero_action.png)`,
+            }}
+          />
+        </div>
         {videos.map((videoSrc, index) => (
           <video
             key={index}

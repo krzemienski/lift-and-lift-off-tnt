@@ -166,11 +166,11 @@ export default function Home() {
             
             <div className="relative">
               <img 
-                src="/images/hero_trainer.png"
+                src="/images/coach_rico.png"
                 alt="Coach Rico - TNT Fitness"
                 className="w-full aspect-square object-cover rounded-2xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/40 via-transparent to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>
@@ -266,9 +266,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-4">
               <img 
-                src="/brand/tnt_logo_main.png" 
+                src="/brand/tnt_horizontal_clean.png" 
                 alt="TNT Fitness"
-                className="h-14 w-auto drop-shadow-[0_0_15px_rgba(212,160,23,0.3)]"
+                className="h-10 w-auto"
               />
             </div>
             

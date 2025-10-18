@@ -43,9 +43,9 @@ export default function StickyNav() {
             <div className="flex items-center justify-between gap-2 py-3">
               <div className="flex items-center">
                 <img 
-                  src="/brand/tnt_logo_main.png" 
+                  src="/brand/tnt_icon_clean.png" 
                   alt="TNT Fitness"
-                  className="h-10 w-auto"
+                  className="h-8 w-8"
                   data-testid="icon-nav-logo"
                 />
               </div>

@@ -4,19 +4,32 @@
 Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with parallax video backgrounds, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
 
 ## Recent Changes
-- **AI-Generated Brand Assets & Visual Enhancement** (October 18, 2025)
-  - **New Brand Images**: Generated 4 AI brand images using image generation tool:
-    * TNT Fitness logo design with explosive graphics
-    * Hero trainer shot with Coach Rico
-    * Program icons set with gold accents
-    * Client transformation results showcase
-  - **Enhanced Video Integration**: Updated VideoCarousel with improved parallax effect:
-    * Added depth effect with scale animation on scroll
-    * Integrated hero_desktop_FINAL_V2.mp4 and hero_mobile_FINAL_V2.mp4
-    * Smooth transition between multiple training videos
-  - **Typography Update**: Integrated Montserrat for display/headings with Inter for body text
-  - **Site-Wide Branding**: Updated Navigation, StickyNav, and Footer with new logo and brand elements
-  - **Visual Consistency**: Maintained TNT brand colors throughout with enhanced contrast
+- **Complete Visual Enhancement & Video System** (October 18, 2025)
+  - **8-Video Carousel System**: Restored alternating portrait/landscape video rotation
+    * Videos: download.mp4 through download8.mp4 with parallax scrolling
+    * Fixed video file permissions (644) for proper serving
+    * Added graceful fallback for environments without video codec support
+  - **Blue & Gold Overlay System**: Enhanced text readability throughout
+    * Navy (#0B2545) and Indigo (#243B6B) overlays replacing purple tones
+    * Gold (#D4A017) accent highlights on CTAs and key elements
+    * Multi-layer gradient system with backdrop blur for text containers
+    * Text shadows and enhanced contrast for maximum readability
+  - **Professional TNT Branding**: Clean, minimalist logo system
+    * Square icon for mobile and small sizes (simple TNT design)
+    * Horizontal logo for desktop (TNT FITNESS with tagline)
+    * White logos optimized for blue backgrounds
+    * Consistent brand application across all components
+  - **Section-Specific Enhancements**:
+    * Hero: Blue container background with gold-accented buttons
+    * Programs: Navy overlay (#0B2545/60) with card-based layout
+    * Coach Rico: Indigo background (#243B6B/50) with contained bio
+    * Results/Instagram: Themed blue overlays with testimonials
+    * Footer: Deep navy with gold border and logo glow effect
+  - **Generated Design Assets**: Created missing brand elements
+    * Hero action background with trainer
+    * Program icons grid in TNT gold
+    * Mobile app mockup
+    * Client transformation showcase
   
 - **Master Build Implementation** (October 16, 2025)
   - **Complete Copy Alignment**: Updated all text content to match exact master build prompt specifications
