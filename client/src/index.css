@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Radial gradient utility */
+@layer utilities {
+  .bg-radial-gradient {
+    background: radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(11, 37, 69, 0.5) 100%);
+  }
+}
+
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(0,0,0, .10);

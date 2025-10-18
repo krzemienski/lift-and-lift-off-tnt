@@ -47,45 +47,52 @@ export default function Home() {
       {/* Video Carousel Background */}
       <VideoCarousel />
 
-      {/* Hero Section */}
+      {/* Hero Section - Enhanced with better text readability */}
       <section className="relative h-screen w-full flex items-center justify-center px-6 pt-16">
-        <div className="max-w-5xl text-center text-white z-10">
-          <h1 className="mb-6 text-5xl font-display font-extrabold leading-tight md:text-7xl text-white animate-fade-in-scale" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }}>
-            TODAY, NOT TOMORROW
-          </h1>
-          <p className="mb-10 text-lg md:text-xl text-white/90 animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }}>
-            Immediate, focused coaching across <strong>boxing</strong>, <strong>strength</strong>, <strong>calisthenics</strong>, <strong>flexibility</strong>, and <strong>fat loss</strong>—engineered for accountability and results.
-          </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-            <Button
-              size="lg"
-              className="text-base bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold btn-scale gold-gradient-animate"
-              data-testid="button-schedule-assessment"
-              asChild
-            >
-              <Link href="/assessment">Schedule Assessment</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 btn-scale"
-              data-testid="button-view-programs"
-              asChild
-            >
-              <Link href="/programs">View Programs</Link>
-            </Button>
+        <div className="max-w-5xl text-center z-10">
+          {/* Enhanced readability container with blue/gold theme */}
+          <div className="bg-[#0B2545]/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-[#D4A017]/30 shadow-2xl">
+            <h1 className="mb-6 text-5xl font-display font-extrabold leading-tight md:text-7xl text-white animate-fade-in-scale" 
+                style={{ textShadow: '3px 3px 6px rgba(11, 37, 69, 0.9), 0 0 30px rgba(212, 160, 23, 0.3)', animationDelay: '100ms' }}>
+              TODAY, NOT TOMORROW
+            </h1>
+            <p className="mb-10 text-lg md:text-xl text-white animate-fade-in-up" 
+               style={{ textShadow: '2px 2px 4px rgba(11, 37, 69, 0.8)', animationDelay: '200ms' }}>
+              Immediate, focused coaching across <strong className="text-[#D4A017]">boxing</strong>, <strong className="text-[#D4A017]">strength</strong>, <strong className="text-[#D4A017]">calisthenics</strong>, <strong className="text-[#D4A017]">flexibility</strong>, and <strong className="text-[#D4A017]">fat loss</strong>—engineered for accountability and results.
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+              <Button
+                size="lg"
+                className="text-base bg-[#D4A017] hover:bg-[#D4A017]/90 text-[#0B2545] font-bold btn-scale gold-gradient-animate shadow-xl border-2 border-[#D4A017]/50"
+                data-testid="button-schedule-assessment"
+                asChild
+              >
+                <Link href="/assessment">Schedule Assessment</Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base bg-[#243B6B]/30 backdrop-blur-sm border-2 border-[#D4A017]/40 text-white hover:bg-[#243B6B]/50 hover:border-[#D4A017]/60 btn-scale"
+                data-testid="button-view-programs"
+                asChild
+              >
+                <Link href="/programs">View Programs</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Programs Section */}
-      <section className="relative py-24 bg-black/50 backdrop-blur-md">
+      {/* Programs Section - Enhanced with blue overlay */}
+      <section className="relative py-24 bg-[#0B2545]/60 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection animation="fade-in-scale" className="text-center mb-12">
-            <h2 className="text-4xl font-display font-bold text-white mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h2 className="text-4xl font-display font-bold text-white mb-4" 
+                style={{ textShadow: '2px 2px 6px rgba(11, 37, 69, 0.9), 0 0 20px rgba(212, 160, 23, 0.2)' }}>
               Training Programs
             </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto" 
+               style={{ textShadow: '1px 1px 3px rgba(11, 37, 69, 0.8)' }}>
               Choose a proven path. Each track pairs technique with conditioning and smart recovery.
             </p>
           </AnimatedSection>
@@ -114,12 +121,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Coach Rico Section */}
-      <section className="relative py-24 bg-black/60 backdrop-blur-md">
+      {/* Coach Rico Section - Enhanced with blue/gold styling */}
+      <section className="relative py-24 bg-[#243B6B]/50 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-display font-bold text-white mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <div className="bg-[#0B2545]/30 backdrop-blur-sm rounded-2xl p-8 border border-[#D4A017]/20">
+              <h2 className="text-4xl font-display font-bold text-white mb-6" 
+                  style={{ textShadow: '2px 2px 6px rgba(11, 37, 69, 0.9), 0 0 20px rgba(212, 160, 23, 0.2)' }}>
                 Coach Rico
               </h2>
               
@@ -168,14 +176,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Results Section */}
-      <section className="relative py-24 bg-black/50 backdrop-blur-md">
+      {/* Results Section - Enhanced with blue styling */}
+      <section className="relative py-24 bg-[#0B2545]/60 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-display font-bold text-white mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h2 className="text-4xl font-display font-bold text-white mb-4" 
+                style={{ textShadow: '2px 2px 6px rgba(11, 37, 69, 0.9), 0 0 20px rgba(212, 160, 23, 0.2)' }}>
               Client Results
             </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto" 
+               style={{ textShadow: '1px 1px 3px rgba(11, 37, 69, 0.8)' }}>
               Real transformations from real people who chose today, not tomorrow
             </p>
           </div>
@@ -218,14 +228,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Instagram Section */}
-      <section className="relative py-24 bg-black/60 backdrop-blur-md">
+      {/* Instagram Section - Enhanced with blue/gold styling */}
+      <section className="relative py-24 bg-[#243B6B]/50 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-display font-bold text-white mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h2 className="text-4xl font-display font-bold text-white mb-4" 
+                style={{ textShadow: '2px 2px 6px rgba(11, 37, 69, 0.9), 0 0 20px rgba(212, 160, 23, 0.2)' }}>
               Follow @tntfitness
             </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto" 
+               style={{ textShadow: '1px 1px 3px rgba(11, 37, 69, 0.8)' }}>
               Daily motivation, workout tips, and client transformations
             </p>
           </div>
@@ -248,22 +260,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative py-12 bg-black/70 backdrop-blur-md border-t border-white/10">
+      {/* Footer - Enhanced with blue overlay and gold accents */}
+      <footer className="relative py-12 bg-[#0B2545]/80 backdrop-blur-md border-t border-[#D4A017]/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-4">
               <img 
                 src="/brand/tnt_logo_main.png" 
                 alt="TNT Fitness"
-                className="h-14 w-auto"
+                className="h-14 w-auto drop-shadow-[0_0_15px_rgba(212,160,23,0.3)]"
               />
             </div>
             
-            <nav className="flex flex-wrap gap-6 text-white/80">
-              <Link href="/programs" className="hover:text-primary transition-colors">Programs</Link>
-              <Link href="/trainer" className="hover:text-primary transition-colors">Trainer</Link>
-              <Link href="/assessment" className="hover:text-primary transition-colors">Assessment</Link>
+            <nav className="flex flex-wrap gap-6 text-white">
+              <Link href="/programs" className="hover:text-[#D4A017] transition-colors">Programs</Link>
+              <Link href="/trainer" className="hover:text-[#D4A017] transition-colors">Trainer</Link>
+              <Link href="/assessment" className="hover:text-[#D4A017] transition-colors">Assessment</Link>
               <Link href="/results" className="hover:text-primary transition-colors">Results</Link>
               <Link href="/instagram" className="hover:text-primary transition-colors">Instagram</Link>
               <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>

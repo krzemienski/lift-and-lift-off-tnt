@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
 const videos = [
-  "/videos/hero_desktop.mp4",
-  "/videos/training_main.mp4",
-  "/videos/download2.mp4",
-  "/videos/download3.mp4",
-  "/videos/download4.mp4",
-  "/videos/download5.mp4",
-  "/videos/download6.mp4",
-  "/videos/download7.mp4",
+  "/videos/download.mp4",   // Portrait 1
+  "/videos/download5.mp4",  // Landscape 1
+  "/videos/download2.mp4",  // Portrait 2
+  "/videos/download6.mp4",  // Landscape 2
+  "/videos/download3.mp4",  // Portrait 3
+  "/videos/download7.mp4",  // Landscape 3
+  "/videos/download4.mp4",  // Portrait 4
+  "/videos/download8.mp4",  // Landscape 4
 ];
 
 export default function VideoCarousel() {
@@ -155,7 +155,20 @@ export default function VideoCarousel() {
             }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+        {/* Enhanced blue and gold overlay for better text readability */}
+        <div className="absolute inset-0">
+          {/* Base blue gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B2545]/70 via-[#243B6B]/50 to-[#0B2545]/80" />
+          
+          {/* Gold accent overlay at top */}
+          <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-[#D4A017]/20 to-transparent" />
+          
+          {/* Additional blue tint for text areas */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/60 via-transparent to-[#243B6B]/40" />
+          
+          {/* Vignette effect for depth */}
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-[#0B2545]/50" />
+        </div>
       </div>
     </div>
   );
