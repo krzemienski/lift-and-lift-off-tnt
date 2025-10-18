@@ -13,6 +13,7 @@ import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
 import VideoCarousel from "@/components/VideoCarousel";
+import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Instagram, Loader2 } from "lucide-react";
 import { AnimatedSection } from "@/hooks/use-intersection-observer";
 import { InlineSuccessAnimation } from "@/components/SuccessAnimation";
@@ -304,30 +305,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative py-12 bg-black/70 backdrop-blur-md border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-              <h3 className="text-2xl font-display font-bold text-primary">TNT FITNESS</h3>
-              <p className="text-white/60">Today, Not Tomorrow</p>
-            </div>
-            
-            <nav className="flex flex-wrap gap-6 text-white/80">
-              <Link href="/programs" className="hover:text-primary transition-colors" data-testid="link-footer-programs-contact">Programs</Link>
-              <Link href="/trainer" className="hover:text-primary transition-colors" data-testid="link-footer-trainer-contact">Trainer</Link>
-              <Link href="/assessment" className="hover:text-primary transition-colors" data-testid="link-footer-assessment-contact">Assessment</Link>
-              <Link href="/results" className="hover:text-primary transition-colors" data-testid="link-footer-results-contact">Results</Link>
-              <Link href="/instagram" className="hover:text-primary transition-colors" data-testid="link-footer-instagram-contact">Instagram</Link>
-              <Link href="/contact" className="hover:text-primary transition-colors" data-testid="link-footer-contact-page">Contact</Link>
-            </nav>
-          </div>
-          
-          <div className="mt-8 pt-8 border-t border-white/10 text-center text-white/60">
-            <p>© 2024 TNT Fitness. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

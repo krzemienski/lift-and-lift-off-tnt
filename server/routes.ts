@@ -60,6 +60,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
               caption: "Recovery is just as important as training",
               permalink: "https://www.instagram.com/ellorylil",
             },
+            {
+              id: "9",
+              imageUrl: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&auto=format&fit=crop",
+              caption: "Team workout - Together we are stronger! Join the TNT family",
+              permalink: "https://www.instagram.com/ellorylil",
+            },
           ]
         });
       }
@@ -77,7 +83,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const posts: InstagramPost[] = data.data
         .filter((post: any) => post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM")
-        .slice(0, 8)
+        .slice(0, 9)
         .map((post: any) => ({
           id: post.id,
           imageUrl: post.media_url,

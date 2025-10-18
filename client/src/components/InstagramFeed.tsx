@@ -44,8 +44,8 @@ export default function InstagramFeed({ username, posts, profileUrl }: Instagram
           </Button>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {posts.map((post) => (
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
+          {posts.slice(0, 9).map((post, index) => (
             <a
               key={post.id}
               href={post.permalink}
@@ -54,7 +54,7 @@ export default function InstagramFeed({ username, posts, profileUrl }: Instagram
               className="relative aspect-square rounded-lg overflow-hidden group"
               onMouseEnter={() => setHoveredPost(post.id)}
               onMouseLeave={() => setHoveredPost(null)}
-              data-testid={`instagram-post-${post.id}`}
+              data-testid={`instagram-post-${index}`}
             >
               <img
                 src={post.imageUrl}
