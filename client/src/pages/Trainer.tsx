@@ -22,10 +22,10 @@ export default function Trainer() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }} data-testid="heading-trainer">
               Coach Rico
             </h1>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-8" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-8" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }} data-testid="subheading-trainer">
               Revelation & Evolution
             </h2>
           </div>
@@ -101,16 +101,16 @@ export default function Trainer() {
 
             <div className="text-center space-y-8">
               <div className="flex flex-wrap gap-3 justify-center">
-                <Badge variant="secondary" className="text-base px-4 py-2">
+                <Badge variant="secondary" className="text-base px-4 py-2" data-testid="badge-cert-issa">
                   ISSA Certified Personal Trainer
                 </Badge>
-                <Badge variant="secondary" className="text-base px-4 py-2">
+                <Badge variant="secondary" className="text-base px-4 py-2" data-testid="badge-cert-nutrition">
                   Sports Nutrition Specialist
                 </Badge>
-                <Badge variant="secondary" className="text-base px-4 py-2">
+                <Badge variant="secondary" className="text-base px-4 py-2" data-testid="badge-cert-corrective">
                   Corrective Exercise Specialist
                 </Badge>
-                <Badge variant="secondary" className="text-base px-4 py-2">
+                <Badge variant="secondary" className="text-base px-4 py-2" data-testid="badge-cert-recovery">
                   Recovery & Rehabilitation Expert
                 </Badge>
               </div>

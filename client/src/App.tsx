@@ -3,7 +3,8 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Header from "@/components/Header";
+import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/AppSidebar";
 import Home from "@/pages/Home";
 import Programs from "@/pages/Programs";
 import Calisthenics from "@/pages/programs/Calisthenics";
@@ -17,6 +18,7 @@ import Results from "@/pages/Results";
 import Instagram from "@/pages/Instagram";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import ThemeToggle from "@/components/ThemeToggle";
 
 function Router() {
   return (
@@ -39,21 +41,44 @@ function Router() {
 }
 
 function App() {
+  // Custom sidebar width for TNT Fitness
+  const style = {
+    "--sidebar-width": "17rem",       // 272px for better content
+    "--sidebar-width-icon": "3rem",   // default icon width
+  };
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        {/* Skip navigation link for accessibility */}
-        <a 
-          href="#main-content" 
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
-          aria-label="Skip to main content"
-        >
-          Skip to main content
-        </a>
-        <Header />
-        <main id="main-content" tabIndex={-1} className="focus:outline-none">
-          <Router />
-        </main>
+        <SidebarProvider style={style as React.CSSProperties} defaultOpen={true}>
+          <div className="flex h-screen w-full">
+            <AppSidebar />
+            <SidebarInset>
+              {/* Mobile/Tablet header with sidebar trigger */}
+              <header className="sticky top-0 z-40 flex items-center justify-between p-2 px-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:hidden">
+                <SidebarTrigger data-testid="button-sidebar-toggle" />
+                <div className="flex items-center gap-2">
+                  <span className="font-display font-bold text-[#D4A017]">TNT FITNESS</span>
+                </div>
+                <ThemeToggle />
+              </header>
+              
+              {/* Desktop header */}
+              <header className="sticky top-0 z-40 hidden md:flex items-center justify-between p-2 px-6 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                <div className="flex items-center gap-4">
+                  <SidebarTrigger data-testid="button-sidebar-toggle-desktop" />
+                  <h1 className="font-display text-lg font-semibold">Today, Not Tomorrow</h1>
+                </div>
+                <ThemeToggle />
+              </header>
+              
+              {/* Main content area */}
+              <main id="main-content" tabIndex={-1} className="flex-1 overflow-auto focus:outline-none">
+                <Router />
+              </main>
+            </SidebarInset>
+          </div>
+        </SidebarProvider>
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>

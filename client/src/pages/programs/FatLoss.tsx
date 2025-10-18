@@ -39,10 +39,10 @@ export default function FatLoss() {
             <div className="flex justify-center mb-6">
               <Flame className="h-16 w-16 text-primary" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }} data-testid="heading-fat-loss">
               FAT LOSS
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }} data-testid="text-fat-loss-description">
               Nutrition guidance + metabolic conditioning.
             </p>
           </div>

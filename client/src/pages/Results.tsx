@@ -98,10 +98,10 @@ export default function Results() {
       {/* Hero Section */}
       <section className="relative py-32 px-6">
         <div className="max-w-5xl mx-auto text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }} data-testid="heading-results">
             Consistency compounds.
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }} data-testid="text-results-description">
             See what clients achieved in 8–12 weeks.
           </p>
         </div>
@@ -112,12 +112,12 @@ export default function Results() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center text-white">
+              <div key={index} className="text-center text-white" data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, '-')}`}>
                 <stat.icon className="h-10 w-10 text-primary mx-auto mb-3" />
-                <div className="text-3xl font-bold" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+                <div className="text-3xl font-bold" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }} data-testid={`text-stat-value-${index}`}>
                   {stat.value}
                 </div>
-                <div className="text-sm text-white/80 mt-1" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>
+                <div className="text-sm text-white/80 mt-1" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.8)' }} data-testid={`text-stat-label-${index}`}>
                   {stat.label}
                 </div>
               </div>
@@ -140,21 +140,21 @@ export default function Results() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {testimonials.filter(t => t.featured).map((testimonial, index) => (
-              <Card key={index} className="hover-elevate">
+              <Card key={index} className="hover-elevate" data-testid={`card-featured-testimonial-${index}`}>
                 <CardContent className="pt-6">
-                  <div className="flex items-center gap-1 mb-3">
+                  <div className="flex items-center gap-1 mb-3" data-testid={`rating-featured-${index}`}>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
                   
                   <blockquote className="mb-4">
-                    <p className="text-muted-foreground italic">"{testimonial.quote}"</p>
+                    <p className="text-muted-foreground italic" data-testid={`text-testimonial-quote-${index}`}>"{testimonial.quote}"</p>
                   </blockquote>
                   
                   <div className="mb-4">
-                    <p className="font-semibold text-lg">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-semibold text-lg" data-testid={`text-testimonial-name-${index}`}>{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground" data-testid={`text-testimonial-program-${index}`}>
                       {testimonial.program} • {testimonial.duration}
                     </p>
                   </div>
@@ -163,7 +163,7 @@ export default function Results() {
                     <p className="text-sm font-semibold">Results:</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       {testimonial.results.map((result, i) => (
-                        <li key={i} className="flex items-start gap-2">
+                        <li key={i} className="flex items-start gap-2" data-testid={`result-${index}-${i}`}>
                           <span className="text-primary">✓</span>
                           {result}
                         </li>

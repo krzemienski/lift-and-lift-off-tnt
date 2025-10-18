@@ -77,45 +77,45 @@ export default function Assessment() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }} data-testid="heading-assessment">
               FREE ASSESSMENT
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }} data-testid="text-assessment-description">
               20-min call · Movement screen · Program fit · Next steps.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="backdrop-blur-sm bg-card/90">
+            <Card className="backdrop-blur-sm bg-card/90" data-testid="card-step-1">
               <CardHeader>
                 <Calendar className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Step 1</CardTitle>
-                <CardDescription>Book Your Assessment</CardDescription>
+                <CardTitle data-testid="text-step-1-title">Step 1</CardTitle>
+                <CardDescription data-testid="text-step-1-description">Book Your Assessment</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm">Fill out the form below with your information and goals</p>
+                <p className="text-sm" data-testid="text-step-1-content">Fill out the form below with your information and goals</p>
               </CardContent>
             </Card>
 
-            <Card className="backdrop-blur-sm bg-card/90">
+            <Card className="backdrop-blur-sm bg-card/90" data-testid="card-step-2">
               <CardHeader>
                 <User className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Step 2</CardTitle>
-                <CardDescription>Meet Coach Rico</CardDescription>
+                <CardTitle data-testid="text-step-2-title">Step 2</CardTitle>
+                <CardDescription data-testid="text-step-2-description">Meet Coach Rico</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm">Discuss your fitness history, goals, and create a custom plan</p>
+                <p className="text-sm" data-testid="text-step-2-content">Discuss your fitness history, goals, and create a custom plan</p>
               </CardContent>
             </Card>
 
-            <Card className="backdrop-blur-sm bg-card/90">
+            <Card className="backdrop-blur-sm bg-card/90" data-testid="card-step-3">
               <CardHeader>
                 <CheckCircle className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Step 3</CardTitle>
-                <CardDescription>Start Training</CardDescription>
+                <CardTitle data-testid="text-step-3-title">Step 3</CardTitle>
+                <CardDescription data-testid="text-step-3-description">Start Training</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm">Begin your transformation with expert guidance and support</p>
+                <p className="text-sm" data-testid="text-step-3-content">Begin your transformation with expert guidance and support</p>
               </CardContent>
             </Card>
           </div>
@@ -126,23 +126,23 @@ export default function Assessment() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-display font-bold mb-4">What's Included</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2" data-testid="included-consultation">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
                       <span>45-minute consultation</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2" data-testid="included-body-composition">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
                       <span>Body composition analysis</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2" data-testid="included-movement">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
                       <span>Movement assessment</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2" data-testid="included-program">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
                       <span>Custom program design</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2" data-testid="included-nutrition">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
                       <span>Nutrition guidelines</span>
                     </li>
@@ -263,8 +263,8 @@ export default function Assessment() {
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent>
-                                {preferredTimes.map((time) => (
-                                  <SelectItem key={time} value={time}>
+                                {preferredTimes.map((time, index) => (
+                                  <SelectItem key={time} value={time} data-testid={`option-time-${index}`}>
                                     {time}
                                   </SelectItem>
                                 ))}

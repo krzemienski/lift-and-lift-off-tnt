@@ -30,16 +30,16 @@ export default function Instagram() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection animation="fade-in-scale" className="text-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }}>
+            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 text-white animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }} data-testid="heading-instagram">
               STAY ACCOUNTABLE
             </h1>
             <div className="flex items-center justify-center gap-4 mb-6">
               <InstagramIcon className="h-8 w-8 text-primary" />
-              <p className="text-2xl md:text-3xl font-display font-bold text-primary" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+              <p className="text-2xl md:text-3xl font-display font-bold text-primary" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }} data-testid="text-instagram-handle">
                 @tntfitness
               </p>
             </div>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }} data-testid="text-instagram-description">
               Latest posts and behind-the-scenes training.
             </p>
             <Button
@@ -60,20 +60,20 @@ export default function Instagram() {
             <AnimatedSection animation="fade-in-up" delay={200}>
               <Card className="backdrop-blur-sm bg-card/90 p-8 mb-12 card-lift">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                  <div className="animate-fade-in-scale" style={{ animationDelay: '300ms' }}>
-                    <p className="text-3xl font-bold text-primary">10K+</p>
+                  <div className="animate-fade-in-scale" style={{ animationDelay: '300ms' }} data-testid="stat-followers">
+                    <p className="text-3xl font-bold text-primary" data-testid="text-followers-count">10K+</p>
                     <p className="text-sm text-muted-foreground">Followers</p>
                   </div>
-                  <div className="animate-fade-in-scale" style={{ animationDelay: '400ms' }}>
-                    <p className="text-3xl font-bold text-primary">750+</p>
+                  <div className="animate-fade-in-scale" style={{ animationDelay: '400ms' }} data-testid="stat-posts">
+                    <p className="text-3xl font-bold text-primary" data-testid="text-posts-count">750+</p>
                     <p className="text-sm text-muted-foreground">Posts</p>
                   </div>
-                  <div className="animate-fade-in-scale" style={{ animationDelay: '500ms' }}>
-                    <p className="text-3xl font-bold text-primary">500+</p>
+                  <div className="animate-fade-in-scale" style={{ animationDelay: '500ms' }} data-testid="stat-transformations">
+                    <p className="text-3xl font-bold text-primary" data-testid="text-transformations-count">500+</p>
                     <p className="text-sm text-muted-foreground">Client Transformations</p>
                   </div>
-                  <div className="animate-fade-in-scale" style={{ animationDelay: '600ms' }}>
-                    <p className="text-3xl font-bold text-primary">Daily</p>
+                  <div className="animate-fade-in-scale" style={{ animationDelay: '600ms' }} data-testid="stat-content">
+                    <p className="text-3xl font-bold text-primary" data-testid="text-content-frequency">Daily</p>
                     <p className="text-sm text-muted-foreground">New Content</p>
                   </div>
                 </div>

@@ -85,22 +85,22 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative py-32 px-6">
         <AnimatedSection animation="fade-in-scale" className="max-w-5xl mx-auto text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }}>
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }} data-testid="heading-contact">
             Let's talk.
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }}>
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }} data-testid="text-contact-description">
             Send a quick message with your goals. We'll respond within 24 hours.
           </p>
         </AnimatedSection>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="relative py-24 bg-black/50 backdrop-blur-md">
+      {/* Contact Form Section - Enhanced with Shadcn Blocks */}
+      <section className="relative py-24 bg-gradient-to-b from-black/50 to-[#0B2545]/60 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Contact Form - Shadcn Form Block */}
             <AnimatedSection animation="fade-in-up" delay={100}>
-              <Card className="card-lift">
+              <Card className="card-lift hover-elevate">
               <CardHeader>
                 <CardTitle className="text-2xl">Send a Message</CardTitle>
                 <CardDescription>Fill out the form below and I'll get back to you within 24 hours.</CardDescription>
@@ -170,12 +170,12 @@ export default function Contact() {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="calisthenics">Calisthenics</SelectItem>
-                              <SelectItem value="flexibility">Flexibility Training</SelectItem>
-                              <SelectItem value="boxing">Boxing</SelectItem>
-                              <SelectItem value="strength">Strength Training</SelectItem>
-                              <SelectItem value="fat-loss">Fat Loss</SelectItem>
-                              <SelectItem value="athletic">Athletic Performance</SelectItem>
+                              <SelectItem value="calisthenics" data-testid="option-calisthenics">Calisthenics</SelectItem>
+                              <SelectItem value="flexibility" data-testid="option-flexibility">Flexibility Training</SelectItem>
+                              <SelectItem value="boxing" data-testid="option-boxing">Boxing</SelectItem>
+                              <SelectItem value="strength" data-testid="option-strength">Strength Training</SelectItem>
+                              <SelectItem value="fat-loss" data-testid="option-fat-loss">Fat Loss</SelectItem>
+                              <SelectItem value="athletic" data-testid="option-athletic">Athletic Performance</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
@@ -233,35 +233,35 @@ export default function Contact() {
                   <CardDescription>Reach out through any of these channels</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3" data-testid="contact-email">
                     <Mail className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-muted-foreground">rico@tntfitness.com</p>
+                      <p className="text-muted-foreground" data-testid="text-email-address">rico@tntfitness.com</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3" data-testid="contact-phone">
                     <Phone className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <p className="text-muted-foreground">+1 (212) 555-0123</p>
+                      <p className="text-muted-foreground" data-testid="text-phone-number">+1 (212) 555-0123</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3" data-testid="contact-location">
                     <MapPin className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Location</p>
-                      <p className="text-muted-foreground">New York, NY</p>
+                      <p className="text-muted-foreground" data-testid="text-location">New York, NY</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3" data-testid="contact-instagram">
                     <Instagram className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Instagram</p>
-                      <a href="https://www.instagram.com/tntfitness" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      <a href="https://www.instagram.com/tntfitness" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-testid="link-instagram">
                         @tntfitness
                       </a>
                     </div>
@@ -314,12 +314,12 @@ export default function Contact() {
             </div>
             
             <nav className="flex flex-wrap gap-6 text-white/80">
-              <Link href="/programs" className="hover:text-primary transition-colors">Programs</Link>
-              <Link href="/trainer" className="hover:text-primary transition-colors">Trainer</Link>
-              <Link href="/assessment" className="hover:text-primary transition-colors">Assessment</Link>
-              <Link href="/results" className="hover:text-primary transition-colors">Results</Link>
-              <Link href="/instagram" className="hover:text-primary transition-colors">Instagram</Link>
-              <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
+              <Link href="/programs" className="hover:text-primary transition-colors" data-testid="link-footer-programs-contact">Programs</Link>
+              <Link href="/trainer" className="hover:text-primary transition-colors" data-testid="link-footer-trainer-contact">Trainer</Link>
+              <Link href="/assessment" className="hover:text-primary transition-colors" data-testid="link-footer-assessment-contact">Assessment</Link>
+              <Link href="/results" className="hover:text-primary transition-colors" data-testid="link-footer-results-contact">Results</Link>
+              <Link href="/instagram" className="hover:text-primary transition-colors" data-testid="link-footer-instagram-contact">Instagram</Link>
+              <Link href="/contact" className="hover:text-primary transition-colors" data-testid="link-footer-contact-page">Contact</Link>
             </nav>
           </div>
           

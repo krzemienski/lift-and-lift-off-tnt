@@ -85,10 +85,10 @@ export default function Programs() {
       {/* Hero Section */}
       <section className="relative py-32 px-6">
         <AnimatedSection animation="fade-in-scale" className="max-w-5xl mx-auto text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }}>
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 animate-fade-in-up" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)', animationDelay: '100ms' }} data-testid="heading-programs-page">
             Training Programs
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }}>
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)', animationDelay: '200ms' }} data-testid="text-programs-page-description">
             Five specialized programs designed to transform your body and mind. Each program is crafted with proven methodologies and personalized to your goals.
           </p>
         </AnimatedSection>
@@ -104,42 +104,43 @@ export default function Programs() {
                 ))
               : programs.map((program, index) => (
                   <AnimatedSection key={index} animation="fade-in-up" delay={index * 150}>
-                    <Card className="overflow-hidden card-lift">
+                    <Card className="overflow-hidden card-lift" data-testid={`card-program-detail-${program.title.toLowerCase().replace(/\s+/g, '-')}`}>
                       <div className="grid md:grid-cols-2 gap-0">
                         <CardContent className="p-0 relative">
                           <ProgressiveImage
                             src={program.thumbnail}
                             alt={`${program.title} training`}
                             className="w-full h-full"
+                            data-testid={`img-program-thumbnail-${program.title.toLowerCase().replace(/\s+/g, '-')}`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                           <div className="absolute bottom-0 left-0 p-8">
                             <div className="flex items-center gap-4">
                               <program.icon className="h-12 w-12 text-primary animate-gold-gradient" />
                               <div>
-                                <h3 className="text-3xl font-bold text-white">{program.title}</h3>
-                                <p className="text-white/90">{program.description}</p>
+                                <h3 className="text-3xl font-bold text-white" data-testid={`text-program-title-${index}`}>{program.title}</h3>
+                                <p className="text-white/90" data-testid={`text-program-subtitle-${index}`}>{program.description}</p>
                               </div>
                             </div>
                           </div>
                         </CardContent>
                         <CardHeader className="p-8 md:p-12">
-                    <p className="text-muted-foreground mb-6">{program.fullDescription}</p>
+                    <p className="text-muted-foreground mb-6" data-testid={`text-program-full-description-${index}`}>{program.fullDescription}</p>
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
                         <p className="text-sm text-muted-foreground">Duration</p>
-                        <p className="font-semibold">{program.duration}</p>
+                        <p className="font-semibold" data-testid={`text-program-duration-${index}`}>{program.duration}</p>
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Frequency</p>
-                        <p className="font-semibold">{program.frequency}</p>
+                        <p className="font-semibold" data-testid={`text-program-frequency-${index}`}>{program.frequency}</p>
                       </div>
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-4">Program Benefits</h3>
                       <ul className="space-y-3 mb-6">
                         {program.benefits.map((benefit, i) => (
-                          <li key={i} className="flex items-start gap-2">
+                          <li key={i} className="flex items-start gap-2" data-testid={`benefit-${program.title.toLowerCase().replace(/\s+/g, '-')}-${i}`}>
                             <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                             <span>{benefit}</span>
                           </li>
@@ -187,12 +188,12 @@ export default function Programs() {
             </div>
             
             <nav className="flex flex-wrap gap-6 text-white/80">
-              <Link href="/programs" className="hover:text-primary transition-colors">Programs</Link>
-              <Link href="/trainer" className="hover:text-primary transition-colors">Trainer</Link>
-              <Link href="/assessment" className="hover:text-primary transition-colors">Assessment</Link>
-              <Link href="/results" className="hover:text-primary transition-colors">Results</Link>
-              <Link href="/instagram" className="hover:text-primary transition-colors">Instagram</Link>
-              <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
+              <Link href="/programs" className="hover:text-primary transition-colors" data-testid="link-footer-programs">Programs</Link>
+              <Link href="/trainer" className="hover:text-primary transition-colors" data-testid="link-footer-trainer-nav">Trainer</Link>
+              <Link href="/assessment" className="hover:text-primary transition-colors" data-testid="link-footer-assessment-nav">Assessment</Link>
+              <Link href="/results" className="hover:text-primary transition-colors" data-testid="link-footer-results-nav">Results</Link>
+              <Link href="/instagram" className="hover:text-primary transition-colors" data-testid="link-footer-instagram-nav">Instagram</Link>
+              <Link href="/contact" className="hover:text-primary transition-colors" data-testid="link-footer-contact-nav">Contact</Link>
             </nav>
           </div>
           
