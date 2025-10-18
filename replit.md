@@ -4,14 +4,19 @@
 Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with parallax video backgrounds, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
 
 ## Recent Changes
-- **TNT PNG Assets v8 & Ultra Master Spec v5 Alignment** (October 17, 2025)
-  - **Complete Asset Integration**: Integrated TNT PNG Assets v8 with all favicons, logos, program icons, and thumbnails
-  - **Spec-Perfect Copy**: Updated all program pages to match Ultra Master Spec v5 exactly:
-    * Changed "What You'll Achieve" → "You'll achieve:"
-    * Changed "Weekly Structure" → "Weekly structure:"
-    * Changed "Gear Needed" → "Gear:"
-  - **Video Placeholders**: Added hero_kettlebell.mp4.PLACE-HERE.txt and hero_ropes.mp4.PLACE-HERE.txt
-  - **Production Ready**: Site tested at 95/100 score with all features functional
+- **AI-Generated Brand Assets & Visual Enhancement** (October 18, 2025)
+  - **New Brand Images**: Generated 4 AI brand images using image generation tool:
+    * TNT Fitness logo design with explosive graphics
+    * Hero trainer shot with Coach Rico
+    * Program icons set with gold accents
+    * Client transformation results showcase
+  - **Enhanced Video Integration**: Updated VideoCarousel with improved parallax effect:
+    * Added depth effect with scale animation on scroll
+    * Integrated hero_desktop_FINAL_V2.mp4 and hero_mobile_FINAL_V2.mp4
+    * Smooth transition between multiple training videos
+  - **Typography Update**: Integrated Montserrat for display/headings with Inter for body text
+  - **Site-Wide Branding**: Updated Navigation, StickyNav, and Footer with new logo and brand elements
+  - **Visual Consistency**: Maintained TNT brand colors throughout with enhanced contrast
   
 - **Master Build Implementation** (October 16, 2025)
   - **Complete Copy Alignment**: Updated all text content to match exact master build prompt specifications
