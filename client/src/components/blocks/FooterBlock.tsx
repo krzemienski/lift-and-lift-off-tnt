@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import { Instagram, Mail, Phone, MapPin, Send, Facebook, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import tntIcon from "@assets/generated_images/TNT_Fitness_icon_logo_4a8a83df.png";
 
 const navigation = {
   programs: [
@@ -118,7 +119,7 @@ export default function FooterBlock() {
             <Link href="/" className="inline-block">
               <div className="flex items-center gap-2">
                 <img 
-                  src="/brand/icon_1A_512.png" 
+                  src={tntIcon} 
                   alt="TNT Fitness"
                   className="h-14 w-14 object-contain"
                 />

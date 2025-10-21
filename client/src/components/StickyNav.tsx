@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Home, User, Dumbbell, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import tntIcon from "@assets/generated_images/TNT_Fitness_icon_logo_4a8a83df.png";
 import {
   Collapsible,
   CollapsibleContent,
@@ -43,7 +44,7 @@ export default function StickyNav() {
             <div className="flex items-center justify-between gap-2 py-3">
               <div className="flex items-center">
                 <img 
-                  src="/brand/icon_1A_512.png" 
+                  src={tntIcon} 
                   alt="TNT Fitness"
                   className="h-10 w-10 object-contain"
                   data-testid="icon-nav-logo"

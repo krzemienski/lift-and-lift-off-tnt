@@ -3,12 +3,17 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Clock, TrendingUp, Award } from "lucide-react";
 import { Link } from "wouter";
+import kettlebellIcon from "@assets/generated_images/Gold_kettlebell_icon_transparent_d404cb8e.png";
+import barbellIcon from "@assets/generated_images/Gold_barbell_icon_transparent_010248f1.png";
+import heartRateIcon from "@assets/generated_images/Gold_heart_rate_icon_9663c375.png";
+import boxingGloveIcon from "@assets/generated_images/Gold_boxing_glove_icon_f6bd82fe.png";
+import stretchBandIcon from "@assets/generated_images/Gold_stretch_band_icon_d88cce45.png";
 
 const programs = [
   {
     title: "Calisthenics",
     description: "Control your body, master movement.",
-    iconSrc: "/icons/png/kettlebell.png",
+    iconSrc: kettlebellIcon,
     badge: "Most Popular",
     features: ["No equipment needed", "Build functional strength", "Improve flexibility"],
     link: "/programs/calisthenics",
@@ -18,7 +23,7 @@ const programs = [
   {
     title: "Strength Training",
     description: "Progressive overload, durable gains.",
-    iconSrc: "/icons/png/barbell.png",
+    iconSrc: barbellIcon,
     badge: "Results Guaranteed",
     features: ["Progressive overload", "Compound movements", "Personalized splits"],
     link: "/programs/strength",
@@ -28,7 +33,7 @@ const programs = [
   {
     title: "Fat Loss",
     description: "Nutrition guidance + metabolic conditioning.",
-    iconSrc: "/icons/png/heart-rate.png",
+    iconSrc: heartRateIcon,
     badge: "Transform Fast",
     features: ["HIIT workouts", "Meal planning", "Weekly check-ins"],
     link: "/programs/fat-loss",
@@ -38,7 +43,7 @@ const programs = [
   {
     title: "Boxing",
     description: "Conditioning + technique for ring stamina.",
-    iconSrc: "/icons/png/boxing-glove.png",
+    iconSrc: boxingGloveIcon,
     badge: "High Energy",
     features: ["Technique drills", "Cardio conditioning", "Stress relief"],
     link: "/programs/boxing",
@@ -48,7 +53,7 @@ const programs = [
   {
     title: "Flexibility",
     description: "Mobility work to move pain‑free.",
-    iconSrc: "/icons/png/stretch-band.png",
+    iconSrc: stretchBandIcon,
     badge: "Recovery Focus",
     features: ["Dynamic stretching", "Yoga elements", "Injury prevention"],
     link: "/programs/flexibility",
@@ -111,8 +116,7 @@ export default function FeaturesBlock() {
                     <img 
                       src={program.iconSrc} 
                       alt={program.title} 
-                      className="h-6 w-6 object-contain brightness-0 invert opacity-90"
-                      style={{ filter: 'brightness(0) saturate(100%) invert(73%) sepia(70%) saturate(453%) hue-rotate(3deg) brightness(93%) contrast(89%)' }}
+                      className="h-6 w-6 object-contain"
                     />
                   </div>
                   <CardTitle className="text-xl">{program.title}</CardTitle>

@@ -4,6 +4,28 @@
 Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with HLS video playlists, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
 
 ## Recent Changes
+- **PNG Asset Regeneration with Proper Transparency** (October 21, 2025)
+  - **Complete PNG Replacement**: Regenerated all brand assets with proper alpha channel transparency
+  - **Generated Assets**:
+    * TNT Fitness icon logo (512x512) - Gold (#D4A017) with transparent background
+    * TNT Fitness horizontal logo (16:9) - "TNT FITNESS" + "TODAY, NOT TOMORROW" tagline with transparent background
+    * Program icons (all in gold with transparency):
+      - Kettlebell icon for Calisthenics
+      - Barbell icon for Strength Training
+      - Heart rate icon for Fat Loss
+      - Boxing glove icon for Boxing
+      - Stretch band icon for Flexibility
+      - Stopwatch icon (available for future use)
+  - **Updated Components**:
+    * FeaturesBlock: Now uses generated program icons via @assets imports
+    * Header: Uses generated TNT icon and horizontal logo
+    * AppSidebar: Uses generated TNT icon
+    * StickyNav: Uses generated TNT icon
+    * Navigation: Uses generated TNT icon and horizontal logo
+    * FooterBlock: Uses generated TNT icon
+  - **Typography Enhancement**: Updated all major headlines to use `font-heading font-extrabold` for proper Montserrat 800-900 weight
+  - **Benefits**: Proper transparency ensures icons display correctly on any background color, no CSS filter hacks needed
+
 - **HLS Video Playlist System** (October 21, 2025)
   - **Major Enhancement**: Converted 8-video system to HLS (HTTP Live Streaming) with auto-progression
   - **Implementation**:

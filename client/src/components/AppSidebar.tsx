@@ -1,5 +1,6 @@
 import { Home, Trophy, User, ClipboardCheck, Award, Instagram, Mail, Dumbbell, Target, Shield, Activity, Flame } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import tntIcon from "@assets/generated_images/TNT_Fitness_icon_logo_4a8a83df.png";
 import {
   Sidebar,
   SidebarContent,
@@ -83,7 +84,7 @@ export function AppSidebar() {
         <Link href="/" data-testid="link-sidebar-logo">
           <div className="flex items-center gap-3">
             <img 
-              src="/brand/icon_1A_512.png" 
+              src={tntIcon} 
               alt="TNT Fitness"
               className="h-12 w-12 object-contain"
               data-testid="img-sidebar-logo"

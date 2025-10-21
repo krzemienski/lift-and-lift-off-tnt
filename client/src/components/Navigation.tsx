@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import tntIcon from "@assets/generated_images/TNT_Fitness_icon_logo_4a8a83df.png";
+import tntHorizontal from "@assets/generated_images/TNT_Fitness_horizontal_logo_5483ac23.png";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -26,14 +28,14 @@ export default function Navigation() {
             <div className="flex items-center">
               {/* Mobile: Icon only */}
               <img 
-                src="/brand/icon_1A_512.png" 
+                src={tntIcon} 
                 alt="TNT Fitness"
                 className="h-10 w-10 object-contain md:hidden"
                 data-testid="logo-mobile"
               />
               {/* Desktop: Horizontal logo */}
               <img 
-                src="/brand/horizontal_1A_light_FIX_transparent.png" 
+                src={tntHorizontal} 
                 alt="TNT Fitness"
                 className="h-12 w-auto object-contain hidden md:block"
                 data-testid="logo-desktop"
