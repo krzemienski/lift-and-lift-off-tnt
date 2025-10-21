@@ -54,16 +54,6 @@ const programs = [
     link: "/programs/flexibility",
     color: "from-indigo-500/20 to-blue-500/20",
     borderColor: "border-indigo-500/30"
-  },
-  {
-    title: "Group Training",
-    description: "Train with others for motivation and accountability",
-    icon: Users,
-    badge: "Community",
-    features: ["Small groups", "Partner workouts", "Team challenges"],
-    link: "/programs",
-    color: "from-yellow-500/20 to-amber-500/20",
-    borderColor: "border-yellow-500/30"
   }
 ];
 
