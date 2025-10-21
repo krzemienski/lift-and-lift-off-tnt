@@ -18,13 +18,8 @@ import {
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronRight } from "lucide-react";
 
-// Main navigation items
+// Main navigation items - per master build spec
 const mainNavItems = [
-  {
-    title: "Home",
-    url: "/",
-    icon: Home,
-  },
   {
     title: "Programs",
     url: "/programs",
@@ -58,7 +53,7 @@ const mainNavItems = [
     ],
   },
   {
-    title: "Coach Rico",
+    title: "Trainer",
     url: "/trainer",
     icon: User,
   },
@@ -76,11 +71,6 @@ const mainNavItems = [
     title: "Instagram",
     url: "/instagram",
     icon: Instagram,
-  },
-  {
-    title: "Contact",
-    url: "/contact",
-    icon: Mail,
   },
 ];
 

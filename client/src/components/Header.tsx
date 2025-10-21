@@ -68,7 +68,7 @@ export default function Header() {
               className="bg-gold hover:bg-gold/90 text-navy font-bold btn-scale gold-gradient-animate"
               data-testid="button-get-started"
             >
-              <Link href="/contact">
+              <Link href="/assessment">
                 Get Started
               </Link>
             </Button>
@@ -124,7 +124,7 @@ export default function Header() {
                   data-testid="button-mobile-get-started"
                   asChild
                 >
-                  <Link href="/contact">
+                  <Link href="/assessment">
                     Get Started
                   </Link>
                 </Button>
