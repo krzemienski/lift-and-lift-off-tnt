@@ -1,14 +1,14 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Activity, Dumbbell, Flame, Shield, Target, Users, Clock, TrendingUp, Award } from "lucide-react";
+import { Users, Clock, TrendingUp, Award } from "lucide-react";
 import { Link } from "wouter";
 
 const programs = [
   {
     title: "Calisthenics",
     description: "Control your body, master movement.",
-    icon: Activity,
+    iconSrc: "/icons/png/kettlebell.png",
     badge: "Most Popular",
     features: ["No equipment needed", "Build functional strength", "Improve flexibility"],
     link: "/programs/calisthenics",
@@ -18,7 +18,7 @@ const programs = [
   {
     title: "Strength Training",
     description: "Progressive overload, durable gains.",
-    icon: Dumbbell,
+    iconSrc: "/icons/png/barbell.png",
     badge: "Results Guaranteed",
     features: ["Progressive overload", "Compound movements", "Personalized splits"],
     link: "/programs/strength",
@@ -28,7 +28,7 @@ const programs = [
   {
     title: "Fat Loss",
     description: "Nutrition guidance + metabolic conditioning.",
-    icon: Flame,
+    iconSrc: "/icons/png/heart-rate.png",
     badge: "Transform Fast",
     features: ["HIIT workouts", "Meal planning", "Weekly check-ins"],
     link: "/programs/fat-loss",
@@ -38,7 +38,7 @@ const programs = [
   {
     title: "Boxing",
     description: "Conditioning + technique for ring stamina.",
-    icon: Shield,
+    iconSrc: "/icons/png/boxing-glove.png",
     badge: "High Energy",
     features: ["Technique drills", "Cardio conditioning", "Stress relief"],
     link: "/programs/boxing",
@@ -48,7 +48,7 @@ const programs = [
   {
     title: "Flexibility",
     description: "Mobility work to move pain‑free.",
-    icon: Target,
+    iconSrc: "/icons/png/stretch-band.png",
     badge: "Recovery Focus",
     features: ["Dynamic stretching", "Yoga elements", "Injury prevention"],
     link: "/programs/flexibility",
@@ -84,7 +84,7 @@ export default function FeaturesBlock() {
           <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Training Programs
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white drop-shadow-lg">
             Choose Your <span className="text-[#D4A017]">Transformation Path</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">
@@ -108,7 +108,12 @@ export default function FeaturesBlock() {
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
                   <div className="p-2 rounded-lg bg-background/50 backdrop-blur-sm">
-                    <program.icon className="h-6 w-6 text-[#D4A017]" />
+                    <img 
+                      src={program.iconSrc} 
+                      alt={program.title} 
+                      className="h-6 w-6 object-contain brightness-0 invert opacity-90"
+                      style={{ filter: 'brightness(0) saturate(100%) invert(73%) sepia(70%) saturate(453%) hue-rotate(3deg) brightness(93%) contrast(89%)' }}
+                    />
                   </div>
                   <CardTitle className="text-xl">{program.title}</CardTitle>
                 </div>

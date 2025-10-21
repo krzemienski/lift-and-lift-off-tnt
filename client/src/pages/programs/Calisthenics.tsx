@@ -19,7 +19,7 @@ export default function Calisthenics() {
                 <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30 mb-4">
                   Most Popular Program
                 </Badge>
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">
                   <Activity className="inline-block h-12 w-12 text-[#D4A017] mr-3" />
                   Calisthenics Training
                 </h1>

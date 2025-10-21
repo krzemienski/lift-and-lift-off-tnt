@@ -61,7 +61,7 @@ export default function HeroBlock() {
 
               {/* Heading */}
               <div className="space-y-4">
-                <h1 className="text-5xl font-bold leading-tight tracking-tight text-white drop-shadow-lg md:text-6xl xl:text-7xl">
+                <h1 className="text-5xl font-heading font-extrabold leading-tight tracking-tight text-white drop-shadow-lg md:text-6xl xl:text-7xl">
                   TODAY,
                   <span className="block text-[#D4A017]">NOT</span>
                   <span className="block">TOMORROW</span>
