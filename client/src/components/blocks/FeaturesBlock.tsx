@@ -3,11 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Clock, TrendingUp, Award } from "lucide-react";
 import { Link } from "wouter";
-import kettlebellIcon from "@assets/generated_images/Gold_kettlebell_icon_transparent_d404cb8e.png";
-import barbellIcon from "@assets/generated_images/Gold_barbell_icon_transparent_010248f1.png";
-import heartRateIcon from "@assets/generated_images/Gold_heart_rate_icon_9663c375.png";
-import boxingGloveIcon from "@assets/generated_images/Gold_boxing_glove_icon_f6bd82fe.png";
-import stretchBandIcon from "@assets/generated_images/Gold_stretch_band_icon_d88cce45.png";
+import kettlebellIcon from "@assets/generated_images/Gold_kettlebell_icon_transparent_0d348c24.png";
+import barbellIcon from "@assets/generated_images/Gold_barbell_icon_transparent_f7feb4d0.png";
+import heartRateIcon from "@assets/generated_images/Gold_heart_rate_icon_transparent_24646962.png";
+import boxingGloveIcon from "@assets/generated_images/Gold_boxing_glove_transparent_icon_e197a17e.png";
+import stretchBandIcon from "@assets/generated_images/Gold_resistance_band_transparent_icon_b406efbe.png";
 
 const programs = [
   {
