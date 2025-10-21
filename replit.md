@@ -1,9 +1,36 @@
 # TNT Fitness - Coach Rico's Personal Training Website
 
 ## Project Overview
-Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with parallax video backgrounds, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
+Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with HLS video playlists, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
 
 ## Recent Changes
+- **HLS Video Playlist System** (October 21, 2025)
+  - **Major Enhancement**: Converted 8-video system to HLS (HTTP Live Streaming) with auto-progression
+  - **Implementation**:
+    * Converted all 8 MP4 videos to HLS format using FFmpeg (H.264, AAC)
+    * Created two master playlists with EXT-X-DISCONTINUITY for seamless transitions:
+      - `mobile_master.m3u8` - 4 portrait videos for mobile devices
+      - `desktop_master.m3u8` - 4 landscape videos for desktop
+    * Each video segmented into .ts chunks for adaptive streaming
+  - **Object Storage Integration**:
+    * All HLS files uploaded to Replit Object Storage (GCS-backed)
+    * Server endpoint `/public-objects/*` serves playlists and segments
+    * Proper MIME types: `application/vnd.apple.mpegurl` (.m3u8), `video/MP2T` (.ts)
+    * CORS headers enabled for cross-origin access
+  - **VideoCarousel Component**:
+    * Upgraded to use HLS.js library for modern adaptive streaming
+    * Auto-detects mobile/desktop and loads appropriate playlist
+    * Fallback to native HLS support for Safari/iOS
+    * Includes error recovery and automatic retry logic
+    * Videos now auto-progress through all 4 videos seamlessly
+  - **Benefits**:
+    * Seamless video transitions with EXT-X-DISCONTINUITY
+    * Adaptive bitrate streaming capability
+    * Better caching and CDN compatibility
+    * Reduced initial load time with segmented delivery
+    * iOS/Safari native support without additional libraries
+  
+
 - **TNT Brand Color System Fix** (October 21, 2025)
   - **Critical Fix**: Added TNT brand colors (gold, navy, indigo) as proper Tailwind utilities
   - **Issue**: Components were using `bg-navy`, `text-gold`, etc. but these utilities weren't defined in tailwind.config.ts
