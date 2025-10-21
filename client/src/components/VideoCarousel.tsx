@@ -22,6 +22,8 @@ export default function VideoCarousel() {
   const [nextVideoIndex, setNextVideoIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [videosLoaded, setVideosLoaded] = useState(false);
+  const [showFirstVideo, setShowFirstVideo] = useState(false); // Show when loaded
+  const [firstVideoLoaded, setFirstVideoLoaded] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -81,9 +83,25 @@ export default function VideoCarousel() {
         const firstVideo = videoRefs.current[0];
         if (firstVideo) {
           console.log("[VideoCarousel] Loading first video:", videos[0]);
+          
+          // Show video once it has loaded data
+          firstVideo.addEventListener('loadeddata', () => {
+            console.log("[VideoCarousel] First video loaded successfully");
+            setShowFirstVideo(true);
+            setFirstVideoLoaded(true);
+          }, { once: true });
+          
+          // Also show on canplay as fallback
+          firstVideo.addEventListener('canplay', () => {
+            console.log("[VideoCarousel] First video can play");
+            setShowFirstVideo(true);
+          }, { once: true });
+          
           firstVideo.load();
           firstVideo.play().catch((error) => {
-            console.warn("[VideoCarousel] Autoplay blocked:", error.message);
+            console.warn("[VideoCarousel] Autoplay blocked, showing video anyway:", error.message);
+            // Show video even if autoplay fails
+            setShowFirstVideo(true);
           });
         }
         
@@ -161,12 +179,21 @@ export default function VideoCarousel() {
             muted
             playsInline
             preload={index < 2 ? "auto" : "metadata"}
+            poster={index === 0 ? "/images/hero_action.png" : undefined}
             onEnded={index === currentVideoIndex ? handleVideoEnd : undefined}
+            onLoadedData={() => {
+              if (index === 0) {
+                console.log(`[VideoCarousel] Video ${index} loaded data`);
+                setShowFirstVideo(true);
+              }
+            }}
             onError={(e) => {
               console.error(`[VideoCarousel] Error loading video ${videoSrc}:`, e);
+              // Show first video anyway even if there's an error
+              if (index === 0) setShowFirstVideo(true);
             }}
             className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-1000 ${
-              index === currentVideoIndex
+              index === currentVideoIndex || (index === 0 && showFirstVideo)
                 ? "opacity-100"
                 : index === nextVideoIndex && isTransitioning
                 ? "opacity-100"
@@ -174,6 +201,7 @@ export default function VideoCarousel() {
             }`}
             style={{
               transformOrigin: 'center',
+              backgroundColor: index === 0 ? '#0B2545' : 'transparent',
             }}
           >
             <source src={videoSrc} type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
