@@ -6,19 +6,19 @@
 /* Theme configuration for Tailwind v4 */
 @theme {
   /* TNT Fitness Brand Colors */
-  --color-tnt-navy: #0B2545;
+  --color-tnt-navy: #0A2340;
   --color-tnt-indigo: #243B6B;
-  --color-tnt-gold: #D4A017;
+  --color-tnt-gold: #F7C948;
   
   /* shadcn semantic colors */
   --color-border: hsl(213 40% 85%);
   --color-input: hsl(213 20% 70%);
-  --color-ring: hsl(46 84% 46%);
+  --color-ring: hsl(46 91% 62%);
   --color-background: hsl(0 0% 99%);
-  --color-foreground: hsl(213 60% 16%);
-  --color-primary: hsl(46 84% 46%);
-  --color-primary-foreground: hsl(213 60% 16%);
-  --color-secondary: hsl(213 60% 20%);
+  --color-foreground: hsl(206 100% 13%);
+  --color-primary: hsl(46 91% 62%);
+  --color-primary-foreground: hsl(206 100% 13%);
+  --color-secondary: hsl(206 100% 13%);
   --color-secondary-foreground: hsl(0 0% 99%);
   --color-muted: hsl(213 20% 89%);
   --color-muted-foreground: hsl(213 30% 45%);
@@ -35,11 +35,11 @@
   --color-sidebar: hsl(213 40% 93%);
   --color-sidebar-foreground: hsl(213 60% 16%);
   --color-sidebar-border: hsl(213 40% 84%);
-  --color-sidebar-primary: hsl(46 84% 46%);
-  --color-sidebar-primary-foreground: hsl(213 60% 16%);
+  --color-sidebar-primary: hsl(46 91% 62%);
+  --color-sidebar-primary-foreground: hsl(206 100% 13%);
   --color-sidebar-accent: hsl(219 50% 30%);
   --color-sidebar-accent-foreground: hsl(0 0% 99%);
-  --color-sidebar-ring: hsl(46 84% 46%);
+  --color-sidebar-ring: hsl(46 91% 62%);
   
   /* Font families */
   --font-family-sans: Inter, system-ui, sans-serif;
@@ -72,9 +72,9 @@
   --elevate-2: rgba(0,0,0, .08);
 
   /* TNT Fitness Exact Brand Colors */
-  --tnt-navy: #0B2545;
+  --tnt-navy: #0A2340;
   --tnt-indigo: #243B6B;
-  --tnt-gold: #D4A017;
+  --tnt-gold: #F7C948;
   
   /* Radius Tokens */
   --radius-sm: 10px;
@@ -91,17 +91,17 @@
   --sidebar: 213 40% 93%;
   --sidebar-foreground: 213 60% 16%;
   --sidebar-border: 213 40% 84%;
-  --sidebar-primary: 46 84% 46%; /* Gold #D4A017 */
-  --sidebar-primary-foreground: 213 60% 16%;
+  --sidebar-primary: 46 91% 62%; /* Gold #F7C948 */
+  --sidebar-primary-foreground: 206 100% 13%;
   --sidebar-accent: 219 50% 30%; /* Indigo */
   --sidebar-accent-foreground: 0 0% 99%;
-  --sidebar-ring: 46 84% 46%;
+  --sidebar-ring: 46 91% 62%;
   --popover: 213 15% 91%;
   --popover-foreground: 213 60% 16%;
   --popover-border: 213 15% 82%;
-  --primary: 46 84% 46%; /* Gold #D4A017 */
-  --primary-foreground: 213 60% 16%;
-  --secondary: 213 60% 20%; /* Navy #0B2545 */
+  --primary: 46 91% 62%; /* Gold #F7C948 */
+  --primary-foreground: 206 100% 13%;
+  --secondary: 206 100% 13%; /* Navy #0A2340 */
   --secondary-foreground: 0 0% 99%;
   --muted: 213 20% 89%;
   --muted-foreground: 213 30% 45%;
@@ -110,8 +110,8 @@
   --destructive: 0 75% 45%;
   --destructive-foreground: 0 0% 99%;
   --input: 213 20% 70%;
-  --ring: 46 84% 46%;
-  --chart-1: 46 81% 40%;
+  --ring: 46 91% 62%;
+  --chart-1: 46 91% 50%;
   --chart-2: 213 60% 25%;
   --chart-3: 219 50% 35%;
   --chart-4: 30 75% 50%;

@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { Instagram, Mail, Phone, MapPin, Send, Facebook, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import tntIcon from "@assets/generated_images/TNT_icon_transparent_logo_6a709e22.png";
+import tntIcon from "@assets/generated_images/TNT_mascot_icon_logo_9e5078a8.png";
 
 const navigation = {
   programs: [

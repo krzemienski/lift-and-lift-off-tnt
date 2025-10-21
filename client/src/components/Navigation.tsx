@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import tntIcon from "@assets/generated_images/TNT_icon_transparent_logo_6a709e22.png";
-import tntHorizontal from "@assets/generated_images/TNT_horizontal_transparent_logo_1a1ff321.png";
+import tntIcon from "@assets/generated_images/TNT_mascot_icon_logo_9e5078a8.png";
+import tntHorizontal from "@assets/generated_images/TNT_horizontal_logo_942acfd0.png";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -57,7 +57,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Button
-              className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold ml-4"
+              className="bg-[#F7C948] hover:bg-[#F7C948]/90 text-black font-semibold ml-4"
               size="sm"
               asChild
             >
