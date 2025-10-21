@@ -4,6 +4,21 @@
 Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with parallax video backgrounds, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
 
 ## Recent Changes
+- **Video Codec Fix & Re-encoding** (October 21, 2025)
+  - **Critical Issue Resolved**: Videos were failing with "NotSupportedError: The element has no supported sources"
+  - **Root Cause**: Original videos used H.264 High profile which isn't universally supported in browsers
+  - **Solution**: Re-encoded all 8 videos using FFmpeg to H.264 Baseline profile with AAC audio
+  - **Technical Specifications**:
+    * Video Codec: H.264 (libx264) - Baseline profile, Level 3.0
+    * Audio Codec: AAC-LC, 128 kbps, 96000 Hz stereo
+    * Container: MP4 with faststart flag enabled for web streaming
+    * Pixel Format: yuv420p (4:2:0 chroma subsampling)
+    * Frame Rate: 30 fps, CRF 23 quality
+    * Codec String: `type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'`
+  - **File Sizes**: Optimized from 4-6 MB to 2.3-3.9 MB per video
+  - **Compatibility**: Now works in all modern browsers (Chrome, Firefox, Safari, Edge, iOS, Android)
+  - **Backup**: Original videos preserved in `client/public/videos/original/` directory
+  
 - **Logo System Update** (October 21, 2025)
   - **White TNT Logos**: Systematically updated all logos to use white assets optimized for blue backgrounds
     * Navigation: Horizontal logo on desktop, icon on mobile
@@ -17,7 +32,9 @@ Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) 
     * **Desktop (≥ 768px)**: 4 landscape videos (download5.mp4, download6.mp4, download7.mp4, download8.mp4)
     * Parallax scrolling effect with smooth auto-rotation
     * Fixed video file permissions (644) for proper serving
-    * Added graceful fallback for environments without video codec support
+    * Enhanced with explicit codec type specifications for browser compatibility
+    * Added error logging for video failures
+    * Improved loading - videos now load immediately on mount without intersection observer
   - **Blue & Gold Overlay System**: Enhanced text readability throughout
     * Navy (#0B2545) and Indigo (#243B6B) overlays replacing purple tones
     * Gold (#D4A017) accent highlights on CTAs and key elements
