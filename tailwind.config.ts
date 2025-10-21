@@ -14,6 +14,19 @@ export default {
         "3xl": "calc(var(--radius) * 1.5)", /* 24px */
       },
       colors: {
+        // TNT Fitness Brand Colors
+        gold: {
+          DEFAULT: "#D4A017",
+          foreground: "#0B2545",
+        },
+        navy: {
+          DEFAULT: "#0B2545",
+          foreground: "#FFFFFF",
+        },
+        indigo: {
+          DEFAULT: "#243B6B",
+          foreground: "#FFFFFF",
+        },
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",

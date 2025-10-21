@@ -4,6 +4,14 @@
 Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with parallax video backgrounds, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
 
 ## Recent Changes
+- **TNT Brand Color System Fix** (October 21, 2025)
+  - **Critical Fix**: Added TNT brand colors (gold, navy, indigo) as proper Tailwind utilities
+  - **Issue**: Components were using `bg-navy`, `text-gold`, etc. but these utilities weren't defined in tailwind.config.ts
+  - **Solution**: Added gold (#D4A017), navy (#0B2545), and indigo (#243B6B) to Tailwind color palette
+  - **Fixed Components**: Header navigation now properly displays with navy background and gold accents
+  - **Card Typography Fix**: Removed white text from program detail page Cards to use default dark text for proper readability
+  - **Contrast Improvement**: Program page Cards now use default light backgrounds that contrast properly with dark blue section overlays
+  
 - **Video Codec Fix & Re-encoding** (October 21, 2025)
   - **Critical Issue Resolved**: Videos were failing with "NotSupportedError: The element has no supported sources"
   - **Root Cause**: Original videos used H.264 High profile which isn't universally supported in browsers

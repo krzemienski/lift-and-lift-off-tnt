@@ -29,42 +29,42 @@ export default function Boxing() {
               </div>
               
               <div className="grid gap-6 md:grid-cols-3">
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-[#D4A017]" />
                       You'll achieve
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• Clean combinations</p>
                     <p>• 12‑round stamina</p>
                     <p>• Fight‑ready conditioning</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Calendar className="h-5 w-5 text-[#D4A017]" />
                       Weekly structure
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• 3x technique (pads/bag)</p>
                     <p>• 2x conditioning circuits</p>
                     <p>• 1x sparring (optional)</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Dumbbell className="h-5 w-5 text-[#D4A017]" />
                       Gear
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• Boxing gloves (12‑16oz)</p>
                     <p>• Hand wraps</p>
                     <p>• Jump rope</p>

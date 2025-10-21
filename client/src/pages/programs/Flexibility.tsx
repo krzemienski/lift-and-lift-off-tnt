@@ -29,42 +29,42 @@ export default function Flexibility() {
               </div>
               
               <div className="grid gap-6 md:grid-cols-3">
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-[#D4A017]" />
                       You'll achieve
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• Touch toes → full splits</p>
                     <p>• Pain‑free movement</p>
                     <p>• Joint stability</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Calendar className="h-5 w-5 text-[#D4A017]" />
                       Weekly structure
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• 4x mobility sessions</p>
                     <p>• 2x yoga flows</p>
                     <p>• Daily 10‑min routines</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Dumbbell className="h-5 w-5 text-[#D4A017]" />
                       Gear
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• Yoga mat</p>
                     <p>• Foam roller</p>
                     <p>• Stretching strap</p>

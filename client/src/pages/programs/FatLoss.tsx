@@ -29,42 +29,42 @@ export default function FatLoss() {
               </div>
               
               <div className="grid gap-6 md:grid-cols-3">
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-[#D4A017]" />
                       You'll achieve
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• 1‑2 lbs/week loss</p>
                     <p>• Visible abs</p>
                     <p>• Sustainable habits</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Calendar className="h-5 w-5 text-[#D4A017]" />
                       Weekly structure
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• 3x HIIT sessions</p>
                     <p>• 2x strength circuits</p>
                     <p>• Daily step goals</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Dumbbell className="h-5 w-5 text-[#D4A017]" />
                       Gear
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• Food scale</p>
                     <p>• Tracking app</p>
                     <p>• Heart rate monitor</p>

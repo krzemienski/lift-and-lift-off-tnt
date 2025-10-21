@@ -29,42 +29,42 @@ export default function Strength() {
               </div>
               
               <div className="grid gap-6 md:grid-cols-3">
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-[#D4A017]" />
                       You'll achieve
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• 2x bodyweight squat</p>
                     <p>• 1.5x bench press</p>
                     <p>• 2.5x deadlift</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Calendar className="h-5 w-5 text-[#D4A017]" />
                       Weekly structure
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• Push/Pull/Legs split</p>
                     <p>• Progressive overload</p>
                     <p>• Deload every 4th week</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/10 backdrop-blur border-white/20">
+                <Card>
                   <CardHeader>
-                    <CardTitle className="text-white flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2">
                       <Dumbbell className="h-5 w-5 text-[#D4A017]" />
                       Gear
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-white/90">
+                  <CardContent className="space-y-2">
                     <p>• Gym membership</p>
                     <p>• Lifting belt</p>
                     <p>• Tracking notebook</p>
