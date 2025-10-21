@@ -243,6 +243,28 @@
   body {
     @apply font-sans antialiased text-foreground;
   }
+
+  /* TNT Fitness Typography - Master Spec */
+  h1, h2, h3, h4, h5, h6,
+  .font-display,
+  [class*="font-display"] {
+    font-family: var(--font-display);
+    font-weight: 800; /* ExtraBold per master spec */
+  }
+
+  /* Buttons use Montserrat 700 */
+  button,
+  [role="button"],
+  .button {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  /* Body text uses Inter 400-600 */
+  p, span, div {
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
 }
 
 /**
