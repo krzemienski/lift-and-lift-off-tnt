@@ -3,7 +3,7 @@ import FooterBlock from "@/components/blocks/FooterBlock";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Activity, CheckCircle, Clock, Users, Target } from "lucide-react";
+import { Activity, CheckCircle, Clock, Dumbbell, Calendar } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Calisthenics() {
@@ -24,54 +24,59 @@ export default function Calisthenics() {
                   Calisthenics Training
                 </h1>
                 <p className="text-lg text-white/90">
-                  Master bodyweight training with progressive exercises
+                  Control your body, master movement.
                 </p>
               </div>
               
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-6 md:grid-cols-3">
                 <Card className="bg-white/10 backdrop-blur border-white/20">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-2">
-                      <Target className="h-5 w-5 text-[#D4A017]" />
-                      What You'll Achieve
+                      <CheckCircle className="h-5 w-5 text-[#D4A017]" />
+                      You'll achieve
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-white/90">
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-[#D4A017] mt-1" />
-                      <span>First muscle-up within 3 months</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-[#D4A017] mt-1" />
-                      <span>Handstand mastery</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-[#D4A017] mt-1" />
-                      <span>Full body control and strength</span>
-                    </div>
+                    <p>• First pull‑up → muscle‑up progression</p>
+                    <p>• Handstand holds (freestanding)</p>
+                    <p>• Control and coordination</p>
                   </CardContent>
                 </Card>
                 
                 <Card className="bg-white/10 backdrop-blur border-white/20">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-2">
-                      <Clock className="h-5 w-5 text-[#D4A017]" />
-                      Program Details
+                      <Calendar className="h-5 w-5 text-[#D4A017]" />
+                      Weekly structure
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-white/90">
-                    <p><strong>Duration:</strong> 12 weeks</p>
-                    <p><strong>Frequency:</strong> 4x per week</p>
-                    <p><strong>Session Length:</strong> 45-60 minutes</p>
-                    <p><strong>Equipment:</strong> Pull-up bar, parallel bars</p>
+                    <p>• 3x skill days (technique)</p>
+                    <p>• 2x strength days (reps)</p>
+                    <p>• Active recovery focus</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-white/10 backdrop-blur border-white/20">
+                  <CardHeader>
+                    <CardTitle className="text-white flex items-center gap-2">
+                      <Dumbbell className="h-5 w-5 text-[#D4A017]" />
+                      Gear
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-2 text-white/90">
+                    <p>• Pull‑up bar</p>
+                    <p>• Parallettes (optional)</p>
+                    <p>• Resistance bands</p>
                   </CardContent>
                 </Card>
               </div>
               
-              <div className="mt-8 text-center">
+              <div className="mt-8 text-center space-y-4">
                 <Button size="lg" className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold" asChild>
-                  <Link href="/assessment">Start Your Assessment</Link>
+                  <Link href="/assessment">Book Free Assessment</Link>
                 </Button>
+                <p className="text-sm text-white/70">Start your bodyweight mastery journey today</p>
               </div>
             </div>
           </div>

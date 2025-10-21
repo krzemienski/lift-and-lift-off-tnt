@@ -20,8 +20,7 @@ export default function Assessment() {
               Book Your <span className="text-[#D4A017]">Free Assessment</span>
             </h1>
             <p className="text-lg text-white/90 mb-8">
-              Start your transformation journey with a comprehensive fitness assessment.
-              We'll evaluate your current fitness level, discuss your goals, and create a personalized plan.
+              20‑min call · Movement screen · Program fit · Next steps.
             </p>
           </div>
         </section>

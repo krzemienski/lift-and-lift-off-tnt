@@ -73,7 +73,7 @@ export default function HeroBlock() {
                   <span className="block">TOMORROW</span>
                 </h1>
                 <p className="max-w-xl text-lg text-gray-300 md:text-xl">
-                  Explosive fitness transformations with Coach Rico. Join 500+ successful clients who chose action over excuses.
+                  Immediate, focused coaching across boxing, strength, calisthenics, flexibility, and fat loss—engineered for accountability and results.
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ export default function HeroBlock() {
                   asChild
                 >
                   <Link href="/assessment" data-testid="button-hero-assessment">
-                    Start Your Transformation
+                    Schedule Assessment
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>

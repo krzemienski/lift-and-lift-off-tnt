@@ -7,7 +7,7 @@ import { Link } from "wouter";
 const programs = [
   {
     title: "Calisthenics",
-    description: "Master bodyweight training with progressive exercises",
+    description: "Control your body, master movement.",
     icon: Activity,
     badge: "Most Popular",
     features: ["No equipment needed", "Build functional strength", "Improve flexibility"],
@@ -17,7 +17,7 @@ const programs = [
   },
   {
     title: "Strength Training",
-    description: "Build muscle and power with structured weightlifting",
+    description: "Progressive overload, durable gains.",
     icon: Dumbbell,
     badge: "Results Guaranteed",
     features: ["Progressive overload", "Compound movements", "Personalized splits"],
@@ -27,7 +27,7 @@ const programs = [
   },
   {
     title: "Fat Loss",
-    description: "Sustainable weight loss through HIIT and nutrition",
+    description: "Nutrition guidance + metabolic conditioning.",
     icon: Flame,
     badge: "Transform Fast",
     features: ["HIIT workouts", "Meal planning", "Weekly check-ins"],
@@ -37,7 +37,7 @@ const programs = [
   },
   {
     title: "Boxing",
-    description: "Learn boxing fundamentals and improve conditioning",
+    description: "Conditioning + technique for ring stamina.",
     icon: Shield,
     badge: "High Energy",
     features: ["Technique drills", "Cardio conditioning", "Stress relief"],
@@ -47,7 +47,7 @@ const programs = [
   },
   {
     title: "Flexibility",
-    description: "Enhance mobility and prevent injuries with stretching",
+    description: "Mobility work to move pain‑free.",
     icon: Target,
     badge: "Recovery Focus",
     features: ["Dynamic stretching", "Yoga elements", "Injury prevention"],
@@ -98,7 +98,7 @@ export default function FeaturesBlock() {
             Choose Your <span className="text-[#D4A017]">Transformation Path</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Science-backed programs designed for real results. Each program is customized to your fitness level and goals.
+            Choose a proven path. Each track pairs technique with conditioning and smart recovery.
           </p>
         </div>
 

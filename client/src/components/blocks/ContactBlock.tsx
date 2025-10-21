@@ -108,10 +108,10 @@ export default function ContactBlock() {
             Get In Touch
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Ready to <span className="text-[#D4A017]">Start Today?</span>
+            Let's <span className="text-[#D4A017]">talk.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Take the first step toward your transformation. We respond within 24 hours.
+            Send a quick message with your goals. We'll respond within 24 hours.
           </p>
         </div>
 

@@ -79,10 +79,10 @@ export default function TestimonialsBlock() {
             Success Stories
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Real People, <span className="text-[#D4A017]">Real Results</span>
+            Consistency <span className="text-[#D4A017]">compounds.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Join hundreds of clients who have transformed their lives with TNT Fitness
+            See what clients achieved in 8–12 weeks.
           </p>
         </div>
 

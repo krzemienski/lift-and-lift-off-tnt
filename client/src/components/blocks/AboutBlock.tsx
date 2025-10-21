@@ -84,25 +84,41 @@ export default function AboutBlock() {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>The TNT Philosophy</CardTitle>
-                <CardDescription>Today, Not Tomorrow</CardDescription>
+                <CardTitle>Revelation & Evolution</CardTitle>
+                <CardDescription>My Journey to TNT Fitness</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="leading-relaxed">
-                  I believe transformation isn't just about changing your body—it's about revolutionizing 
-                  your entire mindset. After struggling with my own weight and confidence issues in my 
-                  early twenties, I discovered the power of decisive action.
-                </p>
-                <p className="leading-relaxed">
-                  That revelation led me to found TNT Fitness with one simple principle: 
-                  <span className="font-semibold text-[#D4A017]"> stop waiting for the perfect moment and start today</span>. 
-                  Over the past decade, I've helped over 500 clients achieve what they once thought impossible.
-                </p>
-                <p className="leading-relaxed">
-                  My approach combines cutting-edge training techniques with old-school discipline, 
-                  creating programs that deliver rapid, sustainable results. Whether you're a complete 
-                  beginner or an experienced athlete, I'll push you to unlock your true potential.
-                </p>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-[#D4A017]">Revelation</h4>
+                  <p className="leading-relaxed">
+                    Growing up with severe asthma, I was told to avoid intense exercise. That changed in 2019 when a freak 
+                    accident with an elevator door sent me to the ER. The MRI didn't just show the injury—it revealed years 
+                    of muscle atrophy and weakness from playing it safe. Lying in that hospital bed, I made a decision: 
+                    no more excuses, no more tomorrow. Today starts now.
+                  </p>
+                </div>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-[#D4A017]">Evolution</h4>
+                  <p className="leading-relaxed">
+                    Recovery became my classroom. I studied movement mechanics, earned my ISSA certification, added nutrition 
+                    specialization, and transformed my own body—gaining 30 pounds of muscle while managing my asthma through 
+                    strategic conditioning. What started as personal rehabilitation evolved into a system that's now helped 
+                    500+ clients break through their own limitations.
+                  </p>
+                </div>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-[#D4A017]">Philosophy</h4>
+                  <p className="leading-relaxed">
+                    TNT isn't just a name—it's a mindset. Every excuse you make is another day stolen from your potential. 
+                    I don't train clients; I forge warriors who show up when motivation doesn't. My programs aren't about 
+                    perfection; they're about progression. One rep, one day, one decision at a time.
+                  </p>
+                  <p className="leading-relaxed font-bold text-[#D4A017]">
+                    Are you ready?
+                  </p>
+                </div>
               </CardContent>
             </Card>
 

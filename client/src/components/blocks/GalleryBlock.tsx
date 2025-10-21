@@ -38,10 +38,10 @@ export default function GalleryBlock() {
             Instagram Feed
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Stay <span className="text-[#D4A017]">Accountable</span>
+            Stay <span className="text-[#D4A017]">accountable.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Latest posts and behind-the-scenes training content
+            Latest posts and behind‑the‑scenes training.
           </p>
           
           {/* Stats Row */}
@@ -140,7 +140,7 @@ export default function GalleryBlock() {
               data-testid="button-follow-instagram"
             >
               <Instagram className="mr-2 h-5 w-5" />
-              Follow @tntfitness
+              Follow on Instagram
             </a>
           </Button>
           
