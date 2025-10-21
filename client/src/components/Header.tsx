@@ -25,9 +25,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center" data-testid="link-logo">
+        <div className="grid grid-cols-3 items-center h-16">
+          {/* Left: Logo */}
+          <Link href="/" className="flex items-center justify-start" data-testid="link-logo">
             {/* Mobile: Icon only */}
             <img 
               src={tntIcon} 
@@ -44,8 +44,8 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          {/* Center: Desktop Navigation */}
+          <nav className="hidden md:flex items-center justify-center gap-6">
             {navItems.map((item) => (
               <Link 
                 key={item.href} 
@@ -58,6 +58,10 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+          </nav>
+
+          {/* Right: CTA */}
+          <div className="hidden md:flex items-center justify-end">
             <Button 
               asChild
               variant="default" 
@@ -68,7 +72,7 @@ export default function Header() {
                 Get Started
               </Link>
             </Button>
-          </nav>
+          </div>
 
           {/* Mobile Menu Trigger */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
