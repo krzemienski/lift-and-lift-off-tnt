@@ -180,19 +180,16 @@ export default function VideoCarousel() {
             <source src={videoSrc} type="video/mp4" />
           </video>
         ))}
-        {/* Enhanced blue and gold overlay for better text readability */}
+        {/* Subtle blue and gold overlay for text readability - lighter to show videos */}
         <div className="absolute inset-0">
-          {/* Base blue gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0B2545]/70 via-[#243B6B]/50 to-[#0B2545]/80" />
+          {/* Base blue gradient overlay - reduced opacity to show videos */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B2545]/30 via-[#243B6B]/20 to-[#0B2545]/40" />
           
           {/* Gold accent overlay at top */}
-          <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-[#D4A017]/20 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-[#D4A017]/10 to-transparent" />
           
-          {/* Additional blue tint for text areas */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/60 via-transparent to-[#243B6B]/40" />
-          
-          {/* Vignette effect for depth */}
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-[#0B2545]/50" />
+          {/* Subtle vignette effect for depth */}
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-[#0B2545]/30" />
         </div>
       </div>
     </div>

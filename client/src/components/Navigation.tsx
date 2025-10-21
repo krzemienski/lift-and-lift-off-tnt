@@ -26,14 +26,14 @@ export default function Navigation() {
             <div className="flex items-center">
               {/* Mobile: Icon only */}
               <img 
-                src="/brand/tnt_icon_white.png" 
+                src="/brand/icon_1A_512.png" 
                 alt="TNT Fitness"
                 className="h-10 w-10 object-contain md:hidden"
                 data-testid="logo-mobile"
               />
               {/* Desktop: Horizontal logo */}
               <img 
-                src="/brand/tnt_horizontal_white.png" 
+                src="/brand/horizontal_1A_light_FIX_transparent.png" 
                 alt="TNT Fitness"
                 className="h-12 w-auto object-contain hidden md:block"
                 data-testid="logo-desktop"

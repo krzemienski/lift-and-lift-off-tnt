@@ -93,7 +93,7 @@ export function AppSidebar() {
         <Link href="/" data-testid="link-sidebar-logo">
           <div className="flex items-center gap-3">
             <img 
-              src="/brand/tnt_icon_white.png" 
+              src="/brand/icon_1A_512.png" 
               alt="TNT Fitness"
               className="h-12 w-12 object-contain"
               data-testid="img-sidebar-logo"

@@ -118,7 +118,7 @@ export default function FooterBlock() {
             <Link href="/" className="inline-block">
               <div className="flex items-center gap-2">
                 <img 
-                  src="/brand/tnt_icon_white.png" 
+                  src="/brand/icon_1A_512.png" 
                   alt="TNT Fitness"
                   className="h-14 w-14 object-contain"
                 />

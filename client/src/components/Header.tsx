@@ -7,8 +7,8 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import tntIcon from "/brand/tnt_icon_white.png";
-import tntHorizontal from "/brand/tnt_horizontal_white.png";
+import tntIcon from "/brand/icon_1A_512.png";
+import tntHorizontal from "/brand/horizontal_1A_light_FIX_transparent.png";
 
 const navItems = [
   { href: "/programs", label: "Programs" },
