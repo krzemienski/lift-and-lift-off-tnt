@@ -18,7 +18,6 @@ import Results from "@/pages/Results";
 import Instagram from "@/pages/Instagram";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
-import ThemeToggle from "@/components/ThemeToggle";
 
 function Router() {
   return (
@@ -60,7 +59,6 @@ function App() {
                 <div className="flex items-center gap-2">
                   <span className="font-display font-bold text-[#D4A017]">TNT FITNESS</span>
                 </div>
-                <ThemeToggle />
               </header>
               
               {/* Desktop header */}
@@ -69,7 +67,6 @@ function App() {
                   <SidebarTrigger data-testid="button-sidebar-toggle-desktop" />
                   <h1 className="font-display text-lg font-semibold">Today, Not Tomorrow</h1>
                 </div>
-                <ThemeToggle />
               </header>
               
               {/* Main content area */}
