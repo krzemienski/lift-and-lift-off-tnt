@@ -84,10 +84,10 @@ export default function FeaturesBlock() {
           <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Training Programs
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Choose Your <span className="text-[#D4A017]">Transformation Path</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-white/90 drop-shadow-md">
             Choose a proven path. Each track pairs technique with conditioning and smart recovery.
           </p>
         </div>
@@ -149,8 +149,8 @@ export default function FeaturesBlock() {
                 <benefit.icon className="h-6 w-6 text-[#D4A017]" />
               </div>
               <div>
-                <h3 className="font-semibold mb-1">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                <h3 className="font-semibold mb-1 text-white">{benefit.title}</h3>
+                <p className="text-sm text-white/80 drop-shadow-md">{benefit.description}</p>
               </div>
             </div>
           ))}

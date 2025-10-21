@@ -37,10 +37,10 @@ export default function GalleryBlock() {
             <Instagram className="h-3 w-3 mr-2" />
             Instagram Feed
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Stay <span className="text-[#D4A017]">accountable.</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-white/90 drop-shadow-md">
             Latest posts and behind‑the‑scenes training.
           </p>
           
@@ -48,15 +48,15 @@ export default function GalleryBlock() {
           <div className="flex items-center justify-center gap-8 pt-4">
             <div>
               <p className="text-2xl font-bold text-[#D4A017]">10K+</p>
-              <p className="text-sm text-muted-foreground">Followers</p>
+              <p className="text-sm text-white/80 drop-shadow-md">Followers</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-[#D4A017]">750+</p>
-              <p className="text-sm text-muted-foreground">Posts</p>
+              <p className="text-sm text-white/80 drop-shadow-md">Posts</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-[#D4A017]">Daily</p>
-              <p className="text-sm text-muted-foreground">New Content</p>
+              <p className="text-sm text-white/80 drop-shadow-md">New Content</p>
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function GalleryBlock() {
             </a>
           </Button>
           
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-white/80 drop-shadow-md">
             Join our community of 10K+ fitness enthusiasts
           </p>
         </div>

@@ -78,10 +78,10 @@ export default function TestimonialsBlock() {
           <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Success Stories
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Consistency <span className="text-[#D4A017]">compounds.</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-white/90 drop-shadow-md">
             See what clients achieved in 8–12 weeks.
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function TestimonialsBlock() {
             <CardContent className="p-8 md:p-12">
               <Quote className="h-8 w-8 text-[#D4A017]/50 mb-6" />
               
-              <p className="text-lg md:text-xl leading-relaxed mb-8">
+              <p className="text-lg md:text-xl leading-relaxed mb-8 text-white/90 drop-shadow-md">
                 {testimonials[activeTestimonial].content}
               </p>
               
@@ -103,8 +103,8 @@ export default function TestimonialsBlock() {
                     <AvatarFallback>{testimonials[activeTestimonial].name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-semibold">{testimonials[activeTestimonial].name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonials[activeTestimonial].role}</p>
+                    <p className="font-semibold text-white">{testimonials[activeTestimonial].name}</p>
+                    <p className="text-sm text-white/80 drop-shadow-md">{testimonials[activeTestimonial].role}</p>
                   </div>
                 </div>
                 
@@ -154,7 +154,7 @@ export default function TestimonialsBlock() {
                   ))}
                 </div>
                 
-                <p className="text-sm leading-relaxed line-clamp-3">
+                <p className="text-sm leading-relaxed line-clamp-3 text-muted-foreground">
                   "{testimonial.content}"
                 </p>
                 

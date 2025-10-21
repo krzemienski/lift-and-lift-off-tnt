@@ -61,12 +61,12 @@ export default function HeroBlock() {
 
               {/* Heading */}
               <div className="space-y-4">
-                <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
+                <h1 className="text-5xl font-bold leading-tight tracking-tight text-white drop-shadow-lg md:text-6xl xl:text-7xl">
                   TODAY,
                   <span className="block text-[#D4A017]">NOT</span>
                   <span className="block">TOMORROW</span>
                 </h1>
-                <p className="max-w-xl text-lg text-gray-300 md:text-xl">
+                <p className="max-w-xl text-lg text-white/90 drop-shadow-md md:text-xl">
                   Immediate, focused coaching across boxing, strength, calisthenics, flexibility, and fat loss—engineered for accountability and results.
                 </p>
               </div>
@@ -74,7 +74,7 @@ export default function HeroBlock() {
               {/* Features List */}
               <ul className="grid gap-3 sm:grid-cols-2">
                 {features.map((feature) => (
-                  <li key={feature} className="flex items-center text-gray-200">
+                  <li key={feature} className="flex items-center text-white/90 drop-shadow-md">
                     <CheckCircle className="mr-3 h-5 w-5 flex-shrink-0 text-[#D4A017]" />
                     <span className="text-sm md:text-base">{feature}</span>
                   </li>
@@ -115,7 +115,7 @@ export default function HeroBlock() {
                     />
                   ))}
                 </div>
-                <div className="text-sm text-gray-300">
+                <div className="text-sm text-white/80 drop-shadow-md">
                   <span className="font-semibold text-white">500+</span> clients achieving their goals
                 </div>
               </div>
@@ -131,9 +131,9 @@ export default function HeroBlock() {
                   <div className="p-6 space-y-3">
                     <stat.icon className="h-8 w-8 text-[#D4A017]" />
                     <div>
-                      <p className="text-3xl font-bold text-white">{stat.value}</p>
-                      <p className="text-sm font-medium text-[#D4A017]">{stat.label}</p>
-                      <p className="text-xs text-gray-400 mt-1">{stat.description}</p>
+                      <p className="text-3xl font-bold text-white drop-shadow-lg">{stat.value}</p>
+                      <p className="text-sm font-medium text-[#D4A017] drop-shadow-md">{stat.label}</p>
+                      <p className="text-xs text-white/70 drop-shadow-md mt-1">{stat.description}</p>
                     </div>
                   </div>
                 </Card>

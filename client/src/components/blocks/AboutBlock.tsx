@@ -39,10 +39,10 @@ export default function AboutBlock() {
           <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Meet Your Coach
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Coach <span className="text-[#D4A017]">Rico Martinez</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-white/90 drop-shadow-md">
             Your dedicated partner in achieving explosive fitness transformations
           </p>
         </div>
@@ -145,7 +145,7 @@ export default function AboutBlock() {
 
         {/* Specialties Grid */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center mb-8">
+          <h3 className="text-2xl font-bold text-center mb-8 text-white drop-shadow-md">
             Areas of <span className="text-[#D4A017]">Expertise</span>
           </h3>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -172,10 +172,10 @@ export default function AboutBlock() {
               <Badge className="bg-[#D4A017]/20 text-[#D4A017] border-[#D4A017]/30">
                 My Promise
               </Badge>
-              <h3 className="text-3xl font-bold">
+              <h3 className="text-3xl font-bold text-white drop-shadow-md">
                 "Your Success Is My Mission"
               </h3>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-lg leading-relaxed text-white/90 drop-shadow-md">
                 When you train with me, you're not just another client—you're part of the TNT family. 
                 I'll be there every step of your journey, celebrating your victories and pushing through 
                 challenges together. Your transformation becomes my personal mission.
