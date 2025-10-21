@@ -71,7 +71,7 @@ export default function TestimonialsBlock() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-[#0B2545]/70 to-[#243B6B]/60 backdrop-blur-md">
+    <section className="relative py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">

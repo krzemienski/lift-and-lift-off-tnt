@@ -42,12 +42,6 @@ const features = [
 export default function HeroBlock() {
   return (
     <section className="relative min-h-screen w-full flex items-center">
-      {/* Gradient Overlays for this section */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B2545]/30 via-transparent to-[#243B6B]/30" />
-      </div>
-
       {/* Content Container */}
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-20">
