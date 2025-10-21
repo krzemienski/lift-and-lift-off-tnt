@@ -1,10 +1,26 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Explicitly serve HLS video files with proper MIME types
+app.use('/videos', express.static(path.resolve(import.meta.dirname, '..', 'client', 'public', 'videos'), {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.m3u8')) {
+      res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+    } else if (filePath.endsWith('.m4s')) {
+      res.setHeader('Content-Type', 'video/iso.segment');
+    } else if (filePath.endsWith('.mp4')) {
+      res.setHeader('Content-Type', 'video/mp4');
+    }
+    // Enable CORS for video files
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  }
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();

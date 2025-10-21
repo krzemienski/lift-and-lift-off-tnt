@@ -618,4 +618,33 @@
     animation: loadingProgress 2s var(--ease-smooth);
     z-index: 9999;
   }
+
+  /* Video carousel gradient animations */
+  @keyframes gradient-shift {
+    0%, 100% {
+      background: linear-gradient(135deg, #0A2340 0%, #1a3758 25%, #0A2340 50%, #1a3758 75%, #0A2340 100%);
+    }
+    50% {
+      background: linear-gradient(135deg, #1a3758 0%, #0A2340 25%, #1a3758 50%, #0A2340 75%, #1a3758 100%);
+    }
+  }
+  
+  @keyframes gold-pulse {
+    0%, 100% {
+      opacity: 0.1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.25;
+      transform: scale(1.1);
+    }
+  }
+  
+  .animate-gradient-shift {
+    animation: gradient-shift 20s ease infinite;
+  }
+  
+  .animate-gold-pulse {
+    animation: gold-pulse 15s ease-in-out infinite;
+  }
 }
