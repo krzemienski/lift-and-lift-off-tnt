@@ -89,31 +89,33 @@ export default function AboutBlock() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-[#D4A017]">Revelation</h4>
+                  <h4 className="font-semibold text-[#D4A017]">Revelation — Why I Became a Trainer</h4>
                   <p className="leading-relaxed">
-                    Growing up with severe asthma, I was told to avoid intense exercise. That changed in 2019 when a freak 
-                    accident with an elevator door sent me to the ER. The MRI didn't just show the injury—it revealed years 
-                    of muscle atrophy and weakness from playing it safe. Lying in that hospital bed, I made a decision: 
-                    no more excuses, no more tomorrow. Today starts now.
+                    I was born into a fight for breath. Asthma dominated my childhood. Thanks to my mother's job at Mount Sinai East, 
+                    I spent too many hours in emergency rooms. At ten, I chose to put down the inhaler and chase sport. Coaches worried, 
+                    benched me, and in that frustration I found fuel—fuel to perform, to prove, to keep showing up.
+                  </p>
+                  <p className="leading-relaxed">
+                    In 2019 a freight elevator door collapsed on my head at work. The MRI read: <strong>severe brain contusions and concussion; 
+                    cervical spine damage (C1–C5); lumbar damage (L5–L7)</strong>. I spent two years in cognitive and physical therapy, 
+                    and a year and a half learning to walk without support.
                   </p>
                 </div>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-[#D4A017]">Evolution</h4>
+                  <h4 className="font-semibold text-[#D4A017]">Evolution — What I Do Now</h4>
                   <p className="leading-relaxed">
-                    Recovery became my classroom. I studied movement mechanics, earned my ISSA certification, added nutrition 
-                    specialization, and transformed my own body—gaining 30 pounds of muscle while managing my asthma through 
-                    strategic conditioning. What started as personal rehabilitation evolved into a system that's now helped 
-                    500+ clients break through their own limitations.
+                    Rebuilding my mind, spirit, and body became non‑negotiable. In 2024 I formalized that work, returning to school, 
+                    earning <strong>three personal trainer certifications</strong> and a <strong>nutritionist certification</strong>, 
+                    and studying human performance every day. My coaching is built on that recovery: <em>breath before load, posture 
+                    before power, consistency over everything.</em>
                   </p>
                 </div>
                 
                 <div className="space-y-3">
                   <h4 className="font-semibold text-[#D4A017]">Philosophy</h4>
                   <p className="leading-relaxed">
-                    TNT isn't just a name—it's a mindset. Every excuse you make is another day stolen from your potential. 
-                    I don't train clients; I forge warriors who show up when motivation doesn't. My programs aren't about 
-                    perfection; they're about progression. One rep, one day, one decision at a time.
+                    Fitness is more than reps. It is capacity—mental, spiritual, physical. It served and saved me—now it's your turn.
                   </p>
                   <p className="leading-relaxed font-bold text-[#D4A017]">
                     Are you ready?
