@@ -104,12 +104,15 @@ export class ObjectStorageService {
       const aclPolicy = await getObjectAclPolicy(file);
       const isPublic = aclPolicy?.visibility === "public";
       
-      // Determine content type - special handling for .m3u8 and .ts files
+      // Determine content type - special handling for HLS files
       let contentType = metadata.contentType || "application/octet-stream";
       if (file.name.endsWith('.m3u8')) {
         contentType = "application/vnd.apple.mpegurl";
       } else if (file.name.endsWith('.ts')) {
         contentType = "video/MP2T";
+      } else if (file.name.endsWith('.m4s') || file.name.endsWith('.mp4')) {
+        // fMP4 segments and init files both use video/mp4
+        contentType = "video/mp4";
       }
       
       // Set appropriate headers

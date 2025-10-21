@@ -20,6 +20,9 @@ function getContentType(filePath: string): string {
     return 'application/vnd.apple.mpegurl';
   } else if (filePath.endsWith('.ts')) {
     return 'video/MP2T';
+  } else if (filePath.endsWith('.m4s') || filePath.endsWith('.mp4')) {
+    // fMP4 segments and init files both use video/mp4
+    return 'video/mp4';
   }
   return 'application/octet-stream';
 }
