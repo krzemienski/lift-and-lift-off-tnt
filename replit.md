@@ -4,9 +4,18 @@
 Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) featuring Coach Rico's explosive fitness programs with parallax video backgrounds, dynamic Instagram integration, and professional service showcase. Fully aligned with master build specifications including Docker deployment, timestamped logging, and comprehensive asset structure.
 
 ## Recent Changes
+- **Logo System Update** (October 21, 2025)
+  - **White TNT Logos**: Systematically updated all logos to use white assets optimized for blue backgrounds
+    * Navigation: Horizontal logo on desktop, icon on mobile
+    * AppSidebar, StickyNav, Footer: White TNT icon
+    * Header component: Responsive white logos throughout
+    * All logos use object-contain for proper aspect ratio
+  
 - **Complete Visual Enhancement & Video System** (October 18, 2025)
-  - **8-Video Carousel System**: Restored alternating portrait/landscape video rotation
-    * Videos: download.mp4 through download8.mp4 with parallax scrolling
+  - **8-Video Carousel System**: Responsive portrait/landscape video system
+    * **Mobile (< 768px)**: 4 portrait videos (download.mp4, download2.mp4, download3.mp4, download4.mp4)
+    * **Desktop (≥ 768px)**: 4 landscape videos (download5.mp4, download6.mp4, download7.mp4, download8.mp4)
+    * Parallax scrolling effect with smooth auto-rotation
     * Fixed video file permissions (644) for proper serving
     * Added graceful fallback for environments without video codec support
   - **Blue & Gold Overlay System**: Enhanced text readability throughout

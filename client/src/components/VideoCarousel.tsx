@@ -1,44 +1,42 @@
 import { useEffect, useRef, useState } from "react";
 
-const videos = [
+// Portrait videos for mobile (vertical orientation)
+const portraitVideos = [
   "/videos/download.mp4",   // Portrait 1
-  "/videos/download5.mp4",  // Landscape 1
   "/videos/download2.mp4",  // Portrait 2
-  "/videos/download6.mp4",  // Landscape 2
   "/videos/download3.mp4",  // Portrait 3
-  "/videos/download7.mp4",  // Landscape 3
   "/videos/download4.mp4",  // Portrait 4
+];
+
+// Landscape videos for desktop (horizontal orientation)
+const landscapeVideos = [
+  "/videos/download5.mp4",  // Landscape 1
+  "/videos/download6.mp4",  // Landscape 2
+  "/videos/download7.mp4",  // Landscape 3
   "/videos/download8.mp4",  // Landscape 4
 ];
 
 export default function VideoCarousel() {
+  const [isMobile, setIsMobile] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [nextVideoIndex, setNextVideoIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [isInView, setIsInView] = useState(false);
   const [videosLoaded, setVideosLoaded] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
-  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Intersection observer for lazy loading
+  // Select appropriate videos based on screen size
+  const videos = isMobile ? portraitVideos : landscapeVideos;
+
+  // Detect mobile/desktop on mount and resize
   useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    if (containerRef.current) {
-      observerRef.current.observe(containerRef.current);
-    }
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
     };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   // Enhanced parallax scrolling effect with smooth transitions
@@ -64,39 +62,54 @@ export default function VideoCarousel() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Load videos only when in view
+  // Load and play videos immediately on mount - runs when videos array changes
   useEffect(() => {
-    if (isInView && !videosLoaded) {
-      // Preload only the first few videos initially
-      const videosToPreload = 3; 
-      videoRefs.current.slice(0, videosToPreload).forEach((video, index) => {
-        if (video) {
-          video.load();
-          if (index === 0) {
-            // Play the first video with graceful fallback
-            const playVideo = () => {
-              video.play().catch((error) => {
-                console.warn("Video autoplay not supported in this environment:", error.message);
-                // Don't retry - fallback to static background will be shown
-              });
-            };
-            playVideo();
-          }
+    // Reset video loading when screen size changes (mobile/desktop switch)
+    setVideosLoaded(false);
+    setCurrentVideoIndex(0);
+    setNextVideoIndex(1);
+  }, [videos]);
+
+  // Load videos once refs are ready
+  useEffect(() => {
+    if (!videosLoaded) {
+      // Wait for refs to be populated
+      const timer = setTimeout(() => {
+        console.log("[VideoCarousel] Loading videos:", videos);
+        
+        // Load first video immediately
+        const firstVideo = videoRefs.current[0];
+        if (firstVideo) {
+          console.log("[VideoCarousel] Loading first video:", videos[0]);
+          firstVideo.load();
+          firstVideo.play().catch((error) => {
+            console.warn("[VideoCarousel] Autoplay blocked:", error.message);
+          });
         }
-      });
-      
-      // Load remaining videos after a delay
-      setTimeout(() => {
-        videoRefs.current.slice(videosToPreload).forEach((video) => {
+        
+        // Preload next 2 videos
+        videoRefs.current.slice(1, 3).forEach((video, index) => {
           if (video) {
+            console.log("[VideoCarousel] Preloading video:", videos[index + 1]);
             video.load();
           }
         });
-      }, 2000);
-      
-      setVideosLoaded(true);
+        
+        // Load remaining videos after delay
+        setTimeout(() => {
+          videoRefs.current.slice(3).forEach((video, index) => {
+            if (video) {
+              video.load();
+            }
+          });
+        }, 3000);
+        
+        setVideosLoaded(true);
+      }, 200);
+
+      return () => clearTimeout(timer);
     }
-  }, [isInView, videosLoaded]);
+  }, [videosLoaded, videos]);
 
   const handleVideoEnd = () => {
     if (isTransitioning) return;
@@ -141,15 +154,17 @@ export default function VideoCarousel() {
         </div>
         {videos.map((videoSrc, index) => (
           <video
-            key={index}
+            key={`${videoSrc}-${index}`}
             ref={(el) => (videoRefs.current[index] = el)}
-            src={videoSrc}
             autoPlay={index === 0}
             loop={false}
             muted
             playsInline
             preload={index < 2 ? "auto" : "metadata"}
             onEnded={index === currentVideoIndex ? handleVideoEnd : undefined}
+            onError={(e) => {
+              console.error(`[VideoCarousel] Error loading video ${videoSrc}:`, e);
+            }}
             className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-1000 ${
               index === currentVideoIndex
                 ? "opacity-100"
@@ -160,7 +175,10 @@ export default function VideoCarousel() {
             style={{
               transformOrigin: 'center',
             }}
-          />
+          >
+            <source src={videoSrc} type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+            <source src={videoSrc} type="video/mp4" />
+          </video>
         ))}
         {/* Enhanced blue and gold overlay for better text readability */}
         <div className="absolute inset-0">
