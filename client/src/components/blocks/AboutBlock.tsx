@@ -36,11 +36,11 @@ export default function AboutBlock() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
+          <Badge className="bg-[#F7C948]/10 text-[#F7C948] border-[#F7C948]/30">
             Meet Your Coach
           </Badge>
           <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white drop-shadow-lg">
-            Coach <span className="text-[#D4A017]">Rico Martinez</span>
+            Coach <span className="text-[#F7C948]">Rico Martinez</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">
             Your dedicated partner in achieving explosive fitness transformations
@@ -61,7 +61,7 @@ export default function AboutBlock() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-2xl font-bold mb-2">Rico Martinez</h3>
-                  <p className="text-[#D4A017]">Founder & Head Coach</p>
+                  <p className="text-[#F7C948]">Founder & Head Coach</p>
                 </div>
               </div>
             </Card>
@@ -71,7 +71,7 @@ export default function AboutBlock() {
               {stats.map((stat) => (
                 <Card key={stat.label} className="text-center">
                   <CardContent className="p-4">
-                    <stat.icon className="h-6 w-6 text-[#D4A017] mx-auto mb-2" />
+                    <stat.icon className="h-6 w-6 text-[#F7C948] mx-auto mb-2" />
                     <p className="text-2xl font-bold">{stat.value}</p>
                     <p className="text-xs text-muted-foreground">{stat.label}</p>
                   </CardContent>
@@ -89,7 +89,7 @@ export default function AboutBlock() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-[#D4A017]">Revelation — Why I Became a Trainer</h4>
+                  <h4 className="font-semibold text-[#F7C948]">Revelation — Why I Became a Trainer</h4>
                   <p className="leading-relaxed">
                     I was born into a fight for breath. Asthma dominated my childhood. Thanks to my mother's job at Mount Sinai East, 
                     I spent too many hours in emergency rooms. At ten, I chose to put down the inhaler and chase sport. Coaches worried, 
@@ -103,7 +103,7 @@ export default function AboutBlock() {
                 </div>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-[#D4A017]">Evolution — What I Do Now</h4>
+                  <h4 className="font-semibold text-[#F7C948]">Evolution — What I Do Now</h4>
                   <p className="leading-relaxed">
                     Rebuilding my mind, spirit, and body became non‑negotiable. In 2024 I formalized that work, returning to school, 
                     earning <strong>three personal trainer certifications</strong> and a <strong>nutritionist certification</strong>, 
@@ -113,11 +113,11 @@ export default function AboutBlock() {
                 </div>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-[#D4A017]">Philosophy</h4>
+                  <h4 className="font-semibold text-[#F7C948]">Philosophy</h4>
                   <p className="leading-relaxed">
                     Fitness is more than reps. It is capacity—mental, spiritual, physical. It served and saved me—now it's your turn.
                   </p>
-                  <p className="leading-relaxed font-bold text-[#D4A017]">
+                  <p className="leading-relaxed font-bold text-[#F7C948]">
                     Are you ready?
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export default function AboutBlock() {
                 <div className="grid gap-2">
                   {achievements.map((achievement) => (
                     <div key={achievement} className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-[#D4A017] flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-[#F7C948] flex-shrink-0" />
                       <span className="text-sm">{achievement}</span>
                     </div>
                   ))}
@@ -146,14 +146,14 @@ export default function AboutBlock() {
         {/* Specialties Grid */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center mb-8 text-white drop-shadow-md">
-            Areas of <span className="text-[#D4A017]">Expertise</span>
+            Areas of <span className="text-[#F7C948]">Expertise</span>
           </h3>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {specialties.map((specialty) => (
               <Card key={specialty.title} className="hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
-                    <Target className="h-5 w-5 text-[#D4A017] mt-0.5" />
+                    <Target className="h-5 w-5 text-[#F7C948] mt-0.5" />
                     <div>
                       <h4 className="font-semibold mb-1">{specialty.title}</h4>
                       <p className="text-sm text-muted-foreground">{specialty.description}</p>
@@ -166,10 +166,10 @@ export default function AboutBlock() {
         </div>
 
         {/* Training Philosophy */}
-        <Card className="bg-gradient-to-br from-[#0B2545]/10 to-[#243B6B]/10 border-[#D4A017]/20">
+        <Card className="bg-gradient-to-br from-[#0B2545]/10 to-[#243B6B]/10 border-[#F7C948]/20">
           <CardContent className="p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <Badge className="bg-[#D4A017]/20 text-[#D4A017] border-[#D4A017]/30">
+              <Badge className="bg-[#F7C948]/20 text-[#F7C948] border-[#F7C948]/30">
                 My Promise
               </Badge>
               <h3 className="text-3xl font-bold text-white drop-shadow-md">
@@ -183,7 +183,7 @@ export default function AboutBlock() {
               <div className="flex flex-wrap gap-4 justify-center pt-4">
                 <Button 
                   size="lg"
-                  className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold"
+                  className="bg-[#F7C948] text-black hover:bg-[#F7C948]/90 font-semibold"
                   asChild
                 >
                   <Link href="/assessment" data-testid="button-about-assessment">

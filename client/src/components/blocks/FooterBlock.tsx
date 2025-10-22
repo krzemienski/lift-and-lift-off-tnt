@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { Instagram, Mail, Phone, MapPin, Send, Facebook, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import tntIcon from "@assets/generated_images/TNT_mascot_icon_logo_9e5078a8.png";
+import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
 
 const navigation = {
   programs: [
@@ -69,12 +69,12 @@ export default function FooterBlock() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#0B2545]/80 to-black/90 backdrop-blur-md text-white border-t border-[#D4A017]/20">
+    <footer className="relative bg-gradient-to-b from-[#0B2545]/80 to-black/90 backdrop-blur-md text-white border-t border-[#F7C948]/20">
       {/* Newsletter Section */}
-      <div className="border-b border-[#D4A017]/20">
+      <div className="border-b border-[#F7C948]/20">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-2xl mx-auto text-center space-y-4">
-            <Badge className="bg-[#D4A017]/20 text-[#D4A017] border-[#D4A017]/30">
+            <Badge className="bg-[#F7C948]/20 text-[#F7C948] border-[#F7C948]/30">
               Stay Updated
             </Badge>
             <h3 className="text-2xl font-bold">Get Fitness Tips & Special Offers</h3>
@@ -93,7 +93,7 @@ export default function FooterBlock() {
               />
               <Button 
                 type="submit"
-                className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold"
+                className="bg-[#F7C948] text-black hover:bg-[#F7C948]/90 font-semibold"
                 disabled={isSubscribing}
                 data-testid="button-newsletter-submit"
               >
@@ -124,7 +124,7 @@ export default function FooterBlock() {
                   className="h-14 w-14 object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-bold text-[#D4A017]">TNT FITNESS</h3>
+                  <h3 className="text-xl font-bold text-[#F7C948]">TNT FITNESS</h3>
                   <p className="text-xs text-gray-400">Today, Not Tomorrow</p>
                 </div>
               </div>
@@ -153,13 +153,13 @@ export default function FooterBlock() {
 
           {/* Programs Column */}
           <div>
-            <h4 className="font-semibold mb-4 text-[#D4A017]">Programs</h4>
+            <h4 className="font-semibold mb-4 text-[#F7C948]">Programs</h4>
             <ul className="space-y-2">
               {navigation.programs.map((item) => (
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-sm text-gray-300 hover:text-[#D4A017] transition-colors"
+                    className="text-sm text-gray-300 hover:text-[#F7C948] transition-colors"
                     data-testid={`link-footer-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {item.name}
@@ -171,13 +171,13 @@ export default function FooterBlock() {
 
           {/* Company Column */}
           <div>
-            <h4 className="font-semibold mb-4 text-[#D4A017]">Company</h4>
+            <h4 className="font-semibold mb-4 text-[#F7C948]">Company</h4>
             <ul className="space-y-2">
               {navigation.company.map((item) => (
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-sm text-gray-300 hover:text-[#D4A017] transition-colors"
+                    className="text-sm text-gray-300 hover:text-[#F7C948] transition-colors"
                     data-testid={`link-footer-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {item.name}
@@ -189,24 +189,24 @@ export default function FooterBlock() {
 
           {/* Contact Column */}
           <div>
-            <h4 className="font-semibold mb-4 text-[#D4A017]">Get In Touch</h4>
+            <h4 className="font-semibold mb-4 text-[#F7C948]">Get In Touch</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
-                <Phone className="h-4 w-4 text-[#D4A017] mt-0.5" />
+                <Phone className="h-4 w-4 text-[#F7C948] mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-300">(555) 123-4567</p>
                   <p className="text-xs text-gray-400">Mon-Fri 6AM-8PM</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <Mail className="h-4 w-4 text-[#D4A017] mt-0.5" />
+                <Mail className="h-4 w-4 text-[#F7C948] mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-300">coach@tntfitness.com</p>
                   <p className="text-xs text-gray-400">24/7 response</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-[#D4A017] mt-0.5" />
+                <MapPin className="h-4 w-4 text-[#F7C948] mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-300">Manhattan, NYC</p>
                   <p className="text-xs text-gray-400">Multiple locations</p>
@@ -218,7 +218,7 @@ export default function FooterBlock() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-[#D4A017]/20">
+      <div className="border-t border-[#F7C948]/20">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
@@ -229,7 +229,7 @@ export default function FooterBlock() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-gray-400 hover:text-[#D4A017] transition-colors"
+                  className="text-sm text-gray-400 hover:text-[#F7C948] transition-colors"
                 >
                   {item.name}
                 </a>

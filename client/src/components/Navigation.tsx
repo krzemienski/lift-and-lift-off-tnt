@@ -2,21 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import tntIcon from "@assets/generated_images/TNT_mascot_icon_logo_9e5078a8.png";
-import tntHorizontal from "@assets/generated_images/TNT_horizontal_logo_942acfd0.png";
+import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
+import tntHorizontal from "@assets/generated_images/TNT_horizontal_header_logo_c1572bb9.png";
 
 export default function Navigation() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Home" },
     { href: "/programs", label: "Programs" },
     { href: "/trainer", label: "Trainer" },
     { href: "/assessment", label: "Assessment" },
     { href: "/results", label: "Results" },
     { href: "/instagram", label: "Instagram" },
-    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -100,7 +98,7 @@ export default function Navigation() {
             ))}
             <div className="pt-2">
               <Button
-                className="w-full bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold"
+                className="w-full bg-[#F7C948] hover:bg-[#F7C948]/90 text-black font-semibold"
                 size="sm"
                 asChild
               >

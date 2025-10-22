@@ -16,11 +16,11 @@ export default function Boxing() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30 mb-4">
+                <Badge className="bg-[#F7C948]/10 text-[#F7C948] border-[#F7C948]/30 mb-4">
                   High Energy
                 </Badge>
                 <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">
-                  <Shield className="inline-block h-12 w-12 text-[#D4A017] mr-3" />
+                  <Shield className="inline-block h-12 w-12 text-[#F7C948] mr-3" />
                   Boxing Training
                 </h1>
                 <p className="text-lg text-white/90">
@@ -32,7 +32,7 @@ export default function Boxing() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-[#D4A017]" />
+                      <CheckCircle className="h-5 w-5 text-[#F7C948]" />
                       You'll achieve
                     </CardTitle>
                   </CardHeader>
@@ -46,7 +46,7 @@ export default function Boxing() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Calendar className="h-5 w-5 text-[#D4A017]" />
+                      <Calendar className="h-5 w-5 text-[#F7C948]" />
                       Weekly structure
                     </CardTitle>
                   </CardHeader>
@@ -60,7 +60,7 @@ export default function Boxing() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Dumbbell className="h-5 w-5 text-[#D4A017]" />
+                      <Dumbbell className="h-5 w-5 text-[#F7C948]" />
                       Gear
                     </CardTitle>
                   </CardHeader>
@@ -73,7 +73,7 @@ export default function Boxing() {
               </div>
               
               <div className="mt-8 text-center space-y-4">
-                <Button size="lg" className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold" asChild>
+                <Button size="lg" className="bg-[#F7C948] text-black hover:bg-[#F7C948]/90 font-semibold" asChild>
                   <Link href="/assessment">Book Free Assessment</Link>
                 </Button>
                 <p className="text-sm text-white/70">Step into the ring with confidence</p>

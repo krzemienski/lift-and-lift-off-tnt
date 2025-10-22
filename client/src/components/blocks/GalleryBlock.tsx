@@ -33,12 +33,12 @@ export default function GalleryBlock() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
+          <Badge className="bg-[#F7C948]/10 text-[#F7C948] border-[#F7C948]/30">
             <Instagram className="h-3 w-3 mr-2" />
             Instagram Feed
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-            Stay <span className="text-[#D4A017]">accountable.</span>
+            Stay <span className="text-[#F7C948]">accountable.</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">
             Latest posts and behind‑the‑scenes training.
@@ -47,15 +47,15 @@ export default function GalleryBlock() {
           {/* Stats Row */}
           <div className="flex items-center justify-center gap-8 pt-4">
             <div>
-              <p className="text-2xl font-bold text-[#D4A017]">10K+</p>
+              <p className="text-2xl font-bold text-[#F7C948]">10K+</p>
               <p className="text-sm text-white/80 drop-shadow-md">Followers</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-[#D4A017]">750+</p>
+              <p className="text-2xl font-bold text-[#F7C948]">750+</p>
               <p className="text-sm text-white/80 drop-shadow-md">Posts</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-[#D4A017]">Daily</p>
+              <p className="text-2xl font-bold text-[#F7C948]">Daily</p>
               <p className="text-sm text-white/80 drop-shadow-md">New Content</p>
             </div>
           </div>

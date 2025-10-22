@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Play } from "lucide-react";
 
 export default function VideoCarousel() {
   const [isMobile, setIsMobile] = useState(false);
@@ -6,6 +7,7 @@ export default function VideoCarousel() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [hasError, setHasError] = useState(false);
+  const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -27,6 +29,22 @@ export default function VideoCarousel() {
   // Get current playlist based on screen size
   const playlist = isMobile ? mobilePlaylist : desktopPlaylist;
   const currentVideoSrc = playlist[currentVideoIndex];
+
+  // Manual play function for when autoplay is blocked
+  const handleManualPlay = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.play()
+        .then(() => {
+          console.log('[VideoCarousel] Manual play successful');
+          setIsPlaying(true);
+          setAutoplayBlocked(false);
+        })
+        .catch((err) => {
+          console.error('[VideoCarousel] Manual play failed:', err);
+        });
+    }
+  };
 
   // Detect mobile/desktop on mount and resize
   useEffect(() => {
@@ -66,6 +84,7 @@ export default function VideoCarousel() {
     setCurrentVideoIndex(0);
     setHasError(false);
     setIsLoading(true);
+    setAutoplayBlocked(false);
   }, [isMobile]);
 
   // Handle video loading and playing
@@ -79,6 +98,7 @@ export default function VideoCarousel() {
     console.log('[VideoCarousel] Loading video:', currentVideoSrc);
     setIsLoading(true);
     setHasError(false);
+    setAutoplayBlocked(false); // Reset autoplay blocked state for new video
 
     const handleCanPlay = () => {
       console.log('[VideoCarousel] Video can play');
@@ -87,10 +107,12 @@ export default function VideoCarousel() {
         .then(() => {
           console.log('[VideoCarousel] Video playing');
           setIsPlaying(true);
+          setAutoplayBlocked(false);
         })
         .catch((err) => {
           console.warn("[VideoCarousel] Autoplay blocked:", err.message);
           setIsPlaying(false);
+          setAutoplayBlocked(true); // Show play button when autoplay is blocked
         });
     };
 
@@ -162,10 +184,9 @@ export default function VideoCarousel() {
         {!hasError && (
           <video
             ref={videoRef}
-            src={currentVideoSrc}
             autoPlay
             loop={false}
-            muted
+            muted={true}
             playsInline
             preload="auto"
             className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-1000 ${
@@ -175,7 +196,13 @@ export default function VideoCarousel() {
               transformOrigin: 'center',
             }}
             data-testid="video-carousel"
-          />
+          >
+            <source 
+              src={currentVideoSrc} 
+              type='video/mp4; codecs="avc1.42E01E"' 
+            />
+            Your browser does not support the video tag.
+          </video>
         )}
         
         {/* Overlay for text readability - always present */}
@@ -206,6 +233,23 @@ export default function VideoCarousel() {
           <div className="text-[#F7C948] opacity-50">
             <div className="w-16 h-16 border-4 border-[#F7C948]/30 border-t-[#F7C948] rounded-full animate-spin" />
           </div>
+        </div>
+      )}
+
+      {/* Play button overlay - shows when autoplay is blocked */}
+      {autoplayBlocked && !isPlaying && !isLoading && !hasError && (
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          <button
+            onClick={handleManualPlay}
+            className="group relative flex items-center justify-center w-24 h-24 bg-[#0A2340]/80 rounded-full border-2 border-[#F7C948] hover:bg-[#0A2340]/90 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#F7C948]/50"
+            aria-label="Play video"
+            data-testid="play-button-overlay"
+          >
+            <Play className="w-10 h-10 text-[#F7C948] ml-1" fill="currentColor" />
+            <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[#F7C948] text-sm whitespace-nowrap opacity-80">
+              Click to play
+            </span>
+          </button>
         </div>
       )}
     </div>

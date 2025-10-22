@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Home, User, Dumbbell, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import tntIcon from "@assets/generated_images/TNT_mascot_icon_logo_9e5078a8.png";
+import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
 import {
   Collapsible,
   CollapsibleContent,
