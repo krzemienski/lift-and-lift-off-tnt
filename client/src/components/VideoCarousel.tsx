@@ -1,18 +1,37 @@
 import { useEffect, useRef, useState } from "react";
-import Hls from "hls.js";
 
 export default function VideoCarousel() {
   const [isMobile, setIsMobile] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [hasError, setHasError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const hlsRef = useRef<Hls | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Define video playlists
+  const mobilePlaylist = [
+    "/videos/download.mp4",
+    "/videos/download2.mp4",
+    "/videos/download3.mp4",
+    "/videos/download4.mp4"
+  ];
+
+  const desktopPlaylist = [
+    "/videos/download5.mp4",
+    "/videos/download6.mp4",
+    "/videos/download7.mp4",
+    "/videos/download8.mp4"
+  ];
+
+  // Get current playlist based on screen size
+  const playlist = isMobile ? mobilePlaylist : desktopPlaylist;
+  const currentVideoSrc = playlist[currentVideoIndex];
 
   // Detect mobile/desktop on mount and resize
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // md breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
     
     checkMobile();
@@ -42,127 +61,66 @@ export default function VideoCarousel() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Load HLS playlist when video ref is ready or screen size changes
+  // Reset video index when screen size changes
+  useEffect(() => {
+    setCurrentVideoIndex(0);
+    setHasError(false);
+    setIsLoading(true);
+  }, [isMobile]);
+
+  // Handle video loading and playing
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     setIsLoading(true);
-    setIsPlaying(false);
+    setHasError(false);
 
-    // Load from local directory since videos are there
-    const playlistUrl = isMobile 
-      ? "/videos/hls/mobile-simple.m3u8"
-      : "/videos/hls/desktop-simple.m3u8";
-
-    console.log(`[VideoCarousel] Loading HLS playlist: ${playlistUrl}`);
-
-    // Clean up previous HLS instance
-    if (hlsRef.current) {
-      hlsRef.current.destroy();
-      hlsRef.current = null;
-    }
-
-    // Check if HLS is supported
-    if (Hls.isSupported()) {
-      const hls = new Hls({
-        debug: false, // Reduce console noise
-        enableWorker: true,
-        lowLatencyMode: true, // Fast initial load
-        backBufferLength: 30,
-        maxBufferLength: 10, // Reduced for faster initial playback
-        maxBufferSize: 20,  // Reduced for faster initial load
-        maxLoadingDelay: 2, // Faster segment loading
-        startLevel: 0, // Start with first quality level
-        autoStartLoad: true, // Start loading immediately
-        startPosition: 0, // Start from beginning
-      });
-
-      hlsRef.current = hls;
-
-      hls.loadSource(playlistUrl);
-      hls.attachMedia(video);
-
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        console.log("[VideoCarousel] HLS manifest parsed, starting playback");
-        video.play()
-          .then(() => {
-            console.log("[VideoCarousel] Video playing successfully");
-            setIsLoading(false);
-            setIsPlaying(true);
-          })
-          .catch((err) => {
-            console.warn("[VideoCarousel] Autoplay blocked:", err.message);
-            setIsLoading(false);
-            setIsPlaying(true); // Show video anyway
-          });
-      });
-
-      hls.on(Hls.Events.ERROR, (event, data) => {
-        console.error("[VideoCarousel] HLS error:", data.type, data.details);
-        
-        // On error, ensure gradient is visible
-        if (data.fatal) {
-          setIsLoading(false);
+    const handleCanPlay = () => {
+      setIsLoading(false);
+      video.play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch((err) => {
+          console.warn("[VideoCarousel] Autoplay blocked:", err.message);
           setIsPlaying(false);
-          
-          switch (data.type) {
-            case Hls.ErrorTypes.NETWORK_ERROR:
-              console.log("[VideoCarousel] Fatal network error, showing fallback");
-              // Don't try to recover, just show the gradient
-              hls.destroy();
-              break;
-            case Hls.ErrorTypes.MEDIA_ERROR:
-              console.log("[VideoCarousel] Fatal media error, showing fallback");
-              hls.destroy();
-              break;
-            default:
-              console.log("[VideoCarousel] Unrecoverable error, showing fallback");
-              hls.destroy();
-              break;
-          }
-        }
-      });
-
-      hls.on(Hls.Events.LEVEL_LOADED, (event, data) => {
-        console.log("[VideoCarousel] Level loaded:", data.level, "duration:", data.details.totalduration);
-      });
-
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      // Native HLS support (Safari, iOS)
-      console.log("[VideoCarousel] Using native HLS support");
-      video.src = playlistUrl;
-      video.addEventListener('loadedmetadata', () => {
-        console.log("[VideoCarousel] Native HLS metadata loaded");
-        setIsLoading(false);
-        video.play()
-          .then(() => {
-            console.log("[VideoCarousel] Native HLS playing successfully");
-            setIsPlaying(true);
-          })
-          .catch((err) => {
-            console.warn("[VideoCarousel] Native HLS autoplay blocked:", err.message);
-            setIsPlaying(true);
-          });
-      });
-      
-      video.addEventListener('error', (e) => {
-        console.error("[VideoCarousel] Native HLS error:", e);
-        setIsLoading(false);
-        setIsPlaying(false);
-      });
-    }
-
-    // No timeout - videos should load immediately and fallback only on actual errors
-
-    // Cleanup
-    return () => {
-      if (hlsRef.current) {
-        hlsRef.current.destroy();
-        hlsRef.current = null;
-      }
+        });
     };
-  }, [isMobile]); // Reload when screen size changes
+
+    const handleVideoEnded = () => {
+      setIsPlaying(false); // Reset playing state during transition
+      setCurrentVideoIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % playlist.length;
+        return nextIndex;
+      });
+    };
+
+    const handleError = (e: Event) => {
+      console.error("[VideoCarousel] Video error:", e);
+      setIsLoading(false);
+      setIsPlaying(false);
+      setHasError(true);
+    };
+
+    const handleLoadedData = () => {
+      setIsLoading(false);
+    };
+
+    video.addEventListener('canplay', handleCanPlay);
+    video.addEventListener('ended', handleVideoEnded);
+    video.addEventListener('error', handleError);
+    video.addEventListener('loadeddata', handleLoadedData);
+
+    video.load();
+
+    return () => {
+      video.removeEventListener('canplay', handleCanPlay);
+      video.removeEventListener('ended', handleVideoEnded);
+      video.removeEventListener('error', handleError);
+      video.removeEventListener('loadeddata', handleLoadedData);
+    };
+  }, [currentVideoSrc, playlist.length]);
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden">
@@ -188,22 +146,26 @@ export default function VideoCarousel() {
         className="absolute inset-0 -top-[20vh] transition-transform duration-100 ease-out"
         style={{ transformStyle: 'preserve-3d' }}
       >
-        {/* HLS Video Player - only show when loaded */}
-        <video
-          ref={videoRef}
-          autoPlay
-          loop={true}
-          muted
-          playsInline
-          preload="auto"
-          className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-2000 ${
-            isPlaying ? "opacity-90" : "opacity-0"
-          }`}
-          style={{
-            transformOrigin: 'center',
-          }}
-          data-testid="video-carousel-hls"
-        />
+        {/* Video Player - only show when loaded and no error */}
+        {!hasError && (
+          <video
+            ref={videoRef}
+            autoPlay
+            loop={false}
+            muted
+            playsInline
+            preload="auto"
+            className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-1000 ${
+              isPlaying ? "opacity-90" : "opacity-0"
+            }`}
+            style={{
+              transformOrigin: 'center',
+            }}
+            data-testid="video-carousel"
+          >
+            <source src={currentVideoSrc} type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+          </video>
+        )}
         
         {/* Overlay for text readability - always present */}
         <div className="absolute inset-0 h-[140vh]">
@@ -228,7 +190,7 @@ export default function VideoCarousel() {
       </div>
 
       {/* Loading indicator */}
-      {isLoading && (
+      {isLoading && !hasError && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="text-[#F7C948] opacity-50">
             <div className="w-16 h-16 border-4 border-[#F7C948]/30 border-t-[#F7C948] rounded-full animate-spin" />
