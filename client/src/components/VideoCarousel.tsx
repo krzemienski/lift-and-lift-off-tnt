@@ -71,15 +71,21 @@ export default function VideoCarousel() {
   // Handle video loading and playing
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      console.log('[VideoCarousel] No video ref');
+      return;
+    }
 
+    console.log('[VideoCarousel] Loading video:', currentVideoSrc);
     setIsLoading(true);
     setHasError(false);
 
     const handleCanPlay = () => {
+      console.log('[VideoCarousel] Video can play');
       setIsLoading(false);
       video.play()
         .then(() => {
+          console.log('[VideoCarousel] Video playing');
           setIsPlaying(true);
         })
         .catch((err) => {
@@ -97,13 +103,19 @@ export default function VideoCarousel() {
     };
 
     const handleError = (e: Event) => {
-      console.error("[VideoCarousel] Video error:", e);
+      const target = e.target as HTMLVideoElement;
+      const errorDetails = target.error ? {
+        code: target.error.code,
+        message: target.error.message
+      } : 'Unknown error';
+      console.error("[VideoCarousel] Video error details:", errorDetails, "Source:", currentVideoSrc);
       setIsLoading(false);
       setIsPlaying(false);
       setHasError(true);
     };
 
     const handleLoadedData = () => {
+      console.log('[VideoCarousel] Video data loaded');
       setIsLoading(false);
     };
 
@@ -112,7 +124,7 @@ export default function VideoCarousel() {
     video.addEventListener('error', handleError);
     video.addEventListener('loadeddata', handleLoadedData);
 
-    video.load();
+    // Note: No need to call video.load() since React handles src updates automatically
 
     return () => {
       video.removeEventListener('canplay', handleCanPlay);
@@ -150,6 +162,7 @@ export default function VideoCarousel() {
         {!hasError && (
           <video
             ref={videoRef}
+            src={currentVideoSrc}
             autoPlay
             loop={false}
             muted
@@ -162,9 +175,7 @@ export default function VideoCarousel() {
               transformOrigin: 'center',
             }}
             data-testid="video-carousel"
-          >
-            <source src={currentVideoSrc} type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-          </video>
+          />
         )}
         
         {/* Overlay for text readability - always present */}

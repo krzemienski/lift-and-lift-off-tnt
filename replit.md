@@ -26,31 +26,29 @@ Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) 
   - **Typography Enhancement**: Updated all major headlines to use `font-heading font-extrabold` for proper Montserrat 800-900 weight
   - **Benefits**: Proper transparency ensures icons display correctly on any background color, no CSS filter hacks needed
 
-- **HLS Video Playlist System** (October 21, 2025)
-  - **Major Enhancement**: Converted 8-video system to HLS (HTTP Live Streaming) with auto-progression
+- **MP4 Video Carousel with Auto-Progression** (October 22, 2025)
+  - **Final Implementation**: Direct MP4 playback with JavaScript-based playlist auto-progression
+  - **Why MP4 Instead of HLS**: After testing, HLS encountered persistent codec compatibility issues with MediaSource API in browser environments. Direct MP4 playback proved more reliable and simpler.
   - **Implementation**:
-    * Converted all 8 MP4 videos to HLS format using FFmpeg (H.264, AAC)
-    * Created two master playlists with EXT-X-DISCONTINUITY for seamless transitions:
-      - `mobile_master.m3u8` - 4 portrait videos for mobile devices
-      - `desktop_master.m3u8` - 4 landscape videos for desktop
-    * Each video segmented into .ts chunks for adaptive streaming
-  - **Object Storage Integration**:
-    * All HLS files uploaded to Replit Object Storage (GCS-backed)
-    * Server endpoint `/public-objects/*` serves playlists and segments
-    * Proper MIME types: `application/vnd.apple.mpegurl` (.m3u8), `video/MP2T` (.ts)
-    * CORS headers enabled for cross-origin access
+    * **Mobile Playlist** (< 768px): 4 portrait videos - download.mp4, download2.mp4, download3.mp4, download4.mp4
+    * **Desktop Playlist** (≥ 768px): 4 landscape videos - download5.mp4, download6.mp4, download7.mp4, download8.mp4
+    * Auto-progression using the `ended` event listener
+    * Videos loop seamlessly from last back to first video
+    * Immediate loading on page mount (no intersection observer delays)
+    * Proper error handling with fallback to animated navy/gold gradient background
   - **VideoCarousel Component**:
-    * Upgraded to use HLS.js library for modern adaptive streaming
-    * Auto-detects mobile/desktop and loads appropriate playlist
-    * Fallback to native HLS support for Safari/iOS
-    * Includes error recovery and automatic retry logic
-    * Videos now auto-progress through all 4 videos seamlessly
+    * Pure React implementation with no external video libraries
+    * Screen size detection with automatic playlist switching on resize
+    * Parallax scrolling effect for cinematic experience
+    * Loading states with opacity transitions between videos
+    * Reset `isPlaying` state during video transitions for proper UI feedback
+    * Video codec specification: `video/mp4; codecs="avc1.42E01E, mp4a.40.2"`
   - **Benefits**:
-    * Seamless video transitions with EXT-X-DISCONTINUITY
-    * Adaptive bitrate streaming capability
-    * Better caching and CDN compatibility
-    * Reduced initial load time with segmented delivery
-    * iOS/Safari native support without additional libraries
+    * Reliable playback across all browsers (Chrome, Firefox, Safari, Edge)
+    * Immediate video loading without buffering delays
+    * Simple codebase without external dependencies
+    * Smooth auto-progression through all videos
+    * Beautiful animated gradient fallback if videos fail to load
   
 
 - **TNT Brand Color System Fix** (October 21, 2025)
