@@ -125,7 +125,7 @@ export default function HeroBlock() {
               {stats.map((stat) => (
                 <Card 
                   key={stat.label} 
-                  className="border-white/10 bg-[#0B2545]/40 backdrop-blur-sm transition-all hover:bg-[#0B2545]/50"
+                  className="border-white/10 !bg-[#0B2545]/40 backdrop-blur-sm transition-all hover:!bg-[#0B2545]/50"
                 >
                   <div className="p-6 space-y-3">
                     <stat.icon className="h-8 w-8 text-[#D4A017]" />
