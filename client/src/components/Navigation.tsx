@@ -18,7 +18,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-[color:var(--tnt-navy)]/85 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-[#0B2545] border-b border-[#D4A017]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -80,7 +80,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[color:var(--tnt-navy)]/95 backdrop-blur-md border-b border-white/10">
+        <div className="md:hidden bg-[#0B2545] border-b border-[#D4A017]/30">
           <div className="px-4 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>

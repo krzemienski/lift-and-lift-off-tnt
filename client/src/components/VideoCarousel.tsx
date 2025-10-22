@@ -208,20 +208,20 @@ export default function VideoCarousel() {
         {/* Overlay for text readability - always present */}
         <div className="absolute inset-0 h-[140vh]">
           {/* Base gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0B2545]/60 via-[#0B2545]/30 to-[#0B2545]/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B2545]/85 via-[#0B2545]/70 to-[#0B2545]/90" />
           
           {/* Gold accent overlay at top */}
           <div className="absolute inset-x-0 top-0 h-[50vh] bg-gradient-to-b from-[#D4A017]/15 via-[#D4A017]/5 to-transparent" />
           
           {/* Bottom fade */}
-          <div className="absolute inset-x-0 bottom-0 h-[30vh] bg-gradient-to-t from-[#0B2545]/90 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-[30vh] bg-gradient-to-t from-[#0B2545]/95 to-transparent" />
           
           {/* Vignette effect */}
           <div 
             className="absolute inset-0"
             style={{
-              background: `radial-gradient(ellipse at center, transparent 0%, transparent 40%, #0B2545 100%)`,
-              opacity: 0.4,
+              background: `radial-gradient(ellipse at center, transparent 0%, transparent 30%, #0B2545 100%)`,
+              opacity: 0.6,
             }}
           />
         </div>
