@@ -59,20 +59,23 @@ Production-ready personal trainer website for TNT Fitness (Today, Not Tomorrow) 
   - **Card Typography Fix**: Removed white text from program detail page Cards to use default dark text for proper readability
   - **Contrast Improvement**: Program page Cards now use default light backgrounds that contrast properly with dark blue section overlays
   
-- **Video Codec Fix & Re-encoding** (October 21, 2025)
-  - **Critical Issue Resolved**: Videos were failing with "NotSupportedError: The element has no supported sources"
-  - **Root Cause**: Original videos used H.264 High profile which isn't universally supported in browsers
-  - **Solution**: Re-encoded all 8 videos using FFmpeg to H.264 Baseline profile with AAC audio
+- **Video Codec Optimization to Baseline Profile Without Audio** (October 22, 2025)
+  - **Critical Issue Resolved**: Videos were failing with "DEMUXER_ERROR_NO_SUPPORTED_STREAMS" (code 4)
+  - **Root Cause**: Original videos used H.264 High profile with audio, which isn't universally supported in browsers
+  - **Solution**: Re-encoded all 8 videos using FFmpeg to H.264 Baseline profile WITHOUT audio
   - **Technical Specifications**:
-    * Video Codec: H.264 (libx264) - Baseline profile, Level 3.0
-    * Audio Codec: AAC-LC, 128 kbps, 96000 Hz stereo
+    * Video Codec: H.264 (libx264) - Constrained Baseline profile, Level 3.0
+    * Audio: REMOVED (no audio stream for maximum compatibility)
     * Container: MP4 with faststart flag enabled for web streaming
     * Pixel Format: yuv420p (4:2:0 chroma subsampling)
     * Frame Rate: 30 fps, CRF 23 quality
-    * Codec String: `type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'`
-  - **File Sizes**: Optimized from 4-6 MB to 2.3-3.9 MB per video
-  - **Compatibility**: Now works in all modern browsers (Chrome, Firefox, Safari, Edge, iOS, Android)
-  - **Backup**: Original videos preserved in `client/public/videos/original/` directory
+    * Codec String: `video/mp4; codecs="avc1.42E01E"`
+  - **File Sizes**: Optimized to 2.0-3.6 MB per video (total ~21.2 MB)
+    * Mobile videos (portrait): download.mp4 (2.1MB), download2.mp4 (2.8MB), download3.mp4 (3.1MB), download4.mp4 (2.2MB)
+    * Desktop videos (landscape): download5.mp4 (2.2MB), download6.mp4 (3.6MB), download7.mp4 (3.2MB), download8.mp4 (2.0MB)
+  - **Compatibility**: Maximum browser compatibility across Chrome, Firefox, Safari, Edge, iOS, Android
+  - **Backup**: Original videos with audio preserved in `client/public/videos/original/` directory
+  - **FFmpeg Command Used**: `ffmpeg -i input.mp4 -vcodec libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p -an -movflags +faststart -crf 23 output.mp4`
   
 - **Logo System Update** (October 21, 2025)
   - **White TNT Logos**: Systematically updated all logos to use white assets optimized for blue backgrounds
