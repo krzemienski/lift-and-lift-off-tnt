@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
-import tntHorizontal from "@assets/generated_images/TNT_horizontal_header_logo_c1572bb9.png";
+
+const tntIcon = "/brand/icon_1A_256.png";
+const tntHorizontal = "/brand/horizontal_1A_dark_FIX_transparent.png";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -18,7 +19,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-black/70 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-[color:var(--tnt-navy)]/85 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

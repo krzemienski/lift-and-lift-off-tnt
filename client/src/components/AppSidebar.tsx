@@ -1,6 +1,5 @@
 import { Home, Trophy, User, ClipboardCheck, Award, Instagram, Mail, Dumbbell, Target, Shield, Activity, Flame } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
 import {
   Sidebar,
   SidebarContent,
@@ -18,6 +17,8 @@ import {
 } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronRight } from "lucide-react";
+
+const tntIcon = "/brand/icon_1A_256.png";
 
 // Main navigation items - per master build spec
 const mainNavItems = [

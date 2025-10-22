@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Home, User, Dumbbell, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
+const tntIcon = "/brand/icon_1A_128.png";
 const SCROLL_THRESHOLD_PERCENTAGE = 0.7;
 
 export default function StickyNav() {
@@ -39,7 +39,7 @@ export default function StickyNav() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <div className="bg-background/95 backdrop-blur-md border-b shadow-sm">
+        <div className="bg-[color:var(--tnt-navy)]/95 backdrop-blur-md border-b shadow-sm">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between gap-2 py-3">
               <div className="flex items-center">
