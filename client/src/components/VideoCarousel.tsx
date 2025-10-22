@@ -29,6 +29,11 @@ export default function VideoCarousel() {
   // Get current playlist based on screen size
   const playlist = isMobile ? mobilePlaylist : desktopPlaylist;
   const currentVideoSrc = playlist[currentVideoIndex];
+  
+  // Get poster frame for current video
+  const posterSrc = isMobile 
+    ? `/images/posters/mobile-${currentVideoIndex + 1}.jpg`
+    : `/images/posters/desktop-${currentVideoIndex + 1}.jpg`;
 
   // Manual play function for when autoplay is blocked
   const handleManualPlay = () => {
@@ -180,6 +185,20 @@ export default function VideoCarousel() {
         className="absolute inset-0 -top-[20vh] transition-transform duration-100 ease-out"
         style={{ transformStyle: 'preserve-3d' }}
       >
+        {/* Poster Frame - show while video is loading or not playing */}
+        {!hasError && (
+          <img
+            src={posterSrc}
+            alt="Video poster"
+            className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-500 ${
+              !isPlaying ? "opacity-90" : "opacity-0"
+            }`}
+            style={{
+              transformOrigin: 'center',
+            }}
+          />
+        )}
+
         {/* Video Player - only show when loaded and no error */}
         {!hasError && (
           <video
@@ -226,15 +245,6 @@ export default function VideoCarousel() {
           />
         </div>
       </div>
-
-      {/* Loading indicator */}
-      {isLoading && !hasError && (
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="text-[#D4A017] opacity-50">
-            <div className="w-16 h-16 border-4 border-[#D4A017]/30 border-t-[#D4A017] rounded-full animate-spin" />
-          </div>
-        </div>
-      )}
 
       {/* Play button overlay - shows when autoplay is blocked */}
       {autoplayBlocked && !isPlaying && !isLoading && !hasError && (
