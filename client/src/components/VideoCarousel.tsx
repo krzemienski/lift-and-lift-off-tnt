@@ -162,7 +162,7 @@ export default function VideoCarousel() {
       <div 
         className="absolute inset-0 w-full h-full animate-gradient-shift"
         style={{
-          background: `linear-gradient(135deg, #0A2340 0%, #1a3758 25%, #0A2340 50%, #1a3758 75%, #0A2340 100%)`,
+          background: `linear-gradient(135deg, #0B2545 0%, #1a3758 25%, #0B2545 50%, #1a3758 75%, #0B2545 100%)`,
         }}
       />
 
@@ -170,7 +170,7 @@ export default function VideoCarousel() {
       <div 
         className="absolute inset-0 w-full h-full opacity-20 animate-gold-pulse"
         style={{
-          background: `radial-gradient(circle at 20% 50%, #F7C948 0%, transparent 50%)`,
+          background: `radial-gradient(circle at 20% 50%, #D4A017 0%, transparent 50%)`,
         }}
       />
 
@@ -208,19 +208,19 @@ export default function VideoCarousel() {
         {/* Overlay for text readability - always present */}
         <div className="absolute inset-0 h-[140vh]">
           {/* Base gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A2340]/60 via-[#0A2340]/30 to-[#0A2340]/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B2545]/60 via-[#0B2545]/30 to-[#0B2545]/70" />
           
           {/* Gold accent overlay at top */}
-          <div className="absolute inset-x-0 top-0 h-[50vh] bg-gradient-to-b from-[#F7C948]/15 via-[#F7C948]/5 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-[50vh] bg-gradient-to-b from-[#D4A017]/15 via-[#D4A017]/5 to-transparent" />
           
           {/* Bottom fade */}
-          <div className="absolute inset-x-0 bottom-0 h-[30vh] bg-gradient-to-t from-[#0A2340]/90 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-[30vh] bg-gradient-to-t from-[#0B2545]/90 to-transparent" />
           
           {/* Vignette effect */}
           <div 
             className="absolute inset-0"
             style={{
-              background: `radial-gradient(ellipse at center, transparent 0%, transparent 40%, #0A2340 100%)`,
+              background: `radial-gradient(ellipse at center, transparent 0%, transparent 40%, #0B2545 100%)`,
               opacity: 0.4,
             }}
           />
@@ -230,8 +230,8 @@ export default function VideoCarousel() {
       {/* Loading indicator */}
       {isLoading && !hasError && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="text-[#F7C948] opacity-50">
-            <div className="w-16 h-16 border-4 border-[#F7C948]/30 border-t-[#F7C948] rounded-full animate-spin" />
+          <div className="text-[#D4A017] opacity-50">
+            <div className="w-16 h-16 border-4 border-[#D4A017]/30 border-t-[#D4A017] rounded-full animate-spin" />
           </div>
         </div>
       )}
@@ -241,12 +241,12 @@ export default function VideoCarousel() {
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <button
             onClick={handleManualPlay}
-            className="group relative flex items-center justify-center w-24 h-24 bg-[#0A2340]/80 rounded-full border-2 border-[#F7C948] hover:bg-[#0A2340]/90 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#F7C948]/50"
+            className="group relative flex items-center justify-center w-24 h-24 bg-[#0B2545]/80 rounded-full border-2 border-[#D4A017] hover:bg-[#0B2545]/90 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#D4A017]/50"
             aria-label="Play video"
             data-testid="play-button-overlay"
           >
-            <Play className="w-10 h-10 text-[#F7C948] ml-1" fill="currentColor" />
-            <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[#F7C948] text-sm whitespace-nowrap opacity-80">
+            <Play className="w-10 h-10 text-[#D4A017] ml-1" fill="currentColor" />
+            <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[#D4A017] text-sm whitespace-nowrap opacity-80">
               Click to play
             </span>
           </button>

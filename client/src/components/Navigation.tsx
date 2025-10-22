@@ -55,7 +55,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Button
-              className="bg-[#F7C948] hover:bg-[#F7C948]/90 text-black font-semibold ml-4"
+              className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold ml-4"
               size="sm"
               asChild
             >
@@ -98,7 +98,7 @@ export default function Navigation() {
             ))}
             <div className="pt-2">
               <Button
-                className="w-full bg-[#F7C948] hover:bg-[#F7C948]/90 text-black font-semibold"
+                className="w-full bg-[#D4A017] hover:bg-[#D4A017]/90 text-black font-semibold"
                 size="sm"
                 asChild
               >

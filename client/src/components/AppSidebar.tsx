@@ -79,8 +79,8 @@ export function AppSidebar() {
   const [location] = useLocation();
 
   return (
-    <Sidebar className="border-r border-[#F7C948]/20">
-      <SidebarHeader className="border-b border-[#F7C948]/20 p-4">
+    <Sidebar className="border-r border-[#D4A017]/20">
+      <SidebarHeader className="border-b border-[#D4A017]/20 p-4">
         <Link href="/" data-testid="link-sidebar-logo">
           <div className="flex items-center gap-3">
             <img 
@@ -90,7 +90,7 @@ export function AppSidebar() {
               data-testid="img-sidebar-logo"
             />
             <div className="flex flex-col">
-              <span className="font-display font-bold text-[#F7C948] tracking-wider group-data-[collapsible=icon]:hidden" data-testid="text-sidebar-title">
+              <span className="font-display font-bold text-[#D4A017] tracking-wider group-data-[collapsible=icon]:hidden" data-testid="text-sidebar-title">
                 TNT FITNESS
               </span>
               <span className="text-xs text-muted-foreground group-data-[collapsible=icon]:hidden" data-testid="text-sidebar-tagline">
@@ -116,7 +116,7 @@ export function AppSidebar() {
                         <CollapsibleTrigger asChild>
                           <SidebarMenuButton 
                             data-active={isActive}
-                            className="w-full hover:bg-[#243B6B]/10 data-[active=true]:bg-[#0A2340]/10 data-[active=true]:text-[#F7C948]"
+                            className="w-full hover:bg-[#243B6B]/10 data-[active=true]:bg-[#0B2545]/10 data-[active=true]:text-[#D4A017]"
                             data-testid={`button-sidebar-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                           >
                             <item.icon className="h-4 w-4" />
@@ -131,7 +131,7 @@ export function AppSidebar() {
                                 <SidebarMenuSubButton 
                                   asChild
                                   data-active={location === subItem.url}
-                                  className="hover:bg-[#243B6B]/10 data-[active=true]:bg-[#0A2340]/10 data-[active=true]:text-[#F7C948]"
+                                  className="hover:bg-[#243B6B]/10 data-[active=true]:bg-[#0B2545]/10 data-[active=true]:text-[#D4A017]"
                                   data-testid={`link-sidebar-${subItem.title.toLowerCase().replace(/\s+/g, '-')}`}
                                 >
                                   <Link href={subItem.url}>
@@ -153,7 +153,7 @@ export function AppSidebar() {
                     <SidebarMenuButton 
                       asChild
                       data-active={isActive}
-                      className="hover:bg-[#243B6B]/10 data-[active=true]:bg-[#0A2340]/10 data-[active=true]:text-[#F7C948]"
+                      className="hover:bg-[#243B6B]/10 data-[active=true]:bg-[#0B2545]/10 data-[active=true]:text-[#D4A017]"
                       data-testid={`link-sidebar-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       <Link href={item.url}>
@@ -175,7 +175,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton 
                   asChild
-                  className="bg-[#F7C948] hover:bg-[#F7C948]/90 text-[#0A2340] font-semibold"
+                  className="bg-[#D4A017] hover:bg-[#D4A017]/90 text-[#0B2545] font-semibold"
                   data-testid="button-sidebar-assessment"
                 >
                   <Link href="/assessment">
@@ -189,9 +189,9 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       
-      <SidebarFooter className="border-t border-[#F7C948]/20 p-4">
+      <SidebarFooter className="border-t border-[#D4A017]/20 p-4">
         <div className="text-xs text-muted-foreground group-data-[collapsible=icon]:hidden">
-          <p className="font-semibold text-[#F7C948] mb-1" data-testid="text-sidebar-contact-title">Contact Info</p>
+          <p className="font-semibold text-[#D4A017] mb-1" data-testid="text-sidebar-contact-title">Contact Info</p>
           <p data-testid="text-sidebar-email">coach@tntfitness.com</p>
           <p data-testid="text-sidebar-instagram">@tntfitness</p>
         </div>

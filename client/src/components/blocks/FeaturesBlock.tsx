@@ -3,11 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Clock, TrendingUp, Award } from "lucide-react";
 import { Link } from "wouter";
-import kettlebellIcon from "@assets/generated_images/Gold_kettlebell_icon_55c2b0b2.png";
-import barbellIcon from "@assets/generated_images/Gold_barbell_icon_a507e9f5.png";
-import heartRateIcon from "@assets/generated_images/Gold_heart_rate_icon_59c5ff57.png";
-import boxingGloveIcon from "@assets/generated_images/Gold_boxing_glove_icon_b5aeac0c.png";
-import stretchBandIcon from "@assets/generated_images/Gold_stretch_band_icon_49bb8c4d.png";
+import kettlebellIcon from "/icons/png/kettlebell.png";
+import barbellIcon from "/icons/png/barbell.png";
+import heartRateIcon from "/icons/png/heart-rate.png";
+import boxingGloveIcon from "/icons/png/boxing-glove.png";
+import stretchBandIcon from "/icons/png/stretch-band.png";
 
 const programs = [
   {
@@ -86,11 +86,11 @@ export default function FeaturesBlock() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <Badge className="bg-[#F7C948]/10 text-[#F7C948] border-[#F7C948]/30">
+          <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Training Programs
           </Badge>
           <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white drop-shadow-lg">
-            Choose Your <span className="text-[#F7C948]">Transformation Path</span>
+            Choose Your <span className="text-[#D4A017]">Transformation Path</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">
             Choose a proven path. Each track pairs technique with conditioning and smart recovery.
@@ -130,7 +130,7 @@ export default function FeaturesBlock() {
                 <ul className="space-y-2">
                   {program.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm">
-                      <div className="h-1.5 w-1.5 rounded-full bg-[#F7C948] mr-2" />
+                      <div className="h-1.5 w-1.5 rounded-full bg-[#D4A017] mr-2" />
                       {feature}
                     </li>
                   ))}
@@ -138,7 +138,7 @@ export default function FeaturesBlock() {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full group-hover:bg-[#F7C948] group-hover:text-black group-hover:border-[#F7C948] transition-all"
+                  className="w-full group-hover:bg-[#D4A017] group-hover:text-black group-hover:border-[#D4A017] transition-all"
                   asChild
                 >
                   <Link href={program.link} data-testid={`button-program-${program.title.toLowerCase()}`}>
@@ -154,8 +154,8 @@ export default function FeaturesBlock() {
         <div className="grid gap-6 md:grid-cols-3">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="flex items-start gap-4">
-              <div className="p-2 rounded-lg bg-[#F7C948]/10 flex-shrink-0">
-                <benefit.icon className="h-6 w-6 text-[#F7C948]" />
+              <div className="p-2 rounded-lg bg-[#D4A017]/10 flex-shrink-0">
+                <benefit.icon className="h-6 w-6 text-[#D4A017]" />
               </div>
               <div>
                 <h3 className="font-semibold mb-1 text-white">{benefit.title}</h3>
@@ -169,7 +169,7 @@ export default function FeaturesBlock() {
         <div className="mt-16 text-center">
           <Button 
             size="lg"
-            className="bg-[#F7C948] text-black hover:bg-[#F7C948]/90 font-semibold"
+            className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold"
             asChild
           >
             <Link href="/assessment" data-testid="button-features-cta">

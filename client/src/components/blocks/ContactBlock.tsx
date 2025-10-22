@@ -104,11 +104,11 @@ export default function ContactBlock() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <Badge className="bg-[#F7C948]/10 text-[#F7C948] border-[#F7C948]/30">
+          <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Get In Touch
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Let's <span className="text-[#F7C948]">talk.</span>
+            Let's <span className="text-[#D4A017]">talk.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Send a quick message with your goals. We'll respond within 24 hours.
@@ -251,7 +251,7 @@ export default function ContactBlock() {
                       <Button 
                         type="submit"
                         size="lg"
-                        className="w-full bg-[#F7C948] text-black hover:bg-[#F7C948]/90 font-semibold"
+                        className="w-full bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold"
                         disabled={contactMutation.isPending}
                         data-testid="button-contact-submit"
                       >
@@ -278,15 +278,15 @@ export default function ContactBlock() {
           <div className="space-y-6">
             {/* Contact Cards */}
             {contactInfo.map((info) => (
-              <Card key={info.title} className="border-l-4 border-l-[#F7C948]">
+              <Card key={info.title} className="border-l-4 border-l-[#D4A017]">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-[#F7C948]/10">
-                      <info.icon className="h-5 w-5 text-[#F7C948]" />
+                    <div className="p-2 rounded-lg bg-[#D4A017]/10">
+                      <info.icon className="h-5 w-5 text-[#D4A017]" />
                     </div>
                     <div>
                       <p className="font-semibold">{info.title}</p>
-                      <p className="text-[#F7C948]">{info.value}</p>
+                      <p className="text-[#D4A017]">{info.value}</p>
                       <p className="text-sm text-muted-foreground">{info.description}</p>
                     </div>
                   </div>
@@ -295,7 +295,7 @@ export default function ContactBlock() {
             ))}
             
             {/* Quick Response Card */}
-            <Card className="bg-[#F7C948]/10 border-[#F7C948]/30">
+            <Card className="bg-[#D4A017]/10 border-[#D4A017]/30">
               <CardContent className="p-6 text-center space-y-3">
                 <Badge className="bg-green-500/10 text-green-500 border-green-500/30">
                   Quick Response

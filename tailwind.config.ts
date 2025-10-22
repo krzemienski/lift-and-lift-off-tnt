@@ -16,11 +16,11 @@ export default {
       colors: {
         // TNT Fitness Brand Colors
         gold: {
-          DEFAULT: "#F7C948",
-          foreground: "#0A2340",
+          DEFAULT: "#D4A017",
+          foreground: "#0B2545",
         },
         navy: {
-          DEFAULT: "#0A2340",
+          DEFAULT: "#0B2545",
           foreground: "#FFFFFF",
         },
         indigo: {

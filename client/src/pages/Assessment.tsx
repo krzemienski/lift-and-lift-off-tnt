@@ -13,11 +13,11 @@ export default function Assessment() {
       <div className="relative z-10">
         <section className="relative py-24 bg-gradient-to-b from-[#0B2545]/70 to-[#243B6B]/60 backdrop-blur-md">
           <div className="container mx-auto px-4 text-center max-w-3xl">
-            <Badge className="bg-[#F7C948]/10 text-[#F7C948] border-[#F7C948]/30 mb-4">
+            <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30 mb-4">
               Free Assessment
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Book Your <span className="text-[#F7C948]">Free Assessment</span>
+              Book Your <span className="text-[#D4A017]">Free Assessment</span>
             </h1>
             <p className="text-lg text-white/90 mb-8">
               20‑min call · Movement screen · Program fit · Next steps.

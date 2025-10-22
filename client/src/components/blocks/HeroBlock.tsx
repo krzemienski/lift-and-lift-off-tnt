@@ -51,7 +51,7 @@ export default function HeroBlock() {
               <div className="inline-flex">
                 <Badge 
                   variant="outline" 
-                  className="border-[#F7C948]/30 bg-[#F7C948]/10 text-[#F7C948] backdrop-blur-sm px-4 py-2 text-sm font-medium"
+                  className="border-[#D4A017]/30 bg-[#D4A017]/10 text-[#D4A017] backdrop-blur-sm px-4 py-2 text-sm font-medium"
                 >
                   <Zap className="mr-2 h-4 w-4" />
                   New Year Special - 30% Off
@@ -62,7 +62,7 @@ export default function HeroBlock() {
               <div className="space-y-4">
                 <h1 className="text-5xl font-heading font-extrabold leading-tight tracking-tight text-white drop-shadow-lg md:text-6xl xl:text-7xl">
                   TODAY,
-                  <span className="block text-[#F7C948]">NOT</span>
+                  <span className="block text-[#D4A017]">NOT</span>
                   <span className="block">TOMORROW</span>
                 </h1>
                 <p className="max-w-xl text-lg text-white/90 drop-shadow-md md:text-xl">
@@ -74,7 +74,7 @@ export default function HeroBlock() {
               <ul className="grid gap-3 sm:grid-cols-2">
                 {features.map((feature) => (
                   <li key={feature} className="flex items-center text-white/90 drop-shadow-md">
-                    <CheckCircle className="mr-3 h-5 w-5 flex-shrink-0 text-[#F7C948]" />
+                    <CheckCircle className="mr-3 h-5 w-5 flex-shrink-0 text-[#D4A017]" />
                     <span className="text-sm md:text-base">{feature}</span>
                   </li>
                 ))}
@@ -84,7 +84,7 @@ export default function HeroBlock() {
               <div className="flex flex-wrap gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-[#F7C948] text-black hover:bg-[#F7C948]/90 font-semibold"
+                  className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold"
                   asChild
                 >
                   <Link href="/assessment" data-testid="button-hero-assessment">
@@ -128,10 +128,10 @@ export default function HeroBlock() {
                   className="border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10"
                 >
                   <div className="p-6 space-y-3">
-                    <stat.icon className="h-8 w-8 text-[#F7C948]" />
+                    <stat.icon className="h-8 w-8 text-[#D4A017]" />
                     <div>
                       <p className="text-3xl font-bold text-white drop-shadow-lg">{stat.value}</p>
-                      <p className="text-sm font-medium text-[#F7C948] drop-shadow-md">{stat.label}</p>
+                      <p className="text-sm font-medium text-[#D4A017] drop-shadow-md">{stat.label}</p>
                       <p className="text-xs text-white/70 drop-shadow-md mt-1">{stat.description}</p>
                     </div>
                   </div>

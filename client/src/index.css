@@ -6,23 +6,23 @@
 /* Theme configuration for Tailwind v4 */
 @theme {
   /* TNT Fitness Brand Colors */
-  --color-tnt-navy: #0A2340;
+  --color-tnt-navy: #0B2545;
   --color-tnt-indigo: #243B6B;
-  --color-tnt-gold: #F7C948;
+  --color-tnt-gold: #D4A017;
   
   /* shadcn semantic colors */
   --color-border: hsl(213 40% 85%);
   --color-input: hsl(213 20% 70%);
-  --color-ring: hsl(46 91% 62%);
+  --color-ring: hsl(44 80% 46%);
   --color-background: hsl(0 0% 99%);
-  --color-foreground: hsl(206 100% 13%);
-  --color-primary: hsl(46 91% 62%);
-  --color-primary-foreground: hsl(206 100% 13%);
-  --color-secondary: hsl(206 100% 13%);
+  --color-foreground: hsl(210 72% 16%);
+  --color-primary: hsl(44 80% 46%);
+  --color-primary-foreground: hsl(210 72% 16%);
+  --color-secondary: hsl(210 72% 16%);
   --color-secondary-foreground: hsl(0 0% 99%);
   --color-muted: hsl(213 20% 89%);
   --color-muted-foreground: hsl(213 30% 45%);
-  --color-accent: hsl(219 50% 30%);
+  --color-accent: hsl(220 50% 28%);
   --color-accent-foreground: hsl(0 0% 99%);
   --color-destructive: hsl(0 75% 45%);
   --color-destructive-foreground: hsl(0 0% 99%);
@@ -35,11 +35,11 @@
   --color-sidebar: hsl(213 40% 93%);
   --color-sidebar-foreground: hsl(213 60% 16%);
   --color-sidebar-border: hsl(213 40% 84%);
-  --color-sidebar-primary: hsl(46 91% 62%);
-  --color-sidebar-primary-foreground: hsl(206 100% 13%);
-  --color-sidebar-accent: hsl(219 50% 30%);
+  --color-sidebar-primary: hsl(44 80% 46%);
+  --color-sidebar-primary-foreground: hsl(210 72% 16%);
+  --color-sidebar-accent: hsl(220 50% 28%);
   --color-sidebar-accent-foreground: hsl(0 0% 99%);
-  --color-sidebar-ring: hsl(46 91% 62%);
+  --color-sidebar-ring: hsl(44 80% 46%);
   
   /* Font families */
   --font-family-sans: Inter, system-ui, sans-serif;
@@ -72,9 +72,9 @@
   --elevate-2: rgba(0,0,0, .08);
 
   /* TNT Fitness Exact Brand Colors */
-  --tnt-navy: #0A2340;
+  --tnt-navy: #0B2545;
   --tnt-indigo: #243B6B;
-  --tnt-gold: #F7C948;
+  --tnt-gold: #D4A017;
   
   /* Radius Tokens */
   --radius-sm: 10px;
@@ -91,17 +91,17 @@
   --sidebar: 213 40% 93%;
   --sidebar-foreground: 213 60% 16%;
   --sidebar-border: 213 40% 84%;
-  --sidebar-primary: 46 91% 62%; /* Gold #F7C948 */
-  --sidebar-primary-foreground: 206 100% 13%;
+  --sidebar-primary: 44 80% 46%; /* Gold #D4A017 */
+  --sidebar-primary-foreground: 213 72% 16%;
   --sidebar-accent: 219 50% 30%; /* Indigo */
   --sidebar-accent-foreground: 0 0% 99%;
-  --sidebar-ring: 46 91% 62%;
+  --sidebar-ring: 44 80% 46%;
   --popover: 213 15% 91%;
   --popover-foreground: 213 60% 16%;
   --popover-border: 213 15% 82%;
-  --primary: 46 91% 62%; /* Gold #F7C948 */
-  --primary-foreground: 206 100% 13%;
-  --secondary: 206 100% 13%; /* Navy #0A2340 */
+  --primary: 44 80% 46%; /* Gold #D4A017 */
+  --primary-foreground: 213 72% 16%;
+  --secondary: 213 72% 16%; /* Navy #0B2545 */
   --secondary-foreground: 0 0% 99%;
   --muted: 213 20% 89%;
   --muted-foreground: 213 30% 45%;
@@ -110,8 +110,8 @@
   --destructive: 0 75% 45%;
   --destructive-foreground: 0 0% 99%;
   --input: 213 20% 70%;
-  --ring: 46 91% 62%;
-  --chart-1: 46 91% 50%;
+  --ring: 44 80% 46%;
+  --chart-1: 44 80% 46%;
   --chart-2: 213 60% 25%;
   --chart-3: 219 50% 35%;
   --chart-4: 30 75% 50%;
@@ -190,17 +190,17 @@
   --sidebar: 213 60% 14%;
   --sidebar-foreground: 0 0% 98%;
   --sidebar-border: 213 50% 24%;
-  --sidebar-primary: 46 91% 62%; /* Gold #F7C948 */
-  --sidebar-primary-foreground: 213 60% 16%;
+  --sidebar-primary: 44 80% 46%; /* Gold #D4A017 */
+  --sidebar-primary-foreground: 213 72% 16%;
   --sidebar-accent: 219 50% 40%; /* Indigo */
   --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-ring: 46 91% 62%;
+  --sidebar-ring: 44 80% 46%;
   --popover: 213 60% 14%;
   --popover-foreground: 0 0% 98%;
   --popover-border: 213 50% 22%;
-  --primary: 46 91% 62%; /* Gold #F7C948 */
-  --primary-foreground: 213 60% 16%;
-  --secondary: 213 60% 16%; /* Navy */
+  --primary: 44 80% 46%; /* Gold #D4A017 */
+  --primary-foreground: 213 72% 16%;
+  --secondary: 213 72% 16%; /* Navy #0B2545 */
   --secondary-foreground: 0 0% 98%;
   --muted: 213 40% 22%;
   --muted-foreground: 0 0% 70%;
@@ -209,8 +209,8 @@
   --destructive: 0 70% 45%;
   --destructive-foreground: 0 0% 98%;
   --input: 213 40% 25%;
-  --ring: 46 91% 62%;
-  --chart-1: 46 81% 55%;
+  --ring: 44 80% 46%;
+  --chart-1: 44 80% 46%;
   --chart-2: 213 60% 35%;
   --chart-3: 219 50% 45%;
   --chart-4: 30 70% 65%;
@@ -622,10 +622,10 @@
   /* Video carousel gradient animations */
   @keyframes gradient-shift {
     0%, 100% {
-      background: linear-gradient(135deg, #0A2340 0%, #1a3758 25%, #0A2340 50%, #1a3758 75%, #0A2340 100%);
+      background: linear-gradient(135deg, #0B2545 0%, #1a3758 25%, #0B2545 50%, #1a3758 75%, #0B2545 100%);
     }
     50% {
-      background: linear-gradient(135deg, #1a3758 0%, #0A2340 25%, #1a3758 50%, #0A2340 75%, #1a3758 100%);
+      background: linear-gradient(135deg, #1a3758 0%, #0B2545 25%, #1a3758 50%, #0B2545 75%, #1a3758 100%);
     }
   }
   

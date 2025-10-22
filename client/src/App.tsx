@@ -57,7 +57,7 @@ function App() {
               <header className="sticky top-0 z-40 flex items-center justify-between p-2 px-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:hidden">
                 <SidebarTrigger data-testid="button-sidebar-toggle" />
                 <div className="flex items-center gap-2">
-                  <span className="font-display font-bold text-[#F7C948]">TNT FITNESS</span>
+                  <span className="font-display font-bold text-[#D4A017]">TNT FITNESS</span>
                 </div>
               </header>
               

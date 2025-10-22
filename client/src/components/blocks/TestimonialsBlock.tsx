@@ -75,11 +75,11 @@ export default function TestimonialsBlock() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <Badge className="bg-[#F7C948]/10 text-[#F7C948] border-[#F7C948]/30">
+          <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Success Stories
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-            Consistency <span className="text-[#F7C948]">compounds.</span>
+            Consistency <span className="text-[#D4A017]">compounds.</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">
             See what clients achieved in 8–12 weeks.
@@ -88,9 +88,9 @@ export default function TestimonialsBlock() {
 
         {/* Featured Testimonial */}
         <div className="max-w-4xl mx-auto mb-16">
-          <Card className="border-[#F7C948]/20 bg-gradient-to-br from-[#0B2545]/10 to-[#243B6B]/10">
+          <Card className="border-[#D4A017]/20 bg-gradient-to-br from-[#0B2545]/10 to-[#243B6B]/10">
             <CardContent className="p-8 md:p-12">
-              <Quote className="h-8 w-8 text-[#F7C948]/50 mb-6" />
+              <Quote className="h-8 w-8 text-[#D4A017]/50 mb-6" />
               
               <p className="text-lg md:text-xl leading-relaxed mb-8 text-white/90 drop-shadow-md">
                 {testimonials[activeTestimonial].content}
@@ -98,7 +98,7 @@ export default function TestimonialsBlock() {
               
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-4">
-                  <Avatar className="h-12 w-12 border-2 border-[#F7C948]/30">
+                  <Avatar className="h-12 w-12 border-2 border-[#D4A017]/30">
                     <AvatarImage src={testimonials[activeTestimonial].image} />
                     <AvatarFallback>{testimonials[activeTestimonial].name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                   </Avatar>
@@ -113,7 +113,7 @@ export default function TestimonialsBlock() {
                   <Badge variant="outline">{testimonials[activeTestimonial].duration}</Badge>
                   <div className="flex">
                     {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-[#F7C948] text-[#F7C948]" />
+                      <Star key={i} className="h-4 w-4 fill-[#D4A017] text-[#D4A017]" />
                     ))}
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function TestimonialsBlock() {
                 onClick={() => setActiveTestimonial(index)}
                 className={`h-2 rounded-full transition-all ${
                   index === activeTestimonial 
-                    ? 'w-8 bg-[#F7C948]' 
+                    ? 'w-8 bg-[#D4A017]' 
                     : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
                 }`}
                 aria-label={`View testimonial ${index + 1}`}
@@ -150,7 +150,7 @@ export default function TestimonialsBlock() {
               <CardContent className="p-6 space-y-4">
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-[#F7C948] text-[#F7C948]" />
+                    <Star key={i} className="h-4 w-4 fill-[#D4A017] text-[#D4A017]" />
                   ))}
                 </div>
                 
