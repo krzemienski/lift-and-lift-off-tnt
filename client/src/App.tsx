@@ -54,7 +54,7 @@ function App() {
             <AppSidebar />
             <SidebarInset>
               {/* Mobile/Tablet header with sidebar trigger */}
-              <header className="sticky top-0 z-40 flex items-center justify-between p-2 px-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:hidden">
+              <header className="sticky top-0 z-40 flex items-center justify-between p-2 px-4 border-b border-[#D4A017]/30 bg-[#0B2545] md:hidden">
                 <SidebarTrigger data-testid="button-sidebar-toggle" />
                 <div className="flex items-center gap-2">
                   <span className="font-display font-bold text-[#D4A017]">TNT FITNESS</span>
@@ -62,10 +62,10 @@ function App() {
               </header>
               
               {/* Desktop header */}
-              <header className="sticky top-0 z-40 hidden md:flex items-center justify-between p-2 px-6 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <header className="sticky top-0 z-40 hidden md:flex items-center justify-between p-2 px-6 border-b border-[#D4A017]/30 bg-[#0B2545]">
                 <div className="flex items-center gap-4">
                   <SidebarTrigger data-testid="button-sidebar-toggle-desktop" />
-                  <h1 className="font-display text-lg font-semibold">Today, Not Tomorrow</h1>
+                  <h1 className="font-display text-lg font-semibold text-white">Today, Not Tomorrow</h1>
                 </div>
               </header>
               
