@@ -166,7 +166,12 @@ export default function AboutBlock() {
         </div>
 
         {/* Training Philosophy */}
-        <Card className="!bg-gradient-to-br !from-[#0B2545]/90 !to-[#243B6B]/90 border-[#D4A017]/20">
+        <Card 
+          className="border-[#D4A017]/20"
+          style={{
+            background: 'linear-gradient(to bottom right, rgba(11, 37, 69, 0.9), rgba(36, 59, 107, 0.9))'
+          }}
+        >
           <CardContent className="p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <Badge className="bg-[#D4A017]/20 text-[#D4A017] border-[#D4A017]/30">

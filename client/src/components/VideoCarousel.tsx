@@ -12,17 +12,19 @@ export default function VideoCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Define video playlists
+  // Mobile: Portrait videos (704x1280)
   const mobilePlaylist = [
     "/videos/download.mp4",
-    "/videos/download2.mp4",
     "/videos/download3.mp4",
-    "/videos/download4.mp4"
+    "/videos/download5.mp4",
+    "/videos/download7.mp4"
   ];
 
+  // Desktop: Landscape videos (1280x704)
   const desktopPlaylist = [
-    "/videos/download5.mp4",
+    "/videos/download2.mp4",
+    "/videos/download4.mp4",
     "/videos/download6.mp4",
-    "/videos/download7.mp4",
     "/videos/download8.mp4"
   ];
 
