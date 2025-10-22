@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
-const tntIcon = "/brand/icon_1A_256.png";
-const tntHorizontal = "/brand/horizontal_1A_dark_FIX_transparent.png";
+import tntIcon from "@assets/generated_images/TNT_mascot_hexagon_logo_7490e9fb.png";
+import tntHorizontal from "@assets/generated_images/TNT_horizontal_transparent_logo_89551c9f.png";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -81,7 +80,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div className="md:hidden bg-[color:var(--tnt-navy)]/95 backdrop-blur-md border-b border-white/10">
           <div className="px-4 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>

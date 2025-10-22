@@ -60,7 +60,7 @@ export default function HeroBlock() {
 
               {/* Heading */}
               <div className="space-y-4">
-                <h1 className="text-5xl font-heading font-extrabold leading-tight tracking-tight text-white drop-shadow-lg md:text-6xl xl:text-7xl">
+                <h1 className="text-5xl font-heading font-black leading-tight tracking-tight text-white drop-shadow-lg md:text-6xl xl:text-7xl">
                   TODAY,
                   <span className="block text-[#D4A017]">NOT</span>
                   <span className="block">TOMORROW</span>
@@ -95,7 +95,7 @@ export default function HeroBlock() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white/20 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+                  className="border-white/20 bg-[#0B2545]/10 text-white backdrop-blur-sm hover:bg-[#0B2545]/20"
                   asChild
                 >
                   <Link href="/programs" data-testid="button-hero-programs">
@@ -125,7 +125,7 @@ export default function HeroBlock() {
               {stats.map((stat) => (
                 <Card 
                   key={stat.label} 
-                  className="border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10"
+                  className="border-white/10 bg-[#0B2545]/5 backdrop-blur-sm transition-all hover:bg-[#0B2545]/10"
                 >
                   <div className="p-6 space-y-3">
                     <stat.icon className="h-8 w-8 text-[#D4A017]" />

@@ -107,8 +107,8 @@ export default function Header() {
                     key={item.href} 
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300 font-medium animate-fade-in-up ${
-                      location === item.href ? "text-gold bg-white/5" : ""
+                    className={`block px-4 py-3 text-white/90 hover:text-white hover:bg-[#0B2545]/10 rounded-md transition-all duration-300 font-medium animate-fade-in-up ${
+                      location === item.href ? "text-gold bg-[#0B2545]/5" : ""
                     }`}
                     style={{ animationDelay: `${index * 50}ms` }}
                     data-testid={`link-mobile-${item.label.toLowerCase()}`}

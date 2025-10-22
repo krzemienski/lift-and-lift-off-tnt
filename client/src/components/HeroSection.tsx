@@ -53,7 +53,7 @@ export default function HeroSection({
             size="lg"
             variant="outline"
             onClick={onSecondaryCTA}
-            className="text-base bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
+            className="text-base bg-[#0B2545]/10 backdrop-blur-sm border-white/20 text-white hover:bg-[#0B2545]/20"
             data-testid="button-secondary-cta"
           >
             {secondaryCTA}

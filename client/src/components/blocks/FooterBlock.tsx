@@ -88,7 +88,7 @@ export default function FooterBlock() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/10 border-white/20 placeholder:text-gray-400 text-white"
+                className="bg-[#0B2545]/10 border-white/20 placeholder:text-gray-400 text-white"
                 data-testid="input-newsletter"
               />
               <Button 
@@ -142,7 +142,7 @@ export default function FooterBlock() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                  className="p-2 rounded-lg bg-[#0B2545]/5 hover:bg-[#0B2545]/10 transition-colors"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />

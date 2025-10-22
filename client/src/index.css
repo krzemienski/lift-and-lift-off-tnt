@@ -59,15 +59,15 @@
 
 /* LIGHT MODE */
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
+  --button-outline: rgba(11, 37, 69, 0.10);
+  --badge-outline: rgba(11, 37, 69, 0.05);
 
   /* Automatic computation of border around primary / danger buttons */
   --opaque-button-border-intensity: -8; /* In terms of percentages */
 
   /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(11, 37, 69, 0.03);
+  --elevate-2: rgba(11, 37, 69, 0.08);
 
   /* TNT Fitness Exact Brand Colors */
   --tnt-navy: #0B2545;
@@ -247,7 +247,7 @@
   .font-display,
   [class*="font-display"] {
     font-family: var(--font-display);
-    font-weight: 800; /* ExtraBold per master spec */
+    font-weight: 900; /* Black weight for maximum impact */
   }
 
   /* Buttons use Montserrat 700 */
@@ -526,7 +526,7 @@
   .card-lift:hover {
     transform: translateY(-8px);
     box-shadow: 
-      0 20px 40px -15px rgba(0, 0, 0, 0.3),
+      0 20px 40px -15px rgba(11, 37, 69, 0.3),
       0 10px 20px -5px hsl(var(--primary) / 0.2);
   }
   

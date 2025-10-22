@@ -89,7 +89,7 @@ export default function FeaturesBlock() {
           <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Training Programs
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-heading font-black text-white drop-shadow-lg">
             Choose Your <span className="text-[#D4A017]">Transformation Path</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">

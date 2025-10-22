@@ -6,8 +6,8 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import tntIcon from "@assets/generated_images/TNT_mascot_hexagon_logo_7490e9fb.png";
 
-const tntIcon = "/brand/icon_1A_128.png";
 const SCROLL_THRESHOLD_PERCENTAGE = 0.7;
 
 export default function StickyNav() {

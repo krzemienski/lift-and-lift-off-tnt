@@ -56,13 +56,13 @@ export default function ContactForm({ onSubmit, trainingGoals, contactInfo }: Co
   });
 
   return (
-    <section className="py-20 md:py-32 px-6 bg-black/40 backdrop-blur-md">
+    <section className="py-20 md:py-32 px-6 bg-[#0B2545]/40 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-4 text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+          <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-4 text-white" style={{ textShadow: '0 2px 4px rgba(11, 37, 69, 0.8)' }}>
             Get In Contact With Me
           </h2>
-          <p className="text-lg text-white/80" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+          <p className="text-lg text-white/80" style={{ textShadow: '0 1px 3px rgba(11, 37, 69, 0.8)' }}>
             Ready to start your fitness journey? Let's talk about your goals
           </p>
         </div>

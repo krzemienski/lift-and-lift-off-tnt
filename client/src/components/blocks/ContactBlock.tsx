@@ -107,7 +107,7 @@ export default function ContactBlock() {
           <Badge className="bg-[#D4A017]/10 text-[#D4A017] border-[#D4A017]/30">
             Get In Touch
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-heading font-black">
             Let's <span className="text-[#D4A017]">talk.</span>
           </h2>
           <p className="text-lg text-muted-foreground">

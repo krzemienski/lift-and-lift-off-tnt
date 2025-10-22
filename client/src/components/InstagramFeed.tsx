@@ -19,16 +19,16 @@ export default function InstagramFeed({ username, posts, profileUrl }: Instagram
   const [hoveredPost, setHoveredPost] = useState<string | null>(null);
 
   return (
-    <section className="py-20 md:py-32 px-6 bg-black/40 backdrop-blur-md">
+    <section className="py-20 md:py-32 px-6 bg-[#0B2545]/40 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
             <Instagram className="h-8 w-8 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(11, 37, 69, 0.8)' }}>
               Follow My Journey
             </h2>
           </div>
-          <p className="text-lg text-white/80 mb-6" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+          <p className="text-lg text-white/80 mb-6" style={{ textShadow: '0 1px 3px rgba(11, 37, 69, 0.8)' }}>
             @{username}
           </p>
           <Button
@@ -62,7 +62,7 @@ export default function InstagramFeed({ username, posts, profileUrl }: Instagram
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               {hoveredPost === post.id && (
-                <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-4 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-[#0B2545]/60 flex items-center justify-center p-4 transition-opacity duration-300">
                   <p className="text-white text-sm line-clamp-4 text-center">
                     {post.caption}
                   </p>

@@ -37,7 +37,7 @@ export default function GalleryBlock() {
             <Instagram className="h-3 w-3 mr-2" />
             Instagram Feed
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-heading font-black text-white drop-shadow-lg">
             Stay <span className="text-[#D4A017]">accountable.</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">
@@ -93,7 +93,7 @@ export default function GalleryBlock() {
                     />
                     
                     {/* Hover Overlay */}
-                    <div className={`absolute inset-0 bg-black/70 flex items-center justify-center transition-opacity duration-200 ${
+                    <div className={`absolute inset-0 bg-[#0B2545]/70 flex items-center justify-center transition-opacity duration-200 ${
                       hoveredPost === post.id ? 'opacity-100' : 'opacity-0'
                     }`}>
                       <div className="text-white text-center space-y-2">
@@ -115,7 +115,7 @@ export default function GalleryBlock() {
                     
                     {/* Corner Icon */}
                     <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div className="p-1.5 bg-white/20 backdrop-blur-sm rounded">
+                      <div className="p-1.5 bg-[#0B2545]/20 backdrop-blur-sm rounded">
                         <ExternalLink className="h-4 w-4 text-white" />
                       </div>
                     </div>

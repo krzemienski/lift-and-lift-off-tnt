@@ -17,8 +17,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronRight } from "lucide-react";
-
-const tntIcon = "/brand/icon_1A_256.png";
+import tntIcon from "@assets/generated_images/TNT_mascot_hexagon_logo_7490e9fb.png";
 
 // Main navigation items - per master build spec
 const mainNavItems = [
