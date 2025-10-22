@@ -54,8 +54,8 @@ export default function AboutBlock() {
             <Card className="overflow-hidden">
               <div className="aspect-[4/5] relative">
                 <img
-                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
-                  alt="Coach Rico"
+                  src="/trainer-headshot.jpg"
+                  alt="Coach Rico Martinez"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -166,7 +166,7 @@ export default function AboutBlock() {
         </div>
 
         {/* Training Philosophy */}
-        <Card className="bg-gradient-to-br from-[#0B2545]/10 to-[#243B6B]/10 border-[#D4A017]/20">
+        <Card className="!bg-gradient-to-br !from-[#0B2545]/90 !to-[#243B6B]/90 border-[#D4A017]/20">
           <CardContent className="p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <Badge className="bg-[#D4A017]/20 text-[#D4A017] border-[#D4A017]/30">
