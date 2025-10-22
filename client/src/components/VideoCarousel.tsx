@@ -52,8 +52,8 @@ export default function VideoCarousel() {
 
     // Load from local directory since videos are there
     const playlistUrl = isMobile 
-      ? "/videos/hls/mobile_master.m3u8"
-      : "/videos/hls/desktop_master.m3u8";
+      ? "/videos/hls/mobile-simple.m3u8"
+      : "/videos/hls/desktop-simple.m3u8";
 
     console.log(`[VideoCarousel] Loading HLS playlist: ${playlistUrl}`);
 
@@ -68,11 +68,14 @@ export default function VideoCarousel() {
       const hls = new Hls({
         debug: false, // Reduce console noise
         enableWorker: true,
-        lowLatencyMode: false,
-        backBufferLength: 90,
-        maxBufferLength: 30,
-        maxBufferSize: 60,
-        maxLoadingDelay: 4,
+        lowLatencyMode: true, // Fast initial load
+        backBufferLength: 30,
+        maxBufferLength: 10, // Reduced for faster initial playback
+        maxBufferSize: 20,  // Reduced for faster initial load
+        maxLoadingDelay: 2, // Faster segment loading
+        startLevel: 0, // Start with first quality level
+        autoStartLoad: true, // Start loading immediately
+        startPosition: 0, // Start from beginning
       });
 
       hlsRef.current = hls;
@@ -82,14 +85,15 @@ export default function VideoCarousel() {
 
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
         console.log("[VideoCarousel] HLS manifest parsed, starting playback");
-        setIsLoading(false);
         video.play()
           .then(() => {
             console.log("[VideoCarousel] Video playing successfully");
+            setIsLoading(false);
             setIsPlaying(true);
           })
           .catch((err) => {
             console.warn("[VideoCarousel] Autoplay blocked:", err.message);
+            setIsLoading(false);
             setIsPlaying(true); // Show video anyway
           });
       });
@@ -149,17 +153,10 @@ export default function VideoCarousel() {
       });
     }
 
-    // Set a timeout to show fallback if loading takes too long
-    const loadingTimeout = setTimeout(() => {
-      if (isLoading) {
-        console.log("[VideoCarousel] Loading timeout, showing fallback");
-        setIsLoading(false);
-      }
-    }, 5000);
+    // No timeout - videos should load immediately and fallback only on actual errors
 
     // Cleanup
     return () => {
-      clearTimeout(loadingTimeout);
       if (hlsRef.current) {
         hlsRef.current.destroy();
         hlsRef.current = null;
@@ -200,7 +197,7 @@ export default function VideoCarousel() {
           playsInline
           preload="auto"
           className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-2000 ${
-            isPlaying && !isLoading ? "opacity-90" : "opacity-0"
+            isPlaying ? "opacity-90" : "opacity-0"
           }`}
           style={{
             transformOrigin: 'center',

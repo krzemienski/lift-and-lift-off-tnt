@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HLS Video Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { margin: 0; background: #0A2340; }
+        #video { width: 100%; height: 100vh; object-fit: cover; }
+        #status { position: absolute; top: 10px; left: 10px; color: white; background: rgba(0,0,0,0.5); padding: 10px; }
+    </style>
+</head>
+<body>
+    <video id="video" autoplay muted playsinline></video>
+    <div id="status">Loading...</div>
+    <script>
+        const video = document.getElementById('video');
+        const status = document.getElementById('status');
+        
+        if (Hls.isSupported()) {
+            const hls = new Hls({
+                debug: true,
+                lowLatencyMode: true,
+                maxBufferLength: 10
+            });
+            
+            hls.loadSource('/videos/hls/desktop_master.m3u8');
+            hls.attachMedia(video);
+            
+            hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                status.textContent = 'Manifest parsed, playing...';
+                video.play().then(() => {
+                    status.textContent = 'Video playing!';
+                }).catch(err => {
+                    status.textContent = 'Play error: ' + err.message;
+                });
+            });
+            
+            hls.on(Hls.Events.ERROR, (event, data) => {
+                status.textContent = 'HLS Error: ' + data.type + ' - ' + data.details;
+                console.error('HLS Error:', data);
+            });
+        } else {
+            status.textContent = 'HLS not supported';
+        }
+        
+        video.addEventListener('playing', () => {
+            status.textContent += ' | Video is playing';
+        });
+    </script>
+</body>
+</html>
