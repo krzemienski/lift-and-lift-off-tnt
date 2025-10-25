@@ -207,7 +207,7 @@ export default function VideoCarousel() {
             ref={videoRef}
             autoPlay
             loop={false}
-            muted={true}
+            muted
             playsInline
             preload="auto"
             className={`absolute inset-0 h-[140vh] w-full object-cover object-center transition-opacity duration-1000 ${
