@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 
 export default function VideoCarousel() {
@@ -89,7 +89,7 @@ export default function VideoCarousel() {
     setCurrentVideoIndex(0);
     setHasError(false);
     setIsLoading(true);
-    setAutoplayBlocked(false);
+    // Don't reset autoplayBlocked - maintain user interaction state across orientation changes
   }, [isMobile]);
 
   // Handle video loading and playing
@@ -103,22 +103,25 @@ export default function VideoCarousel() {
     console.log('[VideoCarousel] Loading video:', currentVideoSrc);
     setIsLoading(true);
     setHasError(false);
-    setAutoplayBlocked(false); // Reset autoplay blocked state for new video
+    // Don't reset autoplayBlocked - let user interaction state persist
 
     const handleCanPlay = () => {
       console.log('[VideoCarousel] Video can play');
       setIsLoading(false);
-      video.play()
-        .then(() => {
-          console.log('[VideoCarousel] Video playing');
-          setIsPlaying(true);
-          setAutoplayBlocked(false);
-        })
-        .catch((err) => {
-          console.warn("[VideoCarousel] Autoplay blocked:", err.message);
-          setIsPlaying(false);
-          setAutoplayBlocked(true); // Show play button when autoplay is blocked
-        });
+      
+      // Only attempt autoplay if it hasn't been blocked
+      if (!autoplayBlocked) {
+        video.play()
+          .then(() => {
+            console.log('[VideoCarousel] Video playing');
+            setIsPlaying(true);
+          })
+          .catch((err) => {
+            console.warn("[VideoCarousel] Autoplay blocked:", err.message);
+            setIsPlaying(false);
+            setAutoplayBlocked(true); // Show play button when autoplay is blocked
+          });
+      }
     };
 
     const handleVideoEnded = () => {
@@ -151,8 +154,6 @@ export default function VideoCarousel() {
     video.addEventListener('error', handleError);
     video.addEventListener('loadeddata', handleLoadedData);
 
-    // Note: No need to call video.load() since React handles src updates automatically
-
     return () => {
       video.removeEventListener('canplay', handleCanPlay);
       video.removeEventListener('ended', handleVideoEnded);
@@ -160,6 +161,15 @@ export default function VideoCarousel() {
       video.removeEventListener('loadeddata', handleLoadedData);
     };
   }, [currentVideoSrc, playlist.length]);
+
+  // Trigger video load AFTER React commits the source update to DOM
+  useLayoutEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      console.log('[VideoCarousel] Triggering video.load() for:', currentVideoSrc);
+      video.load();
+    }
+  }, [currentVideoSrc]);
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden">
