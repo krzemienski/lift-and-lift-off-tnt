@@ -28,7 +28,7 @@ The application is built with a React frontend, leveraging Vite, Tailwind CSS, a
   - Poster frames extracted from actual video content for proper placeholder images
   - Parallax scrolling effect: video background transforms on scroll with `translateY(-${scrollY * 0.12}px)`
   - Error handling with fallback to animated gradient background
-- **Object Storage:** Videos served via `/public/:filePath(*)` route using ObjectStorageService with proper content-type (`video/mp4`) and caching headers (`max-age=3600`)
+- **Object Storage:** Videos served via `/public/:filePath(*)` route using ObjectStorageService with HTTP range request support (206 Partial Content), proper content-type (`video/mp4`), Accept-Ranges header, and caching headers (`max-age=3600`). Range support enables browser video seeking and progressive loading.
 - **Asset Management:** All brand assets (logos, program icons) are high-quality PNGs with proper alpha channel transparency, generated in TNT gold.
 - **Instagram Integration:** Dynamic feed fetching from Instagram Basic Display API via a backend route (`/api/instagram/posts`), with placeholder fallback.
 - **Contact Form:** Backend endpoint (`/api/contact`) to store submissions in in-memory storage, with an admin endpoint (`/api/contact/messages`) to retrieve them.
