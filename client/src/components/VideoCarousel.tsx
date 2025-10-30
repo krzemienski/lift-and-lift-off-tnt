@@ -10,6 +10,7 @@ export default function VideoCarousel() {
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const preloadedVideos = useRef<Map<string, HTMLVideoElement>>(new Map());
 
   // Define video playlists from object storage
   // Mobile: Portrait videos (704x1280)
@@ -83,6 +84,26 @@ export default function VideoCarousel() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Preload all videos in current playlist for instant switching
+  useEffect(() => {
+    const preloadVideos = () => {
+      playlist.forEach((src) => {
+        if (!preloadedVideos.current.has(src)) {
+          const video = document.createElement('video');
+          video.src = src;
+          video.preload = 'auto';
+          video.muted = true;
+          video.playsInline = true;
+          video.load();
+          preloadedVideos.current.set(src, video);
+          console.log('[VideoCarousel] Preloading:', src);
+        }
+      });
+    };
+
+    preloadVideos();
+  }, [playlist]);
 
   // Reset video index when screen size changes
   useEffect(() => {
