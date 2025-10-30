@@ -18,14 +18,24 @@ The application is built with a React frontend, leveraging Vite, Tailwind CSS, a
 - **Navigation:** A collapsible sticky navigation appears on scroll, providing easy access to key sections with smooth scroll functionality.
 
 **Technical Implementations & Feature Specifications:**
-- **Video Playback:** Direct MP4 playback with JavaScript-based auto-progression, handling `ended` events for seamless looping. Includes error handling with a fallback to an animated gradient background.
+- **Video Playback:** Videos served from Replit Object Storage with H.264 Constrained Baseline profile for maximum browser compatibility. Features:
+  - 6 videos total: 3 landscape (1280x704) and 3 portrait (704x1280)
+  - Transcoded with ffmpeg using `-profile:v baseline -level 3.1 -pix_fmt yuv420p -movflags +faststart`
+  - All videos muted (no audio track) to ensure silent autoplay
+  - Responsive playlist switching at 768px breakpoint (portrait <768px, landscape ≥768px)
+  - JavaScript-based auto-progression handling `ended` events for seamless carousel transitions
+  - Preloading system caches all playlist videos for instant switching
+  - Poster frames extracted from actual video content for proper placeholder images
+  - Parallax scrolling effect: video background transforms on scroll with `translateY(-${scrollY * 0.12}px)`
+  - Error handling with fallback to animated gradient background
+- **Object Storage:** Videos served via `/public/:filePath(*)` route using ObjectStorageService with proper content-type (`video/mp4`) and caching headers (`max-age=3600`)
 - **Asset Management:** All brand assets (logos, program icons) are high-quality PNGs with proper alpha channel transparency, generated in TNT gold.
 - **Instagram Integration:** Dynamic feed fetching from Instagram Basic Display API via a backend route (`/api/instagram/posts`), with placeholder fallback.
 - **Contact Form:** Backend endpoint (`/api/contact`) to store submissions in in-memory storage, with an admin endpoint (`/api/contact/messages`) to retrieve them.
 - **Responsive Design:** Comprehensive testing on desktop (1920x1080) and mobile (390x844) ensures full responsiveness and aesthetic integrity.
 - **Docker Configuration:** Includes Docker setup for consistent deployment.
 - **Timestamped Logging:** Implemented for monitoring and debugging.
-- **Design Tokens:** CSS variables for colors, typography, spacing, and shadows are defined in `public/tokens.css`.
+- **Design Tokens:** CSS variables for colors, typography, spacing, and shadows defined in `client/src/index.css`.
 
 ## External Dependencies
 - **Instagram Basic Display API:** Used for fetching and displaying dynamic Instagram feeds from @tntfitness.
