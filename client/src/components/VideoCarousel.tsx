@@ -11,19 +11,19 @@ export default function VideoCarousel() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Define video playlists
+  // Define video playlists from object storage
   // Mobile: Portrait videos (704x1280)
   const mobilePlaylist = [
-    "/videos/portrait1.mp4",
-    "/videos/portrait2.mp4",
-    "/videos/portrait3.mp4"
+    "/public/portrait1.mp4",
+    "/public/portrait2.mp4",
+    "/public/portrait3.mp4"
   ];
 
   // Desktop: Landscape videos (1280x704)
   const desktopPlaylist = [
-    "/videos/landscape1.mp4",
-    "/videos/landscape2.mp4",
-    "/videos/landscape3.mp4"
+    "/public/landscape1.mp4",
+    "/public/landscape2.mp4",
+    "/public/landscape3.mp4"
   ];
 
   // Get current playlist based on screen size
