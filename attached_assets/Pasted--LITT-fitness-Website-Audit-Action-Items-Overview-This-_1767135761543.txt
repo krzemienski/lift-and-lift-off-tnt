@@ -1,0 +1,136 @@
+# LITT.fitness Website Audit & Action Items
+
+## Overview
+This document outlines the required updates, fixes, and improvements for the LITT.fitness website for Coach Rico. The audit covers functionality issues, content accuracy, design elements, and missing integrations that need to be addressed.
+
+## Critical Functionality Issues
+
+### Schedule Assessment Button
+- **Current Issue**: Button exists but doesn't properly connect to scheduling functionality
+- **Required Action**: 
+  - Integrate scheduling system with assessment form
+  - Connect training goal inputs and user preferences to booking flow
+  - Ensure seamless transition from form completion to calendar scheduling
+
+### Contact Information & CTAs
+- **"Let's Talk" Section**: 
+  - Text readability issue with "Let's" underneath the heading
+  - "Book Your Free Assessment" page functions correctly (no changes needed)
+- **Contact Info Below Form**:
+  - All contact information needs verification
+  - Update with correct/current contact details
+  - Set up any missing contact methods
+
+## New Features to Implement
+
+### Email Subscription
+- **Purpose**: Separate newsletter/updates subscription distinct from service inquiry forms
+- **Implementation**: Add "Stay Updated" section
+- **Functionality**: Allow visitors to subscribe without committing to assessment
+
+### Social Media Integration
+- **Current State**: Instagram content integration present
+- **Required Change**: 
+  - Remove Instagram feed integration
+  - Audit and fill in all social media links
+  - Determine alternative content strategy for bottom section previously using Instagram
+
+## Content Audit Requirements
+
+### Programs Section
+**Current Programs Listed**:
+- Calisthenics
+- Strength Training
+- Fat Loss
+- Boxing
+- Flexibility
+
+**Issues to Address**:
+- Program cards should expand/open when clicked (currently non-functional)
+- Need proper back navigation functionality
+- Verify all program descriptions are accurate and complete
+
+### Navigation & Information Architecture
+**Current Structure**:
+- Company information about Coach Rico
+- Success stories
+- Free assessment
+- Instagram feed (to be removed)
+- Contact us
+
+## Branding & Design Issues
+
+### Logo
+- **Current Issue**: TNT Fitness logo appears "raunchy and ghetto"
+- **Action Required**: Create professional, properly designed logo
+
+### Statistics & Claims
+- **"500+ Client Transformations"**: 
+  - Not accurate
+  - Remove this section entirely
+- **"Limited Spots Available"**: 
+  - Remove this messaging
+  - Doesn't align with business model
+
+### Coach Information
+- **Current**: "Coach Rico Martinez"
+- **Required**: Change to "Coach Rico" (remove last name)
+- Apply this change consistently across:
+  - About section component
+  - Page titles
+  - Navigation references
+
+## Copy & Content Review
+
+### Training Paths Section
+- **Status**: Content makes sense, keep as-is
+- **Scheduling Section**: Functional and appropriate
+
+### "Meet Your Coach" Section
+- **Current State**: Present but may need more prominence
+- **Recommendation**: Consider making this section more visible/prominent in layout
+
+### "My Promise" Section
+- **Copy Audit Needed**: All copy requires review for accuracy and tone
+- **CTA Button Issue**: "View Success Stories" button has poor readability
+- **Action Required**: Improve button contrast/visibility
+
+## Elements to Remove
+
+### Testimonials
+- **Current State**: Non-existent/empty
+- **Action**: Remove testimonial section entirely until real testimonials are available
+
+### Instagram Feed
+- **Location**: Bottom of page
+- **Action**: Remove completely (mentioned multiple times as confirmed decision)
+
+### Inaccurate Statistics
+- "500+ client transformations" claim
+- "Limited spots" messaging
+
+## Action Items
+
+- [ ] Connect schedule assessment button to functional booking system with form integration
+- [ ] Fix readability of "Let's Talk" section text
+- [ ] Verify and update all contact information
+- [ ] Implement "Stay Updated" email subscription feature (separate from inquiry forms)
+- [ ] Remove Instagram feed integration from bottom of site
+- [ ] Audit and populate all social media links with correct URLs
+- [ ] Fix program card click functionality to expand/open details
+- [ ] Implement proper back navigation for program pages
+- [ ] Design and implement new professional TNT Fitness logo
+- [ ] Remove "500+ client transformations" statistic section
+- [ ] Remove "Limited spots available" messaging
+- [ ] Audit all copy in "My Promise" section for accuracy
+- [ ] Improve visibility/contrast of "View Success Stories" button
+- [ ] Remove empty testimonials section
+- [ ] Change all instances of "Coach Rico Martinez" to "Coach Rico"
+- [ ] Consider increasing prominence of "Meet Your Coach" section
+- [ ] Conduct full copy audit across entire site for tone and accuracy
+- [ ] Determine content strategy for area previously occupied by Instagram feed
+
+## Notes
+- Training Paths section is working well and should remain as-is
+- Scheduling functionality is appropriate where currently implemented
+- "Book Your Free Assessment" page is functional and requires no changes
