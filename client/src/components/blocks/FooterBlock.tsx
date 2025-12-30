@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
-import { Mail, Phone, MapPin, Send, Facebook, Twitter, Youtube } from "lucide-react";
+import { Mail, MapPin, Send, Facebook, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import tntIcon from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
@@ -190,16 +190,9 @@ export default function FooterBlock() {
             <h4 className="font-semibold mb-4 text-[#D4A017]">Get In Touch</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
-                <Phone className="h-4 w-4 text-[#D4A017] mt-0.5" />
-                <div>
-                  <p className="text-sm text-gray-300">+929-928-8997</p>
-                  <p className="text-xs text-gray-400">Mon-Fri 6AM-8PM</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-[#D4A017] mt-0.5" />
                 <div>
-                  <p className="text-sm text-gray-300">mandusalife@gmail.com</p>
+                  <p className="text-sm text-gray-300">coach@litt.fitness</p>
                   <p className="text-xs text-gray-400">24/7 response</p>
                 </div>
               </li>

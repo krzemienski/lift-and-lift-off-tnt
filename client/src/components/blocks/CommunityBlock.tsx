@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Heart, Users, Quote, Sparkles } from "lucide-react";
+import { Mail, Heart, Users, Quote, Sparkles } from "lucide-react";
 
 export default function CommunityBlock() {
   return (
@@ -97,27 +97,15 @@ export default function CommunityBlock() {
                 Ready to start moving? Reach out to us today!
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-[#D4A017]/50 text-white hover:bg-[#D4A017]/20 w-full sm:w-auto"
-                  asChild
-                >
-                  <a href="tel:+929-928-8997" data-testid="link-community-phone">
-                    <Phone className="mr-2 h-5 w-5 text-[#D4A017]" />
-                    +929-928-8997
-                  </a>
-                </Button>
-                
+              <div className="flex justify-center items-center pt-4">
                 <Button
                   size="lg"
-                  className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold w-full sm:w-auto"
+                  className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold"
                   asChild
                 >
-                  <a href="mailto:mandusalife@gmail.com" data-testid="link-community-email">
+                  <a href="mailto:coach@litt.fitness" data-testid="link-community-email">
                     <Mail className="mr-2 h-5 w-5" />
-                    mandusalife@gmail.com
+                    coach@litt.fitness
                   </a>
                 </Button>
               </div>

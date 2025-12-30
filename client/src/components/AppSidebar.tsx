@@ -187,8 +187,7 @@ export function AppSidebar() {
       <SidebarFooter className="border-t border-[#D4A017]/20 p-4">
         <div className="text-xs text-muted-foreground group-data-[collapsible=icon]:hidden">
           <p className="font-semibold text-[#D4A017] mb-1" data-testid="text-sidebar-contact-title">Contact Info</p>
-          <p data-testid="text-sidebar-phone">+929-928-8997</p>
-          <p data-testid="text-sidebar-email">mandusalife@gmail.com</p>
+          <p data-testid="text-sidebar-email">coach@litt.fitness</p>
         </div>
       </SidebarFooter>
     </Sidebar>
