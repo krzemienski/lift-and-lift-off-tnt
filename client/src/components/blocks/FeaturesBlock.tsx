@@ -3,17 +3,17 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Clock, TrendingUp, Award } from "lucide-react";
 import { Link } from "wouter";
-import kettlebellIcon from "/icons/png/kettlebell.png";
-import barbellIcon from "/icons/png/barbell.png";
-import heartRateIcon from "/icons/png/heart-rate.png";
-import boxingGloveIcon from "/icons/png/boxing-glove.png";
-import stretchBandIcon from "/icons/png/stretch-band.png";
+import calisthenicsIcon from "@assets/generated_images/calisthenics_program_icon_gold.png";
+import strengthIcon from "@assets/generated_images/strength_training_icon_gold.png";
+import fatLossIcon from "@assets/generated_images/fat_loss_program_icon_gold.png";
+import boxingIcon from "@assets/generated_images/boxing_program_icon_gold.png";
+import flexibilityIcon from "@assets/generated_images/flexibility_program_icon_gold.png";
 
 const programs = [
   {
     title: "Calisthenics",
     description: "Control your body, master movement.",
-    iconSrc: kettlebellIcon,
+    iconSrc: calisthenicsIcon,
     badge: "Most Popular",
     features: ["No equipment needed", "Build functional strength", "Improve flexibility"],
     link: "/programs/calisthenics",
@@ -23,7 +23,7 @@ const programs = [
   {
     title: "Strength Training",
     description: "Progressive overload, durable gains.",
-    iconSrc: barbellIcon,
+    iconSrc: strengthIcon,
     badge: "Results Guaranteed",
     features: ["Progressive overload", "Compound movements", "Personalized splits"],
     link: "/programs/strength",
@@ -33,7 +33,7 @@ const programs = [
   {
     title: "Fat Loss",
     description: "Nutrition guidance + metabolic conditioning.",
-    iconSrc: heartRateIcon,
+    iconSrc: fatLossIcon,
     badge: "Transform Fast",
     features: ["HIIT workouts", "Meal planning", "Weekly check-ins"],
     link: "/programs/fat-loss",
@@ -43,7 +43,7 @@ const programs = [
   {
     title: "Boxing",
     description: "Conditioning + technique for ring stamina.",
-    iconSrc: boxingGloveIcon,
+    iconSrc: boxingIcon,
     badge: "High Energy",
     features: ["Technique drills", "Cardio conditioning", "Stress relief"],
     link: "/programs/boxing",
@@ -53,7 +53,7 @@ const programs = [
   {
     title: "Flexibility",
     description: "Mobility work to move pain‑free.",
-    iconSrc: stretchBandIcon,
+    iconSrc: flexibilityIcon,
     badge: "Recovery Focus",
     features: ["Dynamic stretching", "Yoga elements", "Injury prevention"],
     link: "/programs/flexibility",

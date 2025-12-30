@@ -1,4 +1,4 @@
-import { Home, Trophy, User, ClipboardCheck, Award, Instagram, Mail, Dumbbell, Target, Shield, Activity, Flame } from "lucide-react";
+import { Home, Trophy, User, ClipboardCheck, Award, Mail, Dumbbell, Target, Shield, Activity, Flame } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import {
   Sidebar,
@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronRight } from "lucide-react";
-import tntIcon from "@assets/generated_images/TNT_hexagon_transparent_logo_4c7afcc5.png";
+import tntIcon from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
 
 // Main navigation items - per master build spec
 const mainNavItems = [
@@ -67,11 +67,6 @@ const mainNavItems = [
     title: "Results",
     url: "/results",
     icon: Award,
-  },
-  {
-    title: "Instagram",
-    url: "/instagram",
-    icon: Instagram,
   },
 ];
 
@@ -192,8 +187,8 @@ export function AppSidebar() {
       <SidebarFooter className="border-t border-[#D4A017]/20 p-4">
         <div className="text-xs text-muted-foreground group-data-[collapsible=icon]:hidden">
           <p className="font-semibold text-[#D4A017] mb-1" data-testid="text-sidebar-contact-title">Contact Info</p>
-          <p data-testid="text-sidebar-email">coach@tntfitness.com</p>
-          <p data-testid="text-sidebar-instagram">@tntfitness</p>
+          <p data-testid="text-sidebar-phone">+929-928-8997</p>
+          <p data-testid="text-sidebar-email">mandusalife@gmail.com</p>
         </div>
       </SidebarFooter>
     </Sidebar>

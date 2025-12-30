@@ -7,15 +7,14 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
-import tntHorizontal from "@assets/generated_images/TNT_horizontal_header_logo_c1572bb9.png";
+import tntIcon from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
+import tntHorizontal from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
 
 const navItems = [
   { href: "/programs", label: "Programs" },
   { href: "/trainer", label: "Trainer" },
   { href: "/assessment", label: "Assessment" },
   { href: "/results", label: "Results" },
-  { href: "/instagram", label: "Instagram" },
 ];
 
 export default function Header() {

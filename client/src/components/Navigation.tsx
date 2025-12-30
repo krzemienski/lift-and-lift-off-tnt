@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import tntIcon from "@assets/generated_images/TNT_mascot_hexagon_logo_7490e9fb.png";
-import tntHorizontal from "@assets/generated_images/TNT_horizontal_transparent_logo_89551c9f.png";
+import tntIcon from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
+import tntHorizontal from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -14,7 +14,6 @@ export default function Navigation() {
     { href: "/trainer", label: "Trainer" },
     { href: "/assessment", label: "Assessment" },
     { href: "/results", label: "Results" },
-    { href: "/instagram", label: "Instagram" },
   ];
 
   return (

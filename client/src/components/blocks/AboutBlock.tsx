@@ -2,20 +2,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Award, Calendar, Users, Target, TrendingUp, Star, CheckCircle, ArrowRight } from "lucide-react";
+import { Award, Calendar, Target, TrendingUp, Star, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
 const achievements = [
   "ISSA Certified Personal Trainer",
   "Nutrition Specialist Certification",
   "10+ Years Training Experience",
-  "500+ Client Transformations",
   "Former Competitive Athlete",
   "Specialized in Body Recomposition"
 ];
 
 const stats = [
-  { icon: Users, value: "500+", label: "Clients Transformed" },
   { icon: Calendar, value: "10+", label: "Years Experience" },
   { icon: Award, value: "95%", label: "Success Rate" },
   { icon: Star, value: "4.9/5", label: "Client Rating" }
@@ -40,7 +38,7 @@ export default function AboutBlock() {
             Meet Your Coach
           </Badge>
           <h2 className="text-4xl md:text-5xl font-heading font-black text-white drop-shadow-lg">
-            Coach <span className="text-[#D4A017]">Rico Martinez</span>
+            Coach <span className="text-[#D4A017]">Rico</span>
           </h2>
           <p className="text-lg text-white/90 drop-shadow-md">
             Your dedicated partner in achieving explosive fitness transformations
@@ -55,12 +53,12 @@ export default function AboutBlock() {
               <div className="aspect-[4/5] relative">
                 <img
                   src="/trainer-headshot.jpg"
-                  alt="Coach Rico Martinez"
+                  alt="Coach Rico"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Rico Martinez</h3>
+                  <h3 className="text-2xl font-bold mb-2">Coach Rico</h3>
                   <p className="text-[#D4A017]">Founder & Head Coach</p>
                 </div>
               </div>

@@ -15,7 +15,6 @@ import FatLoss from "@/pages/programs/FatLoss";
 import Trainer from "@/pages/Trainer";
 import Assessment from "@/pages/Assessment";
 import Results from "@/pages/Results";
-import Instagram from "@/pages/Instagram";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
@@ -32,7 +31,6 @@ function Router() {
       <Route path="/trainer" component={Trainer} />
       <Route path="/assessment" component={Assessment} />
       <Route path="/results" component={Results} />
-      <Route path="/instagram" component={Instagram} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

@@ -2,8 +2,7 @@ import VideoCarousel from "@/components/VideoCarousel";
 import HeroBlock from "@/components/blocks/HeroBlock";
 import FeaturesBlock from "@/components/blocks/FeaturesBlock";
 import AboutBlock from "@/components/blocks/AboutBlock";
-import TestimonialsBlock from "@/components/blocks/TestimonialsBlock";
-import GalleryBlock from "@/components/blocks/GalleryBlock";
+import CommunityBlock from "@/components/blocks/CommunityBlock";
 import FooterBlock from "@/components/blocks/FooterBlock";
 
 export default function Home() {
@@ -17,8 +16,7 @@ export default function Home() {
         <HeroBlock />
         <FeaturesBlock />
         <AboutBlock />
-        <TestimonialsBlock />
-        <GalleryBlock />
+        <CommunityBlock />
         <FooterBlock />
       </div>
     </div>

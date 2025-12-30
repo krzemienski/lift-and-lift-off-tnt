@@ -6,7 +6,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import tntIcon from "@assets/generated_images/TNT_mascot_hexagon_logo_7490e9fb.png";
+import tntIcon from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
 
 const SCROLL_THRESHOLD_PERCENTAGE = 0.7;
 

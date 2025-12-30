@@ -3,10 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
-import { Instagram, Mail, Phone, MapPin, Send, Facebook, Twitter, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import tntIcon from "@assets/generated_images/TNT_hexagon_mascot_logo_49631fca.png";
+import tntIcon from "@assets/generated_images/tnt_fitness_gold_logo_navy.png";
 
 const navigation = {
   programs: [
@@ -20,7 +20,6 @@ const navigation = {
     { name: "About Coach Rico", href: "/trainer" },
     { name: "Success Stories", href: "/results" },
     { name: "Free Assessment", href: "/assessment" },
-    { name: "Instagram Feed", href: "/instagram" },
     { name: "Contact Us", href: "/contact" },
   ],
   support: [
@@ -32,7 +31,6 @@ const navigation = {
 };
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, href: "https://instagram.com/tntfitness" },
   { name: "Facebook", icon: Facebook, href: "#" },
   { name: "Twitter", icon: Twitter, href: "#" },
   { name: "Youtube", icon: Youtube, href: "#" },
@@ -194,14 +192,14 @@ export default function FooterBlock() {
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-[#D4A017] mt-0.5" />
                 <div>
-                  <p className="text-sm text-gray-300">(555) 123-4567</p>
+                  <p className="text-sm text-gray-300">+929-928-8997</p>
                   <p className="text-xs text-gray-400">Mon-Fri 6AM-8PM</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-[#D4A017] mt-0.5" />
                 <div>
-                  <p className="text-sm text-gray-300">coach@tntfitness.com</p>
+                  <p className="text-sm text-gray-300">mandusalife@gmail.com</p>
                   <p className="text-xs text-gray-400">24/7 response</p>
                 </div>
               </li>

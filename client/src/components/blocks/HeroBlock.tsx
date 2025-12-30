@@ -1,16 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, Users, Trophy, Zap, Star } from "lucide-react";
+import { ArrowRight, CheckCircle, Trophy, Zap, Star } from "lucide-react";
 import { Link } from "wouter";
 
 const stats = [
-  {
-    icon: Users,
-    value: "500+",
-    label: "Clients Transformed",
-    description: "Real people, real results"
-  },
   {
     icon: Trophy,
     value: "10+",
@@ -104,20 +98,6 @@ export default function HeroBlock() {
                 </Button>
               </div>
 
-              {/* Trust Indicators */}
-              <div className="flex items-center gap-6 pt-4">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div
-                      key={i}
-                      className="h-10 w-10 rounded-full border-2 border-white/20 bg-gradient-to-br from-gray-600 to-gray-800"
-                    />
-                  ))}
-                </div>
-                <div className="text-sm text-white/80 drop-shadow-md">
-                  <span className="font-semibold text-white">500+</span> clients achieving their goals
-                </div>
-              </div>
             </div>
 
             {/* Right Column - Stats Grid */}
@@ -140,16 +120,6 @@ export default function HeroBlock() {
             </div>
           </div>
 
-          {/* Bottom Section - Limited Spots */}
-          <div className="mt-12 flex items-center justify-center">
-            <Badge 
-              variant="secondary" 
-              className="bg-red-500/10 text-red-400 border-red-500/30 backdrop-blur-sm px-4 py-2"
-            >
-              <span className="animate-pulse">●</span>
-              <span className="ml-2">Limited Spots Available - Only 3 Left This Month</span>
-            </Badge>
-          </div>
         </div>
       </div>
     </section>
