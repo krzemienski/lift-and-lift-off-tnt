@@ -142,6 +142,7 @@ export default function FooterBlock() {
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-[#0B2545]/5 hover:bg-[#0B2545]/10 transition-colors"
                   aria-label={social.name}
+                  data-testid={`link-social-${social.name.toLowerCase()}`}
                 >
                   <social.icon className="h-5 w-5" />
                 </a>

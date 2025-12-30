@@ -48,5 +48,7 @@ The application is built with a React frontend, leveraging Vite, Tailwind CSS, a
 - Implemented new TNT box character mascot logo with flexing muscular arms (gold on navy)
 - Updated program icons to custom gold icons (calisthenics, strength, fat loss, boxing, flexibility)
 - Removed inaccurate statistics (500+ clients, Limited Spots messaging) from Hero and About sections
-- Updated contact information: Phone +929-928-8997, Email mandusalife@gmail.com
+- Removed phone numbers from entire site (CommunityBlock, FooterBlock, AppSidebar)
+- Updated email to coach@litt.fitness across all components
 - Navigation updated to remove Instagram links (Navigation, Header, AppSidebar, StickyNav, Footer)
+- Gmail integration prepared for contact form email delivery (pending user setup)
