@@ -20,7 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -37,9 +37,7 @@ interface ContactFormProps {
   trainingGoals: string[];
   contactInfo: {
     email: string;
-    phone: string;
     location?: string;
-    instagram: string;
   };
 }
 
@@ -79,29 +77,12 @@ export default function ContactForm({ onSubmit, trainingGoals, contactInfo }: Co
                       {contactInfo.email}
                     </a>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <a href={`tel:${contactInfo.phone}`} className="hover:text-primary transition-colors">
-                      {contactInfo.phone}
-                    </a>
-                  </div>
                   {contactInfo.location && (
                     <div className="flex items-center gap-3">
                       <MapPin className="h-5 w-5 text-primary" />
                       <span>{contactInfo.location}</span>
                     </div>
                   )}
-                  <div className="flex items-center gap-3">
-                    <Instagram className="h-5 w-5 text-primary" />
-                    <a
-                      href={contactInfo.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors"
-                    >
-                      @tntfitness
-                    </a>
-                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -168,7 +149,7 @@ export default function ContactForm({ onSubmit, trainingGoals, contactInfo }: Co
                             <FormControl>
                               <Input
                                 type="tel"
-                                placeholder="(555) 123-4567"
+                                placeholder="Your phone number (optional)"
                                 {...field}
                                 data-testid="input-phone"
                               />

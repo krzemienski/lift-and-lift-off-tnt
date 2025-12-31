@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactMessageSchema, type InstagramPost } from "@shared/schema";
 import { ObjectStorageService } from "./objectStorage";
+import { sendEmail } from "./gmail";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Instagram API endpoint
@@ -105,6 +106,31 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactMessageSchema.parse(req.body);
       const message = await storage.createContactMessage(validatedData);
+      
+      // Send email notification via Gmail
+      const emailBody = `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${validatedData.name}</p>
+        <p><strong>Email:</strong> ${validatedData.email}</p>
+        <p><strong>Phone:</strong> ${validatedData.phone || 'Not provided'}</p>
+        <p><strong>Training Goal:</strong> ${validatedData.trainingGoal || 'Not specified'}</p>
+        <hr>
+        <h3>Message:</h3>
+        <p>${validatedData.message}</p>
+        <hr>
+        <p><em>Submitted from TNT Fitness website</em></p>
+      `;
+      
+      try {
+        await sendEmail(
+          'coach@litt.fitness',
+          `TNT Fitness Contact: ${validatedData.name}`,
+          emailBody
+        );
+      } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+        // Continue even if email fails - form data is still saved
+      }
       
       res.json({ 
         success: true, 

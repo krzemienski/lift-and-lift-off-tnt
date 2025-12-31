@@ -5,7 +5,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Loader2 } from "lucide-react";
+import { Mail, MapPin, Clock, Send, CheckCircle, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -34,15 +34,9 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const contactInfo = [
   {
-    icon: Phone,
-    title: "Phone",
-    value: "(555) 123-4567",
-    description: "Mon-Fri 6AM-8PM"
-  },
-  {
     icon: Mail,
     title: "Email",
-    value: "coach@tntfitness.com",
+    value: "coach@litt.fitness",
     description: "24/7 response"
   },
   {
@@ -185,7 +179,7 @@ export default function ContactBlock() {
                               <FormLabel>Phone Number</FormLabel>
                               <FormControl>
                                 <Input 
-                                  placeholder="(555) 123-4567" 
+                                  placeholder="Your phone number (optional)" 
                                   {...field}
                                   data-testid="input-contact-phone"
                                 />
