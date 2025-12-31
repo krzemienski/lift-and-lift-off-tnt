@@ -31,7 +31,7 @@ The application is built with a React frontend, leveraging Vite, Tailwind CSS, a
 - **Object Storage:** Videos served via `/public/:filePath(*)` route using ObjectStorageService with HTTP range request support (206 Partial Content), proper content-type (`video/mp4`), Accept-Ranges header, and caching headers (`max-age=3600`). Range support enables browser video seeking and progressive loading.
 - **Asset Management:** All brand assets (logos, program icons) are high-quality PNGs with proper alpha channel transparency, generated in TNT gold.
 - **Community Movements Section:** Replaced Instagram feed with CommunityBlock featuring Coach Rico's "Movement is Medicine" philosophy, the quote "ANYTHING THAT DOESN'T MOVE DOESN'T LIVE", and contact information for joining the community program.
-- **Contact Form:** Backend endpoint (`/api/contact`) to store submissions in in-memory storage, with an admin endpoint (`/api/contact/messages`) to retrieve them.
+- **Contact Form:** Backend endpoint (`/api/contact`) stores submissions in in-memory storage and sends email notifications to coach@litt.fitness via Gmail API. Admin endpoint (`/api/contact/messages`) retrieves stored messages.
 - **Responsive Design:** Comprehensive testing on desktop (1920x1080) and mobile (390x844) ensures full responsiveness and aesthetic integrity.
 - **Docker Configuration:** Includes Docker setup for consistent deployment.
 - **Timestamped Logging:** Implemented for monitoring and debugging.
@@ -48,7 +48,7 @@ The application is built with a React frontend, leveraging Vite, Tailwind CSS, a
 - Implemented new TNT box character mascot logo with flexing muscular arms (gold on navy)
 - Updated program icons to custom gold icons (calisthenics, strength, fat loss, boxing, flexibility)
 - Removed inaccurate statistics (500+ clients, Limited Spots messaging) from Hero and About sections
-- Removed phone numbers from entire site (CommunityBlock, FooterBlock, AppSidebar)
-- Updated email to coach@litt.fitness across all components
+- Removed all phone numbers from entire site (ContactBlock, CommunityBlock, FooterBlock, AppSidebar, ContactForm, index.html structured data)
+- Updated email to coach@litt.fitness across all components and structured data
 - Navigation updated to remove Instagram links (Navigation, Header, AppSidebar, StickyNav, Footer)
-- Gmail integration prepared for contact form email delivery (pending user setup)
+- Gmail integration active: contact form submissions send email notifications to coach@litt.fitness
