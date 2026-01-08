@@ -14,51 +14,36 @@ const programs = [
     title: "Calisthenics",
     description: "Control your body, master movement.",
     iconSrc: calisthenicsIcon,
-    badge: "Most Popular",
     features: ["No equipment needed", "Build functional strength", "Improve flexibility"],
     link: "/programs/calisthenics",
-    color: "from-blue-500/20 to-cyan-500/20",
-    borderColor: "border-blue-500/30"
   },
   {
     title: "Strength Training",
     description: "Progressive overload, durable gains.",
     iconSrc: strengthIcon,
-    badge: "Results Guaranteed",
     features: ["Progressive overload", "Compound movements", "Personalized splits"],
     link: "/programs/strength",
-    color: "from-purple-500/20 to-pink-500/20",
-    borderColor: "border-purple-500/30"
   },
   {
     title: "Fat Loss",
     description: "Nutrition guidance + metabolic conditioning.",
     iconSrc: fatLossIcon,
-    badge: "Transform Fast",
     features: ["HIIT workouts", "Meal planning", "Weekly check-ins"],
     link: "/programs/fat-loss",
-    color: "from-orange-500/20 to-red-500/20",
-    borderColor: "border-orange-500/30"
   },
   {
     title: "Boxing",
     description: "Conditioning + technique for ring stamina.",
     iconSrc: boxingIcon,
-    badge: "High Energy",
     features: ["Technique drills", "Cardio conditioning", "Stress relief"],
     link: "/programs/boxing",
-    color: "from-green-500/20 to-emerald-500/20",
-    borderColor: "border-green-500/30"
   },
   {
     title: "Flexibility",
     description: "Mobility work to move pain‑free.",
     iconSrc: flexibilityIcon,
-    badge: "Recovery Focus",
     features: ["Dynamic stretching", "Yoga elements", "Injury prevention"],
     link: "/programs/flexibility",
-    color: "from-indigo-500/20 to-blue-500/20",
-    borderColor: "border-indigo-500/30"
   }
 ];
 
@@ -102,26 +87,20 @@ export default function FeaturesBlock() {
           {programs.map((program) => (
             <Card 
               key={program.title}
-              className={`group relative overflow-hidden ${program.borderColor} border bg-gradient-to-br ${program.color} backdrop-blur-sm transition-all hover:scale-105 hover:shadow-xl`}
+              className="group relative border border-white/10 bg-[#0B2545]/80 backdrop-blur-md transition-all hover:scale-105 hover:shadow-xl hover:bg-[#0B2545]/90"
             >
-              <div className="absolute top-4 right-4">
-                <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
-                  {program.badge}
-                </Badge>
-              </div>
-              
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-lg bg-background/50 backdrop-blur-sm">
+                  <div className="p-2 rounded-lg bg-[#D4A017]/20">
                     <img 
                       src={program.iconSrc} 
                       alt={program.title} 
                       className="h-6 w-6 object-contain"
                     />
                   </div>
-                  <CardTitle className="text-xl">{program.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">{program.title}</CardTitle>
                 </div>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-white/80">
                   {program.description}
                 </CardDescription>
               </CardHeader>
@@ -129,7 +108,7 @@ export default function FeaturesBlock() {
               <CardContent className="space-y-4">
                 <ul className="space-y-2">
                   {program.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm">
+                    <li key={feature} className="flex items-center text-sm text-white/90">
                       <div className="h-1.5 w-1.5 rounded-full bg-[#D4A017] mr-2" />
                       {feature}
                     </li>
@@ -138,7 +117,7 @@ export default function FeaturesBlock() {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full group-hover:bg-[#D4A017] group-hover:text-black group-hover:border-[#D4A017] transition-all"
+                  className="w-full border-[#D4A017]/50 text-[#D4A017] hover:bg-[#D4A017] hover:text-black hover:border-[#D4A017] transition-all"
                   asChild
                 >
                   <Link href={program.link} data-testid={`button-program-${program.title.toLowerCase()}`}>

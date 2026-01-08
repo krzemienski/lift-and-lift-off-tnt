@@ -36,7 +36,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "coach@litt.fitness",
+    value: "crbell725@gmail.com",
     description: "24/7 response"
   },
   {

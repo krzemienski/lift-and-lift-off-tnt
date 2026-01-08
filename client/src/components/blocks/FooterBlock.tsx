@@ -193,7 +193,7 @@ export default function FooterBlock() {
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-[#D4A017] mt-0.5" />
                 <div>
-                  <p className="text-sm text-gray-300">coach@litt.fitness</p>
+                  <p className="text-sm text-gray-300">crbell725@gmail.com</p>
                   <p className="text-xs text-gray-400">24/7 response</p>
                 </div>
               </li>
