@@ -112,10 +112,10 @@ export default function ContactBlock() {
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Contact Form - Takes 2 columns */}
           <div className="lg:col-span-2">
-            <Card>
+            <Card className="border-white/10 bg-[#0B2545]/80">
               <CardHeader>
-                <CardTitle>Send Us a Message</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-white">Send Us a Message</CardTitle>
+                <CardDescription className="text-white/70">
                   Tell us about your fitness goals and we'll create a personalized plan for you
                 </CardDescription>
               </CardHeader>
@@ -123,8 +123,8 @@ export default function ContactBlock() {
                 {showSuccess ? (
                   <div className="flex flex-col items-center justify-center py-12 space-y-4">
                     <CheckCircle className="h-16 w-16 text-green-500 animate-bounce" />
-                    <h3 className="text-xl font-semibold">Message Sent Successfully!</h3>
-                    <p className="text-muted-foreground text-center max-w-md">
+                    <h3 className="text-xl font-semibold text-white">Message Sent Successfully!</h3>
+                    <p className="text-white/70 text-center max-w-md">
                       Thank you for reaching out. We'll review your message and get back to you within 24 hours.
                     </p>
                   </div>
@@ -137,10 +137,11 @@ export default function ContactBlock() {
                           name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Full Name</FormLabel>
+                              <FormLabel className="text-white">Full Name</FormLabel>
                               <FormControl>
                                 <Input 
                                   placeholder="John Doe" 
+                                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                                   {...field}
                                   data-testid="input-contact-name"
                                 />
@@ -155,11 +156,12 @@ export default function ContactBlock() {
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Email</FormLabel>
+                              <FormLabel className="text-white">Email</FormLabel>
                               <FormControl>
                                 <Input 
                                   type="email"
                                   placeholder="john@example.com" 
+                                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                                   {...field}
                                   data-testid="input-contact-email"
                                 />
@@ -176,10 +178,11 @@ export default function ContactBlock() {
                           name="phone"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Phone Number</FormLabel>
+                              <FormLabel className="text-white">Phone Number</FormLabel>
                               <FormControl>
                                 <Input 
                                   placeholder="Your phone number (optional)" 
+                                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                                   {...field}
                                   data-testid="input-contact-phone"
                                 />
@@ -194,14 +197,14 @@ export default function ContactBlock() {
                           name="trainingGoal"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Training Goal</FormLabel>
+                              <FormLabel className="text-white">Training Goal</FormLabel>
                               <Select 
                                 onValueChange={field.onChange} 
                                 defaultValue={field.value}
                                 data-testid="select-training-goal"
                               >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className="bg-white/10 border-white/20 text-white">
                                     <SelectValue placeholder="Select your primary goal" />
                                   </SelectTrigger>
                                 </FormControl>
@@ -225,16 +228,16 @@ export default function ContactBlock() {
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Message</FormLabel>
+                            <FormLabel className="text-white">Message</FormLabel>
                             <FormControl>
                               <Textarea 
                                 placeholder="Tell us about your fitness journey and what you hope to achieve..."
-                                className="min-h-[120px]"
+                                className="min-h-[120px] bg-white/10 border-white/20 text-white placeholder:text-white/50"
                                 {...field}
                                 data-testid="textarea-contact-message"
                               />
                             </FormControl>
-                            <FormDescription>
+                            <FormDescription className="text-white/60">
                               Share any relevant details about your fitness level, schedule, or specific needs
                             </FormDescription>
                             <FormMessage />
@@ -272,16 +275,16 @@ export default function ContactBlock() {
           <div className="space-y-6">
             {/* Contact Cards */}
             {contactInfo.map((info) => (
-              <Card key={info.title} className="border-l-4 border-l-[#D4A017]">
+              <Card key={info.title} className="border-l-4 border-l-[#D4A017] border-white/10 bg-[#0B2545]/80">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-[#D4A017]/10">
+                    <div className="p-2 rounded-lg bg-[#D4A017]/20">
                       <info.icon className="h-5 w-5 text-[#D4A017]" />
                     </div>
                     <div>
-                      <p className="font-semibold">{info.title}</p>
+                      <p className="font-semibold text-white">{info.title}</p>
                       <p className="text-[#D4A017]">{info.value}</p>
-                      <p className="text-sm text-muted-foreground">{info.description}</p>
+                      <p className="text-sm text-white/70">{info.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -289,13 +292,13 @@ export default function ContactBlock() {
             ))}
             
             {/* Quick Response Card */}
-            <Card className="bg-[#D4A017]/10 border-[#D4A017]/30">
+            <Card className="bg-[#D4A017]/20 border-[#D4A017]/30">
               <CardContent className="p-6 text-center space-y-3">
-                <Badge className="bg-green-500/10 text-green-500 border-green-500/30">
+                <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
                   Quick Response
                 </Badge>
-                <p className="font-semibold">We're Here to Help</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="font-semibold text-white">We're Here to Help</p>
+                <p className="text-sm text-white/70">
                   Coach Rico personally responds to every message within 24 hours
                 </p>
               </CardContent>

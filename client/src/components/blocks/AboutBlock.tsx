@@ -49,7 +49,7 @@ export default function AboutBlock() {
         <div className="grid gap-12 lg:grid-cols-2 mb-16">
           {/* Left Column - Image and Quick Stats */}
           <div className="space-y-6">
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-white/10 bg-[#0B2545]/80">
               <div className="aspect-[4/5] relative">
                 <img
                   src="/trainer-headshot.jpg"
@@ -67,11 +67,11 @@ export default function AboutBlock() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat) => (
-                <Card key={stat.label} className="text-center">
+                <Card key={stat.label} className="text-center border-white/10 bg-[#0B2545]/80">
                   <CardContent className="p-4">
                     <stat.icon className="h-6 w-6 text-[#D4A017] mx-auto mb-2" />
-                    <p className="text-2xl font-bold">{stat.value}</p>
-                    <p className="text-xs text-muted-foreground">{stat.label}</p>
+                    <p className="text-2xl font-bold text-white">{stat.value}</p>
+                    <p className="text-xs text-white/70">{stat.label}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -80,12 +80,12 @@ export default function AboutBlock() {
 
           {/* Right Column - Story and Details */}
           <div className="space-y-6">
-            <Card>
+            <Card className="border-white/10 bg-[#0B2545]/80">
               <CardHeader>
-                <CardTitle>Revelation & Evolution</CardTitle>
-                <CardDescription>My Journey to TNT Fitness</CardDescription>
+                <CardTitle className="text-white">Revelation & Evolution</CardTitle>
+                <CardDescription className="text-white/70">My Journey to TNT Fitness</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 text-white/90">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-[#D4A017]">Revelation — Why I Became a Trainer</h4>
                   <p className="leading-relaxed">
@@ -123,16 +123,16 @@ export default function AboutBlock() {
             </Card>
 
             {/* Certifications */}
-            <Card>
+            <Card className="border-white/10 bg-[#0B2545]/80">
               <CardHeader>
-                <CardTitle>Certifications & Achievements</CardTitle>
+                <CardTitle className="text-white">Certifications & Achievements</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid gap-2">
                   {achievements.map((achievement) => (
                     <div key={achievement} className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-[#D4A017] flex-shrink-0" />
-                      <span className="text-sm">{achievement}</span>
+                      <span className="text-sm text-white/90">{achievement}</span>
                     </div>
                   ))}
                 </div>
@@ -148,13 +148,13 @@ export default function AboutBlock() {
           </h3>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {specialties.map((specialty) => (
-              <Card key={specialty.title} className="hover:shadow-lg transition-all">
+              <Card key={specialty.title} className="hover:shadow-lg transition-all border-white/10 bg-[#0B2545]/80">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <Target className="h-5 w-5 text-[#D4A017] mt-0.5" />
                     <div>
-                      <h4 className="font-semibold mb-1">{specialty.title}</h4>
-                      <p className="text-sm text-muted-foreground">{specialty.description}</p>
+                      <h4 className="font-semibold mb-1 text-white">{specialty.title}</h4>
+                      <p className="text-sm text-white/70">{specialty.description}</p>
                     </div>
                   </div>
                 </CardContent>
