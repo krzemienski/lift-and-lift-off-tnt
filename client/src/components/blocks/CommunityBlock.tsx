@@ -103,9 +103,9 @@ export default function CommunityBlock() {
                   className="bg-[#D4A017] text-black hover:bg-[#D4A017]/90 font-semibold"
                   asChild
                 >
-                  <a href="mailto:crbell725@gmail.com" data-testid="link-community-email">
+                  <a href="mailto:fittodaynottomorrow@gmail.com" data-testid="link-community-email">
                     <Mail className="mr-2 h-5 w-5" />
-                    crbell725@gmail.com
+                    fittodaynottomorrow@gmail.com
                   </a>
                 </Button>
               </div>

@@ -31,7 +31,8 @@ The application is built with a React frontend, leveraging Vite, Tailwind CSS, a
 - **Object Storage:** Videos served via `/public/:filePath(*)` route using ObjectStorageService with HTTP range request support (206 Partial Content), proper content-type (`video/mp4`), Accept-Ranges header, and caching headers (`max-age=3600`). Range support enables browser video seeking and progressive loading.
 - **Asset Management:** All brand assets (logos, program icons) are high-quality PNGs with proper alpha channel transparency, generated in TNT gold.
 - **Community Movements Section:** Replaced Instagram feed with CommunityBlock featuring Coach Rico's "Movement is Medicine" philosophy, the quote "ANYTHING THAT DOESN'T MOVE DOESN'T LIVE", and contact information for joining the community program.
-- **Contact Form:** Backend endpoint (`/api/contact`) stores submissions in in-memory storage and sends email notifications to coach@litt.fitness via Gmail API. Admin endpoint (`/api/contact/messages`) retrieves stored messages.
+- **Contact Form:** Backend endpoint (`/api/contact`) stores submissions in in-memory storage and sends email notifications to fittodaynottomorrow@gmail.com via Gmail API. Admin endpoint (`/api/contact/messages`) retrieves stored messages. Phone field is optional.
+- **Dark Theme Cards:** All content cards use consistent dark navy backgrounds (bg-[#0B2545]/80) with white text for improved readability and visual cohesion.
 - **Responsive Design:** Comprehensive testing on desktop (1920x1080) and mobile (390x844) ensures full responsiveness and aesthetic integrity.
 - **Docker Configuration:** Includes Docker setup for consistent deployment.
 - **Timestamped Logging:** Implemented for monitoring and debugging.
@@ -42,13 +43,18 @@ The application is built with a React frontend, leveraging Vite, Tailwind CSS, a
 - **FFmpeg:** Used for video re-encoding and optimization to H.264 Baseline profile.
 - **MemStorage:** In-memory storage solution for contact form submissions.
 
-## Recent Changes (December 2024)
+## Recent Changes (January 2026)
+- Updated contact email to fittodaynottomorrow@gmail.com across all components (server routes, ContactBlock, CommunityBlock, FooterBlock, AppSidebar, index.html)
+- Implemented darker color scheme across all cards for better readability (bg-[#0B2545]/80 with white text)
+- Fixed phone field validation to be optional (empty or 10+ digits)
+- Updated form inputs with dark semi-transparent backgrounds for contrast on dark cards
+- Gmail integration active: contact form submissions send email notifications to fittodaynottomorrow@gmail.com
+
+## Historical Changes (December 2024)
 - Removed Instagram integration entirely, replaced with Community Movements section
 - Updated branding from "Coach Rico Martinez" to "Coach Rico" throughout the site
 - Implemented new TNT box character mascot logo with flexing muscular arms (gold on navy)
 - Updated program icons to custom gold icons (calisthenics, strength, fat loss, boxing, flexibility)
 - Removed inaccurate statistics (500+ clients, Limited Spots messaging) from Hero and About sections
-- Removed all phone numbers from entire site (ContactBlock, CommunityBlock, FooterBlock, AppSidebar, ContactForm, index.html structured data)
-- Updated email to coach@litt.fitness across all components and structured data
-- Navigation updated to remove Instagram links (Navigation, Header, AppSidebar, StickyNav, Footer)
-- Gmail integration active: contact form submissions send email notifications to coach@litt.fitness
+- Removed all phone numbers from entire site
+- Navigation updated to remove Instagram links

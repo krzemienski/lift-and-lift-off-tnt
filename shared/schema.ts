@@ -13,7 +13,7 @@ export const contactMessages = pgTable("contact_messages", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  phone: text("phone").notNull(),
+  phone: text("phone"),
   trainingGoal: text("training_goal").notNull(),
   message: text("message").notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
@@ -50,6 +50,8 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export const insertContactMessageSchema = createInsertSchema(contactMessages).omit({
   id: true,
   createdAt: true,
+}).extend({
+  phone: z.string().optional(),
 });
 
 export const insertAssessmentSchema = createInsertSchema(assessments).omit({

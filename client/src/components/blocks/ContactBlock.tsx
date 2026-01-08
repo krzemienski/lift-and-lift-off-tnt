@@ -21,8 +21,9 @@ const contactSchema = z.object({
   email: z.string()
     .email("Please enter a valid email address"),
   phone: z.string()
-    .min(10, "Phone number must be at least 10 digits")
-    .regex(/^[\d\s\-\(\)\+]+$/, "Please enter a valid phone number"),
+    .refine((val) => val === "" || (val.length >= 10 && /^[\d\s\-\(\)\+]+$/.test(val)), {
+      message: "Please enter a valid phone number (10+ digits) or leave empty"
+    }),
   trainingGoal: z.string()
     .min(1, "Please select a training goal"),
   message: z.string()
@@ -36,7 +37,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "crbell725@gmail.com",
+    value: "fittodaynottomorrow@gmail.com",
     description: "24/7 response"
   },
   {

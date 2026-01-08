@@ -123,7 +123,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       try {
         await sendEmail(
-          'crbell725@gmail.com',
+          'fittodaynottomorrow@gmail.com',
           `TNT Fitness Contact: ${validatedData.name}`,
           emailBody
         );
