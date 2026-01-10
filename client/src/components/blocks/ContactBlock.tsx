@@ -71,7 +71,7 @@ export default function ContactBlock() {
 
   const contactMutation = useMutation({
     mutationFn: (data: ContactFormData) => 
-      apiRequest("/api/contact", "POST", data),
+      apiRequest("POST", "/api/contact", data),
     onSuccess: () => {
       setShowSuccess(true);
       form.reset();
